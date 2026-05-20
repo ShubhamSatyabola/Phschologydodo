@@ -1,0 +1,2627 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Psychology Study Guide — Post BSc Nursing Year 1</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== CSS VARIABLES ===== */
+:root {
+  --bg: #f4f4f8;
+  --surface: #ffffff;
+  --surface2: #f0f0f6;
+  --text: #1a1a2e;
+  --muted: #5a5a7a;
+  --border: #dde0f0;
+  --shadow: 0 2px 16px rgba(30,27,75,0.08);
+  --shadow-hover: 0 8px 32px rgba(30,27,75,0.16);
+  --radius: 14px;
+  --header-h: 72px;
+
+  /* Unit accent colors */
+  --u1: #2563eb; --u1-bg: #eff6ff; --u1-dark: #1d4ed8;
+  --u2: #16a34a; --u2-bg: #f0fdf4; --u2-dark: #15803d;
+  --u3: #dc2626; --u3-bg: #fef2f2; --u3-dark: #b91c1c;
+  --u4: #9333ea; --u4-bg: #faf5ff; --u4-dark: #7e22ce;
+  --u5: #ea580c; --u5-bg: #fff7ed; --u5-dark: #c2410c;
+  --u6: #0891b2; --u6-bg: #ecfeff; --u6-dark: #0e7490;
+  --u7: #65a30d; --u7-bg: #f7fee7; --u7-dark: #4d7c0f;
+  --u8: #d97706; --u8-bg: #fffbeb; --u8-dark: #b45309;
+  --u9: #db2777; --u9-bg: #fdf2f8; --u9-dark: #be185d;
+  --u10: #7c3aed; --u10-bg: #f5f3ff; --u10-dark: #6d28d9;
+  --u11: #059669; --u11-bg: #ecfdf5; --u11-dark: #047857;
+  --u12: #be123c; --u12-bg: #fff1f2; --u12-dark: #9f1239;
+}
+
+[data-theme="dark"] {
+  --bg: #0f1117;
+  --surface: #1a1d27;
+  --surface2: #1f2235;
+  --text: #e8e8f0;
+  --muted: #9ca3af;
+  --border: #2d3148;
+  --shadow: 0 2px 16px rgba(0,0,0,0.4);
+  --shadow-hover: 0 8px 32px rgba(0,0,0,0.6);
+
+  --u1-bg: #0d1a3d; --u1: #60a5fa;
+  --u2-bg: #0a2318; --u2: #4ade80;
+  --u3-bg: #2d0a0a; --u3: #f87171;
+  --u4-bg: #1e0a3d; --u4: #c084fc;
+  --u5-bg: #2d1205; --u5: #fb923c;
+  --u6-bg: #051e2d; --u6: #22d3ee;
+  --u7-bg: #0f1f02; --u7: #a3e635;
+  --u8-bg: #2d1f00; --u8: #fbbf24;
+  --u9-bg: #2d0a1e; --u9: #f472b6;
+  --u10-bg: #180a3d; --u10: #a78bfa;
+  --u11-bg: #022616; --u11: #34d399;
+  --u12-bg: #2d0714; --u12: #fb7185;
+}
+
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  gap: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+}
+.header-title {
+  flex: 1;
+}
+.header-title h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.header-title p {
+  font-size: 0.78rem;
+  color: #c7d2fe;
+  font-weight: 400;
+}
+.toolbar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-shrink: 0;
+}
+.btn {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+.btn-ghost {
+  background: rgba(255,255,255,0.12);
+  color: #e0e7ff;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.btn-ghost:hover { background: rgba(255,255,255,0.22); }
+.btn-print {
+  background: #f59e0b;
+  color: #1a1a2e;
+}
+.btn-print:hover { background: #d97706; }
+
+/* ===== SEARCH BAR ===== */
+.search-wrap {
+  background: linear-gradient(135deg, #312e81, #4338ca);
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.search-input-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 200px;
+}
+.search-input-wrap span {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+}
+#searchInput {
+  width: 100%;
+  padding: 9px 12px 9px 36px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  transition: background 0.2s;
+}
+#searchInput::placeholder { color: #a5b4fc; }
+#searchInput:focus { background: rgba(255,255,255,0.18); }
+
+/* ===== FILTER BUTTONS ===== */
+.filter-wrap {
+  padding: 14px 24px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.filter-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 4px;
+}
+.filter-btn {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: var(--surface2);
+  color: var(--muted);
+}
+.filter-btn.active {
+  color: #fff;
+}
+.filter-btn[data-unit="all"] { border-color: #6366f1; color: #6366f1; background: transparent; }
+.filter-btn[data-unit="all"].active { background: #6366f1; color: #fff; }
+.filter-btn[data-unit="1"] { border-color: var(--u1); }
+.filter-btn[data-unit="1"].active { background: var(--u1); border-color: var(--u1); }
+.filter-btn[data-unit="2"] { border-color: var(--u2); }
+.filter-btn[data-unit="2"].active { background: var(--u2); border-color: var(--u2); }
+.filter-btn[data-unit="3"] { border-color: var(--u3); }
+.filter-btn[data-unit="3"].active { background: var(--u3); border-color: var(--u3); }
+.filter-btn[data-unit="4"] { border-color: var(--u4); }
+.filter-btn[data-unit="4"].active { background: var(--u4); border-color: var(--u4); }
+.filter-btn[data-unit="5"] { border-color: var(--u5); }
+.filter-btn[data-unit="5"].active { background: var(--u5); border-color: var(--u5); }
+.filter-btn[data-unit="6"] { border-color: var(--u6); }
+.filter-btn[data-unit="6"].active { background: var(--u6); border-color: var(--u6); }
+.filter-btn[data-unit="7"] { border-color: var(--u7); }
+.filter-btn[data-unit="7"].active { background: var(--u7); border-color: var(--u7); }
+.filter-btn[data-unit="8"] { border-color: var(--u8); }
+.filter-btn[data-unit="8"].active { background: var(--u8); border-color: var(--u8); }
+.filter-btn[data-unit="9"] { border-color: var(--u9); }
+.filter-btn[data-unit="9"].active { background: var(--u9); border-color: var(--u9); }
+.filter-btn[data-unit="10"] { border-color: var(--u10); }
+.filter-btn[data-unit="10"].active { background: var(--u10); border-color: var(--u10); }
+.filter-btn[data-unit="11"] { border-color: var(--u11); }
+.filter-btn[data-unit="11"].active { background: var(--u11); border-color: var(--u11); }
+.filter-btn[data-unit="12"] { border-color: var(--u12); }
+.filter-btn[data-unit="12"].active { background: var(--u12); border-color: var(--u12); }
+
+/* ===== LEGEND ===== */
+.legend-wrap {
+  padding: 12px 24px;
+  background: var(--surface2);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.legend-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 4px;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.74rem;
+  color: var(--muted);
+}
+.legend-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ===== MAIN CONTENT ===== */
+main { padding: 24px; max-width: 1400px; margin: 0 auto; }
+
+/* ===== UNIT SECTION ===== */
+.unit-section {
+  margin-bottom: 36px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+.unit-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 22px;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.2s;
+  position: relative;
+}
+.unit-header:hover { opacity: 0.9; }
+.unit-badge {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+.unit-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  color: #fff;
+  font-weight: 700;
+  flex: 1;
+}
+.unit-toggle {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.8);
+  transition: transform 0.3s;
+}
+.unit-section.collapsed .unit-toggle { transform: rotate(-90deg); }
+
+.unit-body {
+  background: var(--bg);
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+  transition: max-height 0.4s ease, opacity 0.3s;
+  overflow: hidden;
+}
+.unit-section.collapsed .unit-body {
+  display: none;
+}
+
+/* Unit color bands */
+.unit-section[data-unit="1"] .unit-header { background: linear-gradient(135deg, #1d4ed8, #3b82f6); }
+.unit-section[data-unit="2"] .unit-header { background: linear-gradient(135deg, #15803d, #22c55e); }
+.unit-section[data-unit="3"] .unit-header { background: linear-gradient(135deg, #b91c1c, #ef4444); }
+.unit-section[data-unit="4"] .unit-header { background: linear-gradient(135deg, #7e22ce, #a855f7); }
+.unit-section[data-unit="5"] .unit-header { background: linear-gradient(135deg, #c2410c, #f97316); }
+.unit-section[data-unit="6"] .unit-header { background: linear-gradient(135deg, #0e7490, #06b6d4); }
+.unit-section[data-unit="7"] .unit-header { background: linear-gradient(135deg, #4d7c0f, #84cc16); }
+.unit-section[data-unit="8"] .unit-header { background: linear-gradient(135deg, #b45309, #f59e0b); }
+.unit-section[data-unit="9"] .unit-header { background: linear-gradient(135deg, #be185d, #ec4899); }
+.unit-section[data-unit="10"] .unit-header { background: linear-gradient(135deg, #6d28d9, #8b5cf6); }
+.unit-section[data-unit="11"] .unit-header { background: linear-gradient(135deg, #047857, #10b981); }
+.unit-section[data-unit="12"] .unit-header { background: linear-gradient(135deg, #9f1239, #e11d48); }
+
+/* ===== TOPIC CARD ===== */
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1.5px solid var(--border);
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.25s, transform 0.2s, border-color 0.2s;
+  box-shadow: var(--shadow);
+}
+.card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+}
+.card-emoji {
+  font-size: 1.8rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.card-meta { flex: 1; }
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+.card-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+  display: inline-block;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.card-chevron {
+  font-size: 0.9rem;
+  color: var(--muted);
+  transition: transform 0.3s;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+.card.open .card-chevron { transform: rotate(180deg); }
+
+.card-body {
+  display: none;
+  padding: 0 16px 16px;
+  border-top: 1px solid var(--border);
+  animation: fadeIn 0.25s ease;
+}
+.card.open .card-body { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+
+.card-body h4 {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 14px 0 6px;
+  padding-bottom: 4px;
+  border-bottom: 1.5px solid var(--border);
+}
+.card-body ul {
+  list-style: none;
+  padding: 0;
+}
+.card-body ul li {
+  font-size: 0.88rem;
+  color: var(--text);
+  padding: 4px 0 4px 18px;
+  position: relative;
+  line-height: 1.55;
+}
+.card-body ul li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  font-size: 0.75rem;
+  top: 5px;
+}
+.card-body .mnemonic {
+  background: var(--surface2);
+  border-left: 3px solid #f59e0b;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: var(--text);
+}
+.card-body .mnemonic strong { color: #d97706; }
+.card-body .imp {
+  background: #fef3c7;
+  border: 1px solid #fde68a;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: #92400e;
+}
+[data-theme="dark"] .card-body .imp {
+  background: #2a1f00;
+  border-color: #5c4000;
+  color: #fbbf24;
+}
+
+/* Unit-specific card border top colors */
+.unit-section[data-unit="1"] .card { border-top: 3px solid var(--u1); }
+.unit-section[data-unit="2"] .card { border-top: 3px solid var(--u2); }
+.unit-section[data-unit="3"] .card { border-top: 3px solid var(--u3); }
+.unit-section[data-unit="4"] .card { border-top: 3px solid var(--u4); }
+.unit-section[data-unit="5"] .card { border-top: 3px solid var(--u5); }
+.unit-section[data-unit="6"] .card { border-top: 3px solid var(--u6); }
+.unit-section[data-unit="7"] .card { border-top: 3px solid var(--u7); }
+.unit-section[data-unit="8"] .card { border-top: 3px solid var(--u8); }
+.unit-section[data-unit="9"] .card { border-top: 3px solid var(--u9); }
+.unit-section[data-unit="10"] .card { border-top: 3px solid var(--u10); }
+.unit-section[data-unit="11"] .card { border-top: 3px solid var(--u11); }
+.unit-section[data-unit="12"] .card { border-top: 3px solid var(--u12); }
+
+/* Unit card tag colors */
+.unit-section[data-unit="1"] .card-tag { background: var(--u1-bg); color: var(--u1); }
+.unit-section[data-unit="2"] .card-tag { background: var(--u2-bg); color: var(--u2); }
+.unit-section[data-unit="3"] .card-tag { background: var(--u3-bg); color: var(--u3); }
+.unit-section[data-unit="4"] .card-tag { background: var(--u4-bg); color: var(--u4); }
+.unit-section[data-unit="5"] .card-tag { background: var(--u5-bg); color: var(--u5); }
+.unit-section[data-unit="6"] .card-tag { background: var(--u6-bg); color: var(--u6); }
+.unit-section[data-unit="7"] .card-tag { background: var(--u7-bg); color: var(--u7); }
+.unit-section[data-unit="8"] .card-tag { background: var(--u8-bg); color: var(--u8); }
+.unit-section[data-unit="9"] .card-tag { background: var(--u9-bg); color: var(--u9); }
+.unit-section[data-unit="10"] .card-tag { background: var(--u10-bg); color: var(--u10); }
+.unit-section[data-unit="11"] .card-tag { background: var(--u11-bg); color: var(--u11); }
+.unit-section[data-unit="12"] .card-tag { background: var(--u12-bg); color: var(--u12); }
+
+/* Card subheadings */
+.unit-section[data-unit="1"] .card-body h4 { color: var(--u1); border-color: var(--u1-bg); }
+.unit-section[data-unit="2"] .card-body h4 { color: var(--u2); border-color: var(--u2-bg); }
+.unit-section[data-unit="3"] .card-body h4 { color: var(--u3); border-color: var(--u3-bg); }
+.unit-section[data-unit="4"] .card-body h4 { color: var(--u4); border-color: var(--u4-bg); }
+.unit-section[data-unit="5"] .card-body h4 { color: var(--u5); border-color: var(--u5-bg); }
+.unit-section[data-unit="6"] .card-body h4 { color: var(--u6); border-color: var(--u6-bg); }
+.unit-section[data-unit="7"] .card-body h4 { color: var(--u7); border-color: var(--u7-bg); }
+.unit-section[data-unit="8"] .card-body h4 { color: var(--u8); border-color: var(--u8-bg); }
+.unit-section[data-unit="9"] .card-body h4 { color: var(--u9); border-color: var(--u9-bg); }
+.unit-section[data-unit="10"] .card-body h4 { color: var(--u10); border-color: var(--u10-bg); }
+.unit-section[data-unit="11"] .card-body h4 { color: var(--u11); border-color: var(--u11-bg); }
+.unit-section[data-unit="12"] .card-body h4 { color: var(--u12); border-color: var(--u12-bg); }
+
+/* ===== IMPORTANT QUESTIONS BANNER ===== */
+.iq-banner {
+  background: linear-gradient(135deg, #1e1b4b, #4338ca);
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin-bottom: 28px;
+  color: #fff;
+}
+.iq-banner h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.iq-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 8px;
+}
+.iq-item {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.83rem;
+  color: #c7d2fe;
+}
+.iq-item strong { color: #fff; display: block; margin-bottom: 2px; }
+
+/* ===== NO RESULTS ===== */
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--muted);
+  font-size: 1.1rem;
+  display: none;
+}
+
+/* ===== PRINT ===== */
+@media print {
+  header, .search-wrap, .filter-wrap, .legend-wrap, .toolbar, .btn, .card-chevron { display: none !important; }
+  .unit-section.collapsed .unit-body { display: grid !important; }
+  .card-body { display: block !important; }
+  .card { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; margin-bottom: 8px; }
+  .unit-body { display: grid !important; }
+  body { background: white; color: black; }
+  .unit-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .iq-banner { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+/* ===== TAB NAV ===== */
+.tab-nav {
+  background: var(--surface);
+  border-bottom: 2px solid var(--border);
+  display: flex;
+  gap: 0;
+  padding: 0 24px;
+  overflow-x: auto;
+}
+.tab-btn {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 14px 22px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  white-space: nowrap;
+  transition: color 0.2s, border-color 0.2s;
+}
+.tab-btn:hover { color: var(--text); }
+.tab-btn.active { color: #4338ca; border-bottom-color: #4338ca; }
+[data-theme="dark"] .tab-btn.active { color: #818cf8; border-bottom-color: #818cf8; }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* ===== PYQ SECTION ===== */
+.pyq-main { padding: 24px; max-width: 1400px; margin: 0 auto; }
+.pyq-unit-section {
+  margin-bottom: 32px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+.pyq-unit-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 22px;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.2s;
+}
+.pyq-unit-header:hover { opacity: 0.9; }
+.pyq-unit-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 700;
+  flex: 1;
+}
+.pyq-body {
+  background: var(--bg);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.pyq-unit-section.collapsed .pyq-body { display: none; }
+
+/* PYQ unit gradients — reuse same as unit-section */
+.pyq-unit-section[data-unit="1"] .pyq-unit-header { background: linear-gradient(135deg, #1d4ed8, #3b82f6); }
+.pyq-unit-section[data-unit="2"] .pyq-unit-header { background: linear-gradient(135deg, #15803d, #22c55e); }
+.pyq-unit-section[data-unit="3"] .pyq-unit-header { background: linear-gradient(135deg, #b91c1c, #ef4444); }
+.pyq-unit-section[data-unit="4"] .pyq-unit-header { background: linear-gradient(135deg, #7e22ce, #a855f7); }
+.pyq-unit-section[data-unit="5"] .pyq-unit-header { background: linear-gradient(135deg, #c2410c, #f97316); }
+.pyq-unit-section[data-unit="6"] .pyq-unit-header { background: linear-gradient(135deg, #0e7490, #06b6d4); }
+.pyq-unit-section[data-unit="7"] .pyq-unit-header { background: linear-gradient(135deg, #4d7c0f, #84cc16); }
+.pyq-unit-section[data-unit="8"] .pyq-unit-header { background: linear-gradient(135deg, #b45309, #f59e0b); }
+.pyq-unit-section[data-unit="9"] .pyq-unit-header { background: linear-gradient(135deg, #be185d, #ec4899); }
+.pyq-unit-section[data-unit="10"] .pyq-unit-header { background: linear-gradient(135deg, #6d28d9, #8b5cf6); }
+.pyq-unit-section[data-unit="11"] .pyq-unit-header { background: linear-gradient(135deg, #047857, #10b981); }
+.pyq-unit-section[data-unit="12"] .pyq-unit-header { background: linear-gradient(135deg, #9f1239, #e11d48); }
+
+/* PYQ Card */
+.pyq-card {
+  background: var(--surface);
+  border-radius: 12px;
+  border: 1.5px solid var(--border);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.2s;
+}
+.pyq-card:hover { box-shadow: var(--shadow-hover); }
+.pyq-q-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  cursor: pointer;
+  user-select: none;
+}
+.pyq-q-num {
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 3px 9px;
+  border-radius: 20px;
+  flex-shrink: 0;
+  letter-spacing: 0.06em;
+  margin-top: 2px;
+}
+.pyq-unit-section[data-unit="1"] .pyq-q-num { background: var(--u1-bg); color: var(--u1); }
+.pyq-unit-section[data-unit="2"] .pyq-q-num { background: var(--u2-bg); color: var(--u2); }
+.pyq-unit-section[data-unit="3"] .pyq-q-num { background: var(--u3-bg); color: var(--u3); }
+.pyq-unit-section[data-unit="4"] .pyq-q-num { background: var(--u4-bg); color: var(--u4); }
+.pyq-unit-section[data-unit="5"] .pyq-q-num { background: var(--u5-bg); color: var(--u5); }
+.pyq-unit-section[data-unit="6"] .pyq-q-num { background: var(--u6-bg); color: var(--u6); }
+.pyq-unit-section[data-unit="7"] .pyq-q-num { background: var(--u7-bg); color: var(--u7); }
+.pyq-unit-section[data-unit="8"] .pyq-q-num { background: var(--u8-bg); color: var(--u8); }
+.pyq-unit-section[data-unit="9"] .pyq-q-num { background: var(--u9-bg); color: var(--u9); }
+.pyq-unit-section[data-unit="10"] .pyq-q-num { background: var(--u10-bg); color: var(--u10); }
+.pyq-unit-section[data-unit="11"] .pyq-q-num { background: var(--u11-bg); color: var(--u11); }
+.pyq-unit-section[data-unit="12"] .pyq-q-num { background: var(--u12-bg); color: var(--u12); }
+
+.pyq-q-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--text);
+  flex: 1;
+  line-height: 1.4;
+}
+.pyq-q-chevron {
+  font-size: 0.9rem;
+  color: var(--muted);
+  transition: transform 0.3s;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.pyq-card.open .pyq-q-chevron { transform: rotate(180deg); }
+
+.pyq-answer {
+  display: none;
+  padding: 4px 16px 18px;
+  border-top: 1px solid var(--border);
+  animation: fadeIn 0.25s ease;
+}
+.pyq-card.open .pyq-answer { display: block; }
+
+.pyq-answer h4 {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin: 14px 0 6px;
+  padding-bottom: 4px;
+  border-bottom: 1.5px solid var(--border);
+}
+.pyq-unit-section[data-unit="1"] .pyq-answer h4 { color: var(--u1); }
+.pyq-unit-section[data-unit="2"] .pyq-answer h4 { color: var(--u2); }
+.pyq-unit-section[data-unit="3"] .pyq-answer h4 { color: var(--u3); }
+.pyq-unit-section[data-unit="4"] .pyq-answer h4 { color: var(--u4); }
+.pyq-unit-section[data-unit="5"] .pyq-answer h4 { color: var(--u5); }
+.pyq-unit-section[data-unit="6"] .pyq-answer h4 { color: var(--u6); }
+.pyq-unit-section[data-unit="7"] .pyq-answer h4 { color: var(--u7); }
+.pyq-unit-section[data-unit="8"] .pyq-answer h4 { color: var(--u8); }
+.pyq-unit-section[data-unit="9"] .pyq-answer h4 { color: var(--u9); }
+.pyq-unit-section[data-unit="10"] .pyq-answer h4 { color: var(--u10); }
+.pyq-unit-section[data-unit="11"] .pyq-answer h4 { color: var(--u11); }
+.pyq-unit-section[data-unit="12"] .pyq-answer h4 { color: var(--u12); }
+
+.pyq-answer p {
+  font-size: 0.88rem;
+  color: var(--text);
+  margin: 6px 0 10px;
+  line-height: 1.65;
+}
+.pyq-answer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px;
+}
+.pyq-answer ul li {
+  font-size: 0.88rem;
+  color: var(--text);
+  padding: 4px 0 4px 20px;
+  position: relative;
+  line-height: 1.6;
+}
+.pyq-answer ul li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  font-size: 0.75rem;
+  top: 5px;
+  color: var(--muted);
+}
+.pyq-answer .ans-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 0.84rem;
+}
+.pyq-answer .ans-table th {
+  background: var(--surface2);
+  color: var(--text);
+  padding: 7px 10px;
+  text-align: left;
+  font-weight: 700;
+  border: 1px solid var(--border);
+}
+.pyq-answer .ans-table td {
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  vertical-align: top;
+}
+.pyq-answer .ans-table tr:nth-child(even) td { background: var(--surface2); }
+.pyq-answer .tip {
+  background: #fef3c7;
+  border-left: 3px solid #f59e0b;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-top: 10px;
+  font-size: 0.83rem;
+  color: #92400e;
+}
+[data-theme="dark"] .pyq-answer .tip {
+  background: #2a1f00;
+  border-color: #d97706;
+  color: #fbbf24;
+}
+.pyq-answer .key-def {
+  background: var(--surface2);
+  border-left: 3px solid #6366f1;
+  border-radius: 6px;
+  padding: 9px 13px;
+  margin: 10px 0;
+  font-size: 0.87rem;
+  font-style: italic;
+  color: var(--text);
+}
+
+/* PYQ search banner */
+.pyq-search-row {
+  display: flex;
+  gap: 12px;
+  padding: 0 24px 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.pyq-search-wrap {
+  position: relative;
+  flex: 1; min-width: 180px;
+}
+.pyq-search-wrap span { position:absolute; left:10px; top:50%; transform:translateY(-50%); }
+#pyqSearch {
+  width: 100%;
+  padding: 8px 10px 8px 32px;
+  border-radius: 8px;
+  border: 1.5px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.88rem;
+  outline: none;
+}
+#pyqSearch:focus { border-color: #6366f1; }
+
+/* ===== SCROLL TOP ===== */
+#scrollTop {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #4338ca;
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(67,56,202,0.4);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s, transform 0.2s;
+  z-index: 999;
+}
+#scrollTop:hover { transform: scale(1.1); }
+#scrollTop.visible { display: flex; }
+
+/* ===== EXPAND ALL ===== */
+.expand-row {
+  display: flex;
+  gap: 8px;
+  padding: 0 24px 16px;
+  flex-wrap: wrap;
+}
+.btn-sm {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 7px;
+  border: 1.5px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-sm:hover { background: var(--surface2); color: var(--text); }
+
+/* ===== PROGRESS BAR ===== */
+.progress-wrap {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.progress-label { font-size: 0.78rem; color: var(--muted); font-weight: 600; }
+.progress-bar-bg {
+  flex: 1;
+  height: 6px;
+  background: var(--surface2);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #4338ca, #7c3aed);
+  transition: width 0.4s;
+  width: 0%;
+}
+.progress-count { font-size: 0.78rem; color: var(--muted); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-title">
+    <h1>🧠 Psychology Study Guide</h1>
+    <p>Post BSc Nursing — Year 1 · 12 Units · Complete Syllabus</p>
+  </div>
+  <div class="toolbar">
+    <button class="btn btn-ghost" id="themeToggle">🌙 Dark Mode</button>
+    <button class="btn btn-print" onclick="window.print()">🖨️ Print / PDF</button>
+  </div>
+</header>
+
+<!-- SEARCH -->
+<div class="search-wrap">
+  <div class="search-input-wrap">
+    <span>🔍</span>
+    <input type="text" id="searchInput" placeholder="Search topics, definitions, keywords…">
+  </div>
+</div>
+
+<!-- FILTER -->
+<div class="filter-wrap">
+  <span class="filter-label">Filter:</span>
+  <button class="filter-btn active" data-unit="all">All Units</button>
+  <button class="filter-btn" data-unit="1">I – Intro</button>
+  <button class="filter-btn" data-unit="2">II – Perception</button>
+  <button class="filter-btn" data-unit="3">III – Motivation</button>
+  <button class="filter-btn" data-unit="4">IV – Emotions</button>
+  <button class="filter-btn" data-unit="5">V – Personality</button>
+  <button class="filter-btn" data-unit="6">VI – Nursing</button>
+  <button class="filter-btn" data-unit="7">VII – Differences</button>
+  <button class="filter-btn" data-unit="8">VIII – Intelligence</button>
+  <button class="filter-btn" data-unit="9">IX – Learning</button>
+  <button class="filter-btn" data-unit="10">X – Memory</button>
+  <button class="filter-btn" data-unit="11">XI – Attitudes</button>
+  <button class="filter-btn" data-unit="12">XII – Mental Health</button>
+</div>
+
+<!-- LEGEND -->
+<div class="legend-wrap">
+  <span class="legend-label">Legend:</span>
+  <span class="legend-item"><span class="legend-dot" style="background:#2563eb"></span>Unit I</span>
+  <span class="legend-item"><span class="legend-dot" style="background:#16a34a"></span>Unit II</span>
+  <span class="legend-item"><span class="legend-dot" style="background:#dc2626"></span>Unit III</span>
+  <span class="legend-item"><span class="legend-dot" style="background:#9333ea"></span>Unit IV</span>
+  <span class="legend-item"><span class="legend-dot" style="background:#ea580c"></span>Unit V</span>
+  <span class="legend-item"><span class="legend-dot" style="background:#0891b2"></span>Unit VI</span>
+  <span class="legend-item"><span class="legend-dot" style="background:#65a30d"></span>Unit VII</span>
+  <span class="legend-item"><span class="legend-dot" style="background:#d97706"></span>Unit VIII</span>
+  <span class="legend-item"><span class="legend-dot" style="background:#db2777"></span>Unit IX</span>
+  <span class="legend-item"><span class="legend-dot" style="background:#7c3aed"></span>Unit X</span>
+  <span class="legend-item"><span class="legend-dot" style="background:#059669"></span>Unit XI</span>
+  <span class="legend-item"><span class="legend-dot" style="background:#be123c"></span>Unit XII</span>
+</div>
+
+<!-- PROGRESS -->
+<div class="progress-wrap">
+  <span class="progress-label">Study Progress:</span>
+  <div class="progress-bar-bg"><div class="progress-bar-fill" id="progressBar"></div></div>
+  <span class="progress-count" id="progressCount">0 / 0 cards opened</span>
+</div>
+
+<!-- EXPAND CONTROLS -->
+<div class="expand-row">
+  <button class="btn-sm" onclick="expandAll()">▼ Expand All Cards</button>
+  <button class="btn-sm" onclick="collapseAll()">▲ Collapse All Cards</button>
+</div>
+
+<!-- TAB NAV -->
+<div class="tab-nav">
+  <button class="tab-btn active" data-tab="syllabus">📖 Syllabus Notes</button>
+  <button class="tab-btn" data-tab="pyq">📝 PYQ Answers</button>
+</div>
+
+<!-- ===== SYLLABUS TAB ===== -->
+<div id="tab-syllabus" class="tab-panel active">
+<main>
+
+<!-- IMPORTANT QUESTIONS BANNER -->
+<div class="iq-banner">
+  <h2>⭐ Important Exam Questions — Post BSc Nursing Yr 1</h2>
+  <div class="iq-list">
+    <div class="iq-item"><strong>Define Psychology</strong>Scope, methods, relationship with other subjects</div>
+    <div class="iq-item"><strong>Sensation vs Perception</strong>Normal & abnormal, clinical significance</div>
+    <div class="iq-item"><strong>Maslow's Hierarchy</strong>Self-actualization, nursing applications</div>
+    <div class="iq-item"><strong>Frustration & Conflict</strong>Types, effects, coping in sick patients</div>
+    <div class="iq-item"><strong>Emotions in Sickness</strong>Role of emotions, nurse management</div>
+    <div class="iq-item"><strong>Personality in Nursing</strong>How sickness affects personality</div>
+    <div class="iq-item"><strong>Defense Mechanisms</strong>Types with examples — very important!</div>
+    <div class="iq-item"><strong>Individual Differences</strong>Heredity vs environment, nursing implications</div>
+    <div class="iq-item"><strong>Intelligence</strong>Definition, IQ, measurement tools, sickness</div>
+    <div class="iq-item"><strong>Laws of Learning</strong>Thorndike's laws + nursing education</div>
+    <div class="iq-item"><strong>Memory & Forgetting</strong>Types of memory, forgetting theories</div>
+    <div class="iq-item"><strong>Mental Health</strong>Characteristics, hygiene, defense mechanisms</div>
+  </div>
+</div>
+
+<div class="no-results" id="noResults">🔎 No topics found matching your search.</div>
+
+<!-- =================== UNIT I =================== -->
+<div class="unit-section" data-unit="1">
+  <div class="unit-header" onclick="toggleUnit(this)">
+    <span class="unit-badge">Unit I</span>
+    <h2>Introduction to Psychology</h2>
+    <span class="unit-toggle">▾</span>
+  </div>
+  <div class="unit-body">
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">🧠</span>
+        <div class="card-meta">
+          <div class="card-title">Definition of Psychology</div>
+          <span class="card-tag">Unit I</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Definition</h4>
+        <ul>
+          <li><strong>Psychology</strong> = "the scientific study of behaviour and mental processes" (APA)</li>
+          <li>Derived from Greek: <em>Psyche</em> (mind/soul) + <em>Logos</em> (study)</li>
+          <li>Earlier defined as "study of the soul/mind"; now operationally defined as study of observable behaviour + internal mental events</li>
+          <li>Behaviour = any observable action (speaking, walking, crying)</li>
+          <li>Mental processes = thoughts, feelings, memories, perceptions (not directly observable)</li>
+        </ul>
+        <h4>Key Definitions by Scholars</h4>
+        <ul>
+          <li><strong>Watson (1913):</strong> "Psychology is the science of behaviour" — Behaviourist view</li>
+          <li><strong>William James:</strong> "The science of mental life"</li>
+          <li><strong>Hilgard:</strong> "Science of behaviour and mental processes of man and other animals"</li>
+        </ul>
+        <div class="mnemonic"><strong>🔑 Mnemonic:</strong> <em>BMP</em> — Behaviour, Mental Processes, People (what psychology studies)</div>
+        <div class="imp">⭐ Exam Tip: Always define psychology as "scientific study" — the word scientific is key. Mention both behaviour AND mental processes.</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">🔭</span>
+        <div class="card-meta">
+          <div class="card-title">Scope & Goals of Psychology</div>
+          <span class="card-tag">Unit I</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Four Main Goals</h4>
+        <ul>
+          <li><strong>Description:</strong> What is happening? (observe & record behaviour)</li>
+          <li><strong>Explanation:</strong> Why is it happening? (cause & effect)</li>
+          <li><strong>Prediction:</strong> What will happen next?</li>
+          <li><strong>Control/Modification:</strong> How can we change or improve behaviour?</li>
+        </ul>
+        <h4>Scope / Areas</h4>
+        <ul>
+          <li><strong>Clinical Psychology:</strong> assessment, diagnosis & treatment of mental disorders</li>
+          <li><strong>Health Psychology:</strong> role of behaviour in health & illness</li>
+          <li><strong>Educational Psychology:</strong> learning, teaching methods</li>
+          <li><strong>Industrial Psychology:</strong> workplace behaviour, productivity</li>
+          <li><strong>Social Psychology:</strong> influence of society on individual behaviour</li>
+          <li><strong>Developmental Psychology:</strong> lifespan changes</li>
+          <li><strong>Nursing Psychology:</strong> applying psychology principles in patient care</li>
+        </ul>
+        <div class="mnemonic"><strong>🔑 DEPC</strong> — Describe, Explain, Predict, Control</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">🔬</span>
+        <div class="card-meta">
+          <div class="card-title">Methods of Psychology</div>
+          <span class="card-tag">Unit I</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Observational Methods</h4>
+        <ul>
+          <li><strong>Naturalistic Observation:</strong> studying behaviour in natural setting without interference (e.g., watching patient interactions in ward)</li>
+          <li><strong>Controlled Observation:</strong> structured lab setting</li>
+          <li><strong>Participant Observation:</strong> researcher joins the group being studied</li>
+        </ul>
+        <h4>Experimental Method</h4>
+        <ul>
+          <li>Manipulates independent variable (IV) → measures dependent variable (DV)</li>
+          <li>Has control & experimental group</li>
+          <li>Most scientific method — establishes cause-effect</li>
+        </ul>
+        <h4>Survey / Interview Methods</h4>
+        <ul>
+          <li>Questionnaires, structured/unstructured interviews</li>
+          <li>Used to gather attitudes, opinions, history</li>
+        </ul>
+        <h4>Case Study Method</h4>
+        <ul>
+          <li>In-depth study of a single individual or group</li>
+          <li>Useful in nursing for understanding unusual presentations</li>
+        </ul>
+        <h4>Introspection</h4>
+        <ul>
+          <li>Self-examination of one's own thought processes</li>
+          <li>Subjective; earliest psychological method (Wundt)</li>
+        </ul>
+        <h4>Clinical Method</h4>
+        <ul>
+          <li>Includes psychological tests, case history, physical examination</li>
+          <li>Most relevant for nurses</li>
+        </ul>
+        <div class="mnemonic"><strong>🔑 OESCI:</strong> Observation, Experiment, Survey, Case study, Introspection</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">🔗</span>
+        <div class="card-meta">
+          <div class="card-title">Relationship with Other Subjects</div>
+          <span class="card-tag">Unit I</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Psychology & Nursing</h4>
+        <ul>
+          <li>Understanding patient behaviour, compliance, pain response</li>
+          <li>Therapeutic communication, patient education</li>
+          <li>Helps nurses manage their own stress (self-care)</li>
+        </ul>
+        <h4>Psychology & Medicine</h4>
+        <ul>
+          <li>Psychosomatic disorders (mind-body connection)</li>
+          <li>Placebo effect, doctor-patient relationship</li>
+        </ul>
+        <h4>Psychology & Sociology</h4>
+        <ul>
+          <li>Social influences on behaviour (culture, family, peers)</li>
+          <li>Group dynamics in hospital settings</li>
+        </ul>
+        <h4>Psychology & Biology</h4>
+        <ul>
+          <li>Neuroscience: brain-behaviour relationships</li>
+          <li>Genetic basis of mental disorders</li>
+        </ul>
+        <h4>Psychology & Education</h4>
+        <ul>
+          <li>Teaching-learning process, motivation, memory</li>
+          <li>Patient/health education principles</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- =================== UNIT II =================== -->
+<div class="unit-section" data-unit="2">
+  <div class="unit-header" onclick="toggleUnit(this)">
+    <span class="unit-badge">Unit II</span>
+    <h2>Sensation, Attention & Perception</h2>
+    <span class="unit-toggle">▾</span>
+  </div>
+  <div class="unit-body">
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">👁️</span>
+        <div class="card-meta">
+          <div class="card-title">Sensation — Definition & Sensory Processes</div>
+          <span class="card-tag">Unit II</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Definition</h4>
+        <ul>
+          <li><strong>Sensation</strong> = the process by which sense organs detect physical stimuli from the environment and transmit them to the brain</li>
+          <li>Involves receptor → afferent nerve → brain</li>
+          <li>It is the raw data before interpretation</li>
+        </ul>
+        <h4>Types of Sensation (Sense Modalities)</h4>
+        <ul>
+          <li><strong>Exteroceptive:</strong> Vision, Hearing, Touch, Taste, Smell — receives external stimuli</li>
+          <li><strong>Interoceptive:</strong> visceral sensations (pain, hunger, nausea)</li>
+          <li><strong>Proprioceptive:</strong> position and movement of body parts (muscles, joints)</li>
+        </ul>
+        <h4>Sensory Threshold</h4>
+        <ul>
+          <li><strong>Absolute threshold:</strong> minimum stimulus needed to produce sensation 50% of time</li>
+          <li><strong>Difference threshold (JND):</strong> minimum change in stimulus that can be detected</li>
+          <li><strong>Sensory adaptation:</strong> decreased sensitivity after prolonged exposure (e.g., smell in ICU)</li>
+        </ul>
+        <h4>Normal vs Abnormal Sensation</h4>
+        <ul>
+          <li><strong>Normal:</strong> accurate transmission of stimuli via intact sense organs</li>
+          <li><strong>Hyperesthesia:</strong> abnormally increased sensitivity (pain)</li>
+          <li><strong>Hypoesthesia/Anesthesia:</strong> decreased or absent sensation</li>
+          <li><strong>Paresthesia:</strong> abnormal sensations (tingling, burning) without stimulus</li>
+          <li><strong>Hallucination:</strong> perception without external stimulus (important in psych nursing)</li>
+        </ul>
+        <div class="imp">⭐ Exam: Distinguish sensation from perception. Sensation = detection; Perception = interpretation.</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">🎯</span>
+        <div class="card-meta">
+          <div class="card-title">Attention — Definition & Distraction</div>
+          <span class="card-tag">Unit II</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Definition</h4>
+        <ul>
+          <li><strong>Attention</strong> = selective concentration of consciousness on a particular stimulus while ignoring others</li>
+          <li>It is the focusing of mental resources on selected information</li>
+          <li>William James: "Everyone knows what attention is… taking possession of the mind in clear and vivid form"</li>
+        </ul>
+        <h4>Types of Attention</h4>
+        <ul>
+          <li><strong>Involuntary/Reflexive:</strong> automatic, no effort (e.g., loud noise pulls attention)</li>
+          <li><strong>Voluntary/Deliberate:</strong> conscious effort (e.g., studying)</li>
+          <li><strong>Habitual:</strong> no effort after repetition (e.g., experienced nurse scanning monitor)</li>
+        </ul>
+        <h4>Factors Affecting Attention (Determinants)</h4>
+        <ul>
+          <li><strong>Objective factors (stimulus properties):</strong> Intensity, Size, Novelty, Movement, Repetition, Contrast</li>
+          <li><strong>Subjective factors (personal):</strong> Interest, Set/Expectation, Emotions, Fatigue, Practice, Needs/Motives</li>
+        </ul>
+        <h4>Distraction & Contributory Factors</h4>
+        <ul>
+          <li>Internal distractors: pain, anxiety, hunger, emotional distress</li>
+          <li>External distractors: noise, movement, bright lights</li>
+          <li>In nursing: patient distraction can affect understanding of instructions, consent</li>
+          <li>Strategy: minimize distractors during patient teaching/counselling</li>
+        </ul>
+        <div class="mnemonic"><strong>🔑 INSME:</strong> Intensity, Novelty, Size, Movement, Emotion — factors that capture attention</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">🧩</span>
+        <div class="card-meta">
+          <div class="card-title">Perception — Normal & Abnormal</div>
+          <span class="card-tag">Unit II</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Definition</h4>
+        <ul>
+          <li><strong>Perception</strong> = the process by which the brain organizes, interprets, and gives meaning to sensory information</li>
+          <li>Goes beyond raw sensation — involves higher brain functions</li>
+          <li>Influenced by past experience, expectations, culture, emotions</li>
+        </ul>
+        <h4>Characteristics of Perception</h4>
+        <ul>
+          <li><strong>Selectivity:</strong> we perceive what is relevant to us (figure-ground)</li>
+          <li><strong>Organisation:</strong> we group stimuli into patterns (Gestalt principles)</li>
+          <li><strong>Constancy:</strong> objects appear stable despite changes in stimulus (size, shape constancy)</li>
+          <li><strong>Meaningfulness:</strong> perception is always meaningful/interpretive</li>
+          <li><strong>Subjectivity:</strong> two people may perceive same event differently</li>
+        </ul>
+        <h4>Gestalt Principles</h4>
+        <ul>
+          <li><strong>Figure-Ground:</strong> focusing on one element vs background</li>
+          <li><strong>Proximity:</strong> close objects seen as group</li>
+          <li><strong>Similarity:</strong> similar objects grouped together</li>
+          <li><strong>Closure:</strong> filling in gaps to make complete picture</li>
+          <li><strong>Continuity:</strong> perceiving smooth flowing lines</li>
+        </ul>
+        <h4>Normal Perception</h4>
+        <ul>
+          <li>Accurate interpretation matching reality</li>
+          <li>Consistent with others' perception of same stimulus</li>
+        </ul>
+        <h4>Abnormal Perception</h4>
+        <ul>
+          <li><strong>Illusion:</strong> misinterpretation of a real external stimulus (e.g., rope seen as snake)</li>
+          <li><strong>Hallucination:</strong> perception without any external stimulus; most serious perceptual abnormality</li>
+          <li>Types of hallucination: Auditory (most common in schizophrenia), Visual, Olfactory, Gustatory, Tactile</li>
+          <li><strong>Depersonalization:</strong> feeling detached from one's own body</li>
+          <li><strong>Derealization:</strong> surroundings seem unreal</li>
+        </ul>
+        <div class="imp">⭐ Important: Illusion = real stimulus misinterpreted. Hallucination = NO real stimulus. This distinction is frequently tested.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- =================== UNIT III =================== -->
+<div class="unit-section" data-unit="3">
+  <div class="unit-header" onclick="toggleUnit(this)">
+    <span class="unit-badge">Unit III</span>
+    <h2>Motivation</h2>
+    <span class="unit-toggle">▾</span>
+  </div>
+  <div class="unit-body">
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">🚀</span>
+        <div class="card-meta">
+          <div class="card-title">Definition & Nature of Motivation</div>
+          <span class="card-tag">Unit III</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Definition</h4>
+        <ul>
+          <li><strong>Motivation</strong> = the driving force that initiates, directs, and sustains goal-directed behaviour</li>
+          <li>From Latin <em>movere</em> = to move</li>
+          <li>Includes motives (internal states) that push/pull behaviour toward goals</li>
+          <li>Motivation = Needs + Drives + Incentives</li>
+        </ul>
+        <h4>Nature/Characteristics</h4>
+        <ul>
+          <li>It is an internal state/condition</li>
+          <li>It is goal-directed</li>
+          <li>It energizes and sustains behaviour</li>
+          <li>Can be conscious or unconscious</li>
+          <li>Can be biological or learned (social)</li>
+          <li>It is dynamic — changes with time and situation</li>
+        </ul>
+        <h4>Key Concepts</h4>
+        <ul>
+          <li><strong>Need:</strong> deficiency state (e.g., hunger = need for food)</li>
+          <li><strong>Drive:</strong> internal tension arising from need (motivates action)</li>
+          <li><strong>Incentive:</strong> external object/event that motivates (e.g., food, money, praise)</li>
+          <li><strong>Goal:</strong> what satisfies the drive</li>
+        </ul>
+        <div class="mnemonic"><strong>🔑 NDIG:</strong> Need → Drive → Incentive → Goal</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">🧬</span>
+        <div class="card-meta">
+          <div class="card-title">Biological & Social Motives</div>
+          <span class="card-tag">Unit III</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Biological (Primary) Motives</h4>
+        <ul>
+          <li>Innate, unlearned, physiological basis</li>
+          <li><strong>Hunger:</strong> blood glucose drop → hypothalamus → eating behaviour</li>
+          <li><strong>Thirst:</strong> osmoreceptors in hypothalamus detect dehydration</li>
+          <li><strong>Sleep:</strong> RAS (Reticular Activating System) regulation</li>
+          <li><strong>Sex/Reproduction:</strong> hormonal drive</li>
+          <li><strong>Pain avoidance:</strong> protective reflex mechanism</li>
+          <li><strong>Temperature regulation:</strong> homeostatic drive</li>
+          <li><strong>Maternal drive:</strong> care for offspring</li>
+        </ul>
+        <h4>Social (Secondary/Psychological) Motives</h4>
+        <ul>
+          <li>Learned, culturally influenced</li>
+          <li><strong>Achievement motive:</strong> desire to excel (McClelland — n-Ach)</li>
+          <li><strong>Affiliation motive:</strong> need to belong, be with others</li>
+          <li><strong>Power motive:</strong> desire to influence others</li>
+          <li><strong>Approval motive:</strong> need for recognition/praise</li>
+          <li><strong>Security motive:</strong> desire for safety and stability</li>
+          <li><strong>Curiosity motive:</strong> drive to explore and know</li>
+        </ul>
+        <h4>Nursing Relevance</h4>
+        <ul>
+          <li>Sick patients lose biological drives (anorexia, reduced thirst)</li>
+          <li>Nurse must recognize altered motives and adapt care plans</li>
+          <li>Social motives (affiliation, security) become prominent during illness</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">😤</span>
+        <div class="card-meta">
+          <div class="card-title">Frustration & Conflicts</div>
+          <span class="card-tag">Unit III</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Frustration — Definition</h4>
+        <ul>
+          <li>The blocking or thwarting of goal-directed behaviour</li>
+          <li>Occurs when a motivated person is prevented from reaching their goal</li>
+          <li>Sources: External (people, situations) or Internal (personal limitations)</li>
+        </ul>
+        <h4>Responses to Frustration</h4>
+        <ul>
+          <li><strong>Aggression:</strong> outward hostility (Dollard's Frustration-Aggression Hypothesis)</li>
+          <li><strong>Withdrawal/Regression:</strong> retreating to earlier behaviours</li>
+          <li><strong>Fixation:</strong> repeating ineffective behaviour</li>
+          <li><strong>Resignation:</strong> giving up</li>
+          <li><strong>Constructive coping:</strong> problem-solving, finding alternatives</li>
+        </ul>
+        <h4>Conflict — Definition</h4>
+        <ul>
+          <li>Simultaneous presence of two or more incompatible motives or goals</li>
+          <li>Creates psychological tension</li>
+        </ul>
+        <h4>Types of Conflict (Lewin)</h4>
+        <ul>
+          <li><strong>Approach-Approach:</strong> choosing between TWO attractive goals (pleasant dilemma) e.g., two good job offers</li>
+          <li><strong>Avoidance-Avoidance:</strong> choosing between TWO unpleasant alternatives (double bind) e.g., surgery vs pain</li>
+          <li><strong>Approach-Avoidance:</strong> one goal has BOTH attractive and repulsive aspects e.g., wanting recovery but fearing surgery</li>
+          <li><strong>Double Approach-Avoidance:</strong> multiple goals each with positive & negative aspects — most complex, most common in real life</li>
+        </ul>
+        <div class="imp">⭐ Exam: Define all 4 types of conflict with examples. Patients often experience approach-avoidance conflict about treatment.</div>
+        <div class="mnemonic"><strong>🔑 "AA, AA, AA, DAA"</strong> = App-App, Avoid-Avoid, App-Avoid, Double App-Avoid</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">🏔️</span>
+        <div class="card-meta">
+          <div class="card-title">Maslow's Hierarchy & Self-Actualization</div>
+          <span class="card-tag">Unit III</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Maslow's Hierarchy of Needs (1943)</h4>
+        <ul>
+          <li><strong>Level 1 — Physiological:</strong> food, water, sleep, warmth, oxygen, homeostasis (MOST basic)</li>
+          <li><strong>Level 2 — Safety/Security:</strong> physical safety, stability, freedom from fear</li>
+          <li><strong>Level 3 — Love/Belonging:</strong> social connections, relationships, affection, sense of belonging</li>
+          <li><strong>Level 4 — Esteem:</strong> self-esteem, achievement, recognition, mastery, respect</li>
+          <li><strong>Level 5 — Self-Actualization:</strong> realizing full potential, creativity, peak experiences</li>
+        </ul>
+        <h4>Self-Actualization</h4>
+        <ul>
+          <li>Highest level — becoming the best one can be</li>
+          <li>Characteristics of self-actualized people (Maslow): realistic, problem-centered, autonomous, creative, spontaneous, deep relationships, peak experiences, acceptance of self & others</li>
+          <li>Only ~1% of people reach self-actualization</li>
+          <li>Examples: Gandhi, Einstein, Mother Teresa</li>
+        </ul>
+        <h4>Nursing Application</h4>
+        <ul>
+          <li>Sick patients often regress to lower levels (safety, physiological)</li>
+          <li>Nurse must meet lower needs FIRST before higher needs can be addressed</li>
+          <li>Sickness threatens safety and esteem needs</li>
+          <li>Recovery path = ascending Maslow's pyramid</li>
+        </ul>
+        <div class="mnemonic"><strong>🔑 "Please Stop Loving Everyone Selflessly"</strong> — Physiological, Safety, Love, Esteem, Self-actualization</div>
+        <div class="imp">⭐ Must draw and label the pyramid. Know how each level applies to patient care.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- =================== UNIT IV =================== -->
+<div class="unit-section" data-unit="4">
+  <div class="unit-header" onclick="toggleUnit(this)">
+    <span class="unit-badge">Unit IV</span>
+    <h2>Emotions</h2>
+    <span class="unit-toggle">▾</span>
+  </div>
+  <div class="unit-body">
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">💓</span>
+        <div class="card-meta">
+          <div class="card-title">Definition & Nature of Emotions</div>
+          <span class="card-tag">Unit IV</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Definition</h4>
+        <ul>
+          <li><strong>Emotion</strong> = complex feeling states accompanied by physiological arousal and behavioural expressions that influence behaviour</li>
+          <li>From Latin <em>emovere</em> = to stir up, to move</li>
+          <li>Components: Subjective feeling + Physiological changes + Cognitive appraisal + Behavioural expression</li>
+        </ul>
+        <h4>Basic / Primary Emotions (Paul Ekman)</h4>
+        <ul>
+          <li>Fear, Anger, Disgust, Happiness, Sadness, Surprise — universal across cultures</li>
+          <li>Also: Contempt added later</li>
+        </ul>
+        <h4>Theories of Emotion</h4>
+        <ul>
+          <li><strong>James-Lange Theory:</strong> physiological change → emotion ("we feel afraid because we tremble")</li>
+          <li><strong>Cannon-Bard Theory:</strong> stimulus → simultaneous physiology + emotion (thalamus theory)</li>
+          <li><strong>Schachter-Singer (Two-Factor):</strong> physiological arousal + cognitive label = emotion</li>
+          <li><strong>Lazarus Cognitive Appraisal:</strong> emotion depends on how you appraise/interpret the situation</li>
+        </ul>
+        <h4>Physiological Changes in Emotion</h4>
+        <ul>
+          <li>↑ Heart rate, ↑ Blood pressure</li>
+          <li>Pupil dilation, sweating, piloerection</li>
+          <li>Release of adrenaline (epinephrine) from adrenal medulla</li>
+          <li>Controlled by Autonomic Nervous System (sympathetic activation)</li>
+          <li>Limbic system (amygdala) plays key role in emotional processing</li>
+        </ul>
+        <div class="mnemonic"><strong>🔑 FACE-SP:</strong> Fear, Anger, Contempt, Excitement, Sadness, Pride — common emotions in sick patients</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">😷</span>
+        <div class="card-meta">
+          <div class="card-title">Emotions in Sickness & Nursing</div>
+          <span class="card-tag">Unit IV</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>How Sickness Affects Emotions</h4>
+        <ul>
+          <li><strong>Anxiety & Fear:</strong> most common; fear of death, pain, disability, unknown</li>
+          <li><strong>Anger:</strong> at situation, caregivers, God ("Why me?"); may be displaced onto nurses</li>
+          <li><strong>Depression/Sadness:</strong> loss of role, independence, body image changes</li>
+          <li><strong>Denial:</strong> refusing to accept diagnosis (especially cancer, AIDS)</li>
+          <li><strong>Guilt:</strong> feeling they caused their illness</li>
+          <li><strong>Hope:</strong> crucial positive emotion for recovery</li>
+        </ul>
+        <h4>Kübler-Ross Stages of Grief (DABDA)</h4>
+        <ul>
+          <li><strong>D</strong>enial → <strong>A</strong>nger → <strong>B</strong>argaining → <strong>D</strong>epression → <strong>A</strong>cceptance</li>
+          <li>Applied to any major loss: terminal illness, amputation, chronic disease</li>
+        </ul>
+        <h4>How Emotions Affect Physical Health</h4>
+        <ul>
+          <li>Anxiety → ↑ cortisol → immunosuppression</li>
+          <li>Chronic stress → cardiovascular disease, GI disorders, skin problems</li>
+          <li>Psychosomatic disorders: real physical symptoms caused/worsened by emotions</li>
+        </ul>
+        <h4>Nursing Management</h4>
+        <ul>
+          <li>Active listening, empathy, therapeutic communication</li>
+          <li>Explain procedures to reduce fear</li>
+          <li>Allow expression of emotions without judgment</li>
+          <li>Maintain patient dignity — prevents shame and humiliation</li>
+          <li>Refer to counsellor/psychiatrist when needed</li>
+        </ul>
+        <div class="imp">⭐ Know DABDA stages and apply them to patients with terminal illness. Very frequently asked in nursing exams.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- =================== UNIT V =================== -->
+<div class="unit-section" data-unit="5">
+  <div class="unit-header" onclick="toggleUnit(this)">
+    <span class="unit-badge">Unit V</span>
+    <h2>Personality</h2>
+    <span class="unit-toggle">▾</span>
+  </div>
+  <div class="unit-body">
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">🎭</span>
+        <div class="card-meta">
+          <div class="card-title">Definition & Constituents of Personality</div>
+          <span class="card-tag">Unit V</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Definition</h4>
+        <ul>
+          <li><strong>Personality</strong> = the unique, relatively stable pattern of thoughts, emotions, and behaviours that characterize an individual and distinguish them from others</li>
+          <li>From Latin <em>persona</em> = mask (used by Greek actors)</li>
+          <li>Gordon Allport: "the dynamic organization within the individual of those psychophysical systems that determine his unique adjustments to the environment"</li>
+        </ul>
+        <h4>Constituents of Personality</h4>
+        <ul>
+          <li><strong>Traits:</strong> stable, consistent characteristics (e.g., introversion, conscientiousness)</li>
+          <li><strong>Self-concept:</strong> how one perceives oneself</li>
+          <li><strong>Values & Beliefs:</strong> guiding principles</li>
+          <li><strong>Temperament:</strong> biologically based emotional reactivity (born with)</li>
+          <li><strong>Character:</strong> moral aspects of personality (shaped by learning)</li>
+          <li><strong>Habits:</strong> repeated patterns of behaviour</li>
+        </ul>
+        <h4>Major Personality Theories</h4>
+        <ul>
+          <li><strong>Freud's Psychoanalytic:</strong> Id (pleasure principle), Ego (reality principle), Superego (moral principle)</li>
+          <li><strong>Big Five (OCEAN):</strong> Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism</li>
+          <li><strong>Type A/B:</strong> Type A = competitive, time-pressured, hostile (↑ MI risk); Type B = relaxed</li>
+          <li><strong>Eysenck:</strong> Introversion-Extraversion + Neuroticism-Stability dimensions</li>
+        </ul>
+        <h4>Freud's Structural Theory</h4>
+        <ul>
+          <li><strong>Id:</strong> primitive, unconscious, seeks immediate pleasure (newborn is all id)</li>
+          <li><strong>Ego:</strong> conscious mediator between id and reality — delays gratification</li>
+          <li><strong>Superego:</strong> internalized morality, conscience, ideal self</li>
+        </ul>
+        <div class="mnemonic"><strong>🔑 OCEAN</strong> for Big Five; <strong>IES</strong> for Freud's Id-Ego-Superego</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">🏥</span>
+        <div class="card-meta">
+          <div class="card-title">Personality in Sickness & Nursing</div>
+          <span class="card-tag">Unit V</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>How Sickness Affects Personality</h4>
+        <ul>
+          <li>Regression: return to childlike dependence</li>
+          <li>Increased irritability, mood swings</li>
+          <li>Changes in self-concept (especially with disability, disfigurement)</li>
+          <li>Loss of role identity (breadwinner, parent)</li>
+          <li>Introversion may increase with chronic illness</li>
+        </ul>
+        <h4>Personality Types & Response to Illness</h4>
+        <ul>
+          <li><strong>Type A:</strong> poor patient — resists dependence, hostile, impatient; hard to nurse</li>
+          <li><strong>Type B:</strong> better patient — compliant, relaxed</li>
+          <li><strong>Neurotic:</strong> tends to exaggerate symptoms, more anxious</li>
+          <li><strong>Paranoid:</strong> suspicious of nurses, non-compliant</li>
+        </ul>
+        <h4>Nurse's Personality — Qualities Needed</h4>
+        <ul>
+          <li>Empathy, patience, emotional stability</li>
+          <li>Good communication, adaptability</li>
+          <li>Non-judgmental attitude</li>
+          <li>High emotional intelligence (EQ)</li>
+          <li>Self-awareness — knows own reactions/biases</li>
+        </ul>
+        <h4>Nurse-Patient Relationship & Personality</h4>
+        <ul>
+          <li>Nurse's personality directly affects therapeutic relationship</li>
+          <li>Warm, stable nurse personality → patient trust → better compliance → better outcomes</li>
+          <li>Burnout affects nurse's personality — self-care is essential</li>
+        </ul>
+        <div class="imp">⭐ Question: "How does personality affect nursing care?" Answer: Both patient's and nurse's personality influence therapeutic relationship and recovery.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- =================== UNIT VI =================== -->
+<div class="unit-section" data-unit="6">
+  <div class="unit-header" onclick="toggleUnit(this)">
+    <span class="unit-badge">Unit VI</span>
+    <h2>Psychological Aspects of Nursing</h2>
+    <span class="unit-toggle">▾</span>
+  </div>
+  <div class="unit-body">
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">🩺</span>
+        <div class="card-meta">
+          <div class="card-title">Behaviour & Sickness</div>
+          <span class="card-tag">Unit VI</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>How Sickness Changes Behaviour</h4>
+        <ul>
+          <li>Regression: dependent, demanding behaviour</li>
+          <li>Sick role (Talcott Parsons): exempt from duties, expected to seek help and get well</li>
+          <li>Non-compliance: refusing medications, diet, rest</li>
+          <li>Changed communication patterns (withdrawal, aggression)</li>
+          <li>Illness behaviour: actions taken to define one's illness and seek remedy</li>
+        </ul>
+        <h4>Factors Affecting Behaviour in Sickness</h4>
+        <ul>
+          <li>Nature and severity of illness</li>
+          <li>Pre-morbid personality</li>
+          <li>Cultural and religious beliefs</li>
+          <li>Family support system</li>
+          <li>Previous hospital experiences</li>
+          <li>Age and developmental level</li>
+        </ul>
+        <h4>Nurse's Role</h4>
+        <ul>
+          <li>Understand that difficult patient behaviour is often a response to illness/fear</li>
+          <li>Use therapeutic communication to address behavioural changes</li>
+          <li>Collaborate with multidisciplinary team</li>
+          <li>Set clear, consistent boundaries with compassion</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">👶</span>
+        <div class="card-meta">
+          <div class="card-title">Psychological Needs of Children & Adolescents</div>
+          <span class="card-tag">Unit VI</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Children (0-12 years)</h4>
+        <ul>
+          <li><strong>Separation anxiety:</strong> greatest fear — being separated from parents; allow rooming-in</li>
+          <li><strong>Fear of procedures/pain:</strong> use play therapy, child-friendly explanations</li>
+          <li><strong>Need for security:</strong> consistent caregivers, familiar toys, routines</li>
+          <li><strong>Communication:</strong> use simple language, drawings, puppets</li>
+          <li><strong>Regression:</strong> may revert to bedwetting, thumb-sucking — normal in illness</li>
+          <li>Erikson: Infants — Trust vs Mistrust; Toddlers — Autonomy vs Shame; School age — Industry vs Inferiority</li>
+        </ul>
+        <h4>Adolescents (12-18 years)</h4>
+        <ul>
+          <li><strong>Identity vs Role confusion</strong> (Erikson stage)</li>
+          <li><strong>Body image concerns:</strong> very sensitive to physical changes (scars, hair loss, weight changes)</li>
+          <li><strong>Peer group importance:</strong> fear of being "different"</li>
+          <li><strong>Privacy and dignity:</strong> must maintain; involve in decisions</li>
+          <li><strong>Independence:</strong> explain rationale for all procedures; do not patronize</li>
+          <li>Sexuality concerns may arise with hospitalization</li>
+        </ul>
+        <h4>Nursing Approach</h4>
+        <ul>
+          <li>Children: involve parents, use play therapy, minimize separation</li>
+          <li>Adolescents: maintain confidentiality, peer support, treat as adult-in-training</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">👨</span>
+        <div class="card-meta">
+          <div class="card-title">Psychological Needs of Adults</div>
+          <span class="card-tag">Unit VI</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Key Psychological Needs</h4>
+        <ul>
+          <li><strong>Autonomy & Control:</strong> involve in treatment decisions; informed consent is essential</li>
+          <li><strong>Role maintenance:</strong> worried about work, family responsibilities</li>
+          <li><strong>Financial concerns:</strong> cost of illness causes anxiety — social worker involvement</li>
+          <li><strong>Information needs:</strong> want to understand diagnosis, prognosis, treatment options</li>
+          <li><strong>Intimacy/sexuality:</strong> may be affected by illness — address sensitively</li>
+          <li><strong>Self-esteem:</strong> maintain dignity; avoid infantilizing (treating like child)</li>
+        </ul>
+        <h4>Erikson's Adult Stages</h4>
+        <ul>
+          <li>Young adult: Intimacy vs Isolation</li>
+          <li>Middle adult: Generativity vs Stagnation</li>
+        </ul>
+        <h4>Nursing Approach</h4>
+        <ul>
+          <li>Shared decision-making</li>
+          <li>Provide clear information, written materials</li>
+          <li>Respect cultural and religious beliefs</li>
+          <li>Maintain professional boundaries while being empathetic</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">👴</span>
+        <div class="card-meta">
+          <div class="card-title">Psychological Needs of the Aged</div>
+          <span class="card-tag">Unit VI</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Erikson's Stage: Ego Integrity vs Despair</h4>
+        <ul>
+          <li>Successful aging = accepting life with satisfaction (ego integrity)</li>
+          <li>Failure = regret, bitterness (despair)</li>
+        </ul>
+        <h4>Psychological Challenges of Old Age</h4>
+        <ul>
+          <li>Fear of death and dying</li>
+          <li>Loneliness and social isolation</li>
+          <li>Cognitive decline (memory loss, dementia)</li>
+          <li>Loss of independence — very distressing</li>
+          <li>Sensory losses (vision, hearing) → frustration, withdrawal</li>
+          <li>Loss of spouse, friends — grief</li>
+          <li>Ageism — feeling disrespected/invisible</li>
+        </ul>
+        <h4>Nursing Approach</h4>
+        <ul>
+          <li>Speak clearly (not loudly!), face-to-face, simple sentences</li>
+          <li>Maintain their independence as much as possible</li>
+          <li>Encourage reminiscence therapy</li>
+          <li>Involve family; assess caregiver burden</li>
+          <li>Prevent falls, pressure sores (decreased pain sensation)</li>
+          <li>Respect experience and wisdom; avoid ageist language</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">👨‍👩‍👧</span>
+        <div class="card-meta">
+          <div class="card-title">Psychological Needs of Attendants & Chronically Ill</div>
+          <span class="card-tag">Unit VI</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Psychological Needs of Attendants/Bystanders</h4>
+        <ul>
+          <li>Anxiety and fear about patient's condition</li>
+          <li>Need for accurate, timely information</li>
+          <li>May experience vicarious trauma (especially in ICU, critical care)</li>
+          <li>Caregiver burden — physical and emotional exhaustion</li>
+          <li>Financial stress from prolonged hospitalization</li>
+          <li>Guilt (especially if they feel responsible for accident/illness)</li>
+        </ul>
+        <h4>Nurse's Role with Attendants</h4>
+        <ul>
+          <li>Regular updates; designate spokesperson in large families</li>
+          <li>Prepare them psychologically for bad news</li>
+          <li>Teach caregiving skills to reduce anxiety</li>
+          <li>Acknowledge their emotional needs</li>
+          <li>Social worker/counselor referral for severe distress</li>
+        </ul>
+        <h4>Chronically Ill Individual</h4>
+        <ul>
+          <li>Depression and hopelessness common</li>
+          <li>Loss of purpose and meaning</li>
+          <li>Sick role becomes permanent — identity shifts to "patient"</li>
+          <li>Social withdrawal due to disability/pain</li>
+          <li>Non-compliance increases as hope diminishes</li>
+          <li>Spiritual needs intensify</li>
+        </ul>
+        <h4>Nursing Approach for Chronically Ill</h4>
+        <ul>
+          <li>Set realistic short-term goals to maintain hope</li>
+          <li>Empower patient: self-management skills, peer support groups</li>
+          <li>Palliative care approach: quality of life focus</li>
+          <li>Screen for depression regularly</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- =================== UNIT VII =================== -->
+<div class="unit-section" data-unit="7">
+  <div class="unit-header" onclick="toggleUnit(this)">
+    <span class="unit-badge">Unit VII</span>
+    <h2>Individual Differences</h2>
+    <span class="unit-toggle">▾</span>
+  </div>
+  <div class="unit-body">
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">🌈</span>
+        <div class="card-meta">
+          <div class="card-title">Significance of Individual Differences</div>
+          <span class="card-tag">Unit VII</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Definition</h4>
+        <ul>
+          <li>Individual differences = variations in physical, psychological, social, and intellectual characteristics that make each person unique</li>
+          <li>No two individuals (even identical twins) are psychologically identical</li>
+        </ul>
+        <h4>Areas of Individual Differences</h4>
+        <ul>
+          <li>Intelligence, personality, aptitude, achievement</li>
+          <li>Attitudes, values, beliefs</li>
+          <li>Physical traits (height, weight, body structure)</li>
+          <li>Emotional reactivity, temperament</li>
+          <li>Learning style, pace, preferences</li>
+          <li>Coping styles and response to stress</li>
+        </ul>
+        <h4>Significance</h4>
+        <ul>
+          <li>Explains why people behave differently in similar situations</li>
+          <li>Basis for individualized patient care</li>
+          <li>Relevant to educational planning (nursing students learn differently)</li>
+          <li>Basis for psychological testing and assessment</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">🧬</span>
+        <div class="card-meta">
+          <div class="card-title">Heredity vs Environment (Nature vs Nurture)</div>
+          <span class="card-tag">Unit VII</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Heredity (Nature)</h4>
+        <ul>
+          <li>Genetic transmission of traits from parents to offspring via chromosomes</li>
+          <li>Determines: physical traits, basic temperament, potential IQ range, susceptibility to some disorders</li>
+          <li>Evidence: twin studies (identical twins more similar even when raised apart)</li>
+          <li>Heritability of intelligence: ~50% genetic basis</li>
+        </ul>
+        <h4>Environment (Nurture)</h4>
+        <ul>
+          <li>All external influences: family, culture, education, nutrition, socioeconomic status</li>
+          <li>Prenatal environment: maternal nutrition, substance use, infections</li>
+          <li>Postnatal: parenting, peer influence, schooling, life experiences</li>
+          <li>Critically sensitive periods: early childhood (0-5 years) — most plastic</li>
+        </ul>
+        <h4>Interactionist View (Modern Consensus)</h4>
+        <ul>
+          <li>Both nature AND nurture interact continuously</li>
+          <li><strong>Gene-environment interaction:</strong> genes may be expressed differently in different environments</li>
+          <li><strong>Epigenetics:</strong> environment can switch genes on/off</li>
+          <li>Example: Genetically predisposed to depression — stressful environment triggers it; supportive environment may prevent it</li>
+        </ul>
+        <div class="imp">⭐ Nursing relevance: Understanding heredity + environment helps assess disease risk, plan preventive care, and understand patient behaviour.</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">⚕️</span>
+        <div class="card-meta">
+          <div class="card-title">Individual Differences in Health, Sickness & Nursing</div>
+          <span class="card-tag">Unit VII</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>In Health</h4>
+        <ul>
+          <li>Pain threshold varies widely between individuals</li>
+          <li>Health-seeking behaviour differs by personality, culture, education</li>
+          <li>Lifestyle choices (diet, exercise) vary by individual differences</li>
+          <li>Health literacy — affects understanding of health information</li>
+        </ul>
+        <h4>In Sickness</h4>
+        <ul>
+          <li>Symptom perception varies (some ignore, some catastrophize)</li>
+          <li>Response to treatment (drug metabolism differences — pharmacogenomics)</li>
+          <li>Coping style in illness (active vs avoidant)</li>
+          <li>Speed of recovery varies</li>
+        </ul>
+        <h4>Implications in Nursing</h4>
+        <ul>
+          <li><strong>Individualized care plans:</strong> not one-size-fits-all</li>
+          <li><strong>Communication adaptation:</strong> adjust based on education, age, culture</li>
+          <li><strong>Pain assessment:</strong> use validated tools; don't rely on stereotypes</li>
+          <li><strong>Health education:</strong> tailor content, literacy level, language</li>
+          <li><strong>Cultural competence:</strong> be aware of cultural differences in illness perception</li>
+          <li><strong>Non-judgmental:</strong> differences are normal, not moral failures</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- =================== UNIT VIII =================== -->
+<div class="unit-section" data-unit="8">
+  <div class="unit-header" onclick="toggleUnit(this)">
+    <span class="unit-badge">Unit VIII</span>
+    <h2>Intelligence & Abilities</h2>
+    <span class="unit-toggle">▾</span>
+  </div>
+  <div class="unit-body">
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">💡</span>
+        <div class="card-meta">
+          <div class="card-title">Definition & Theories of Intelligence</div>
+          <span class="card-tag">Unit VIII</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Definition</h4>
+        <ul>
+          <li><strong>Intelligence</strong> = the ability to learn from experience, solve problems, and adapt to new situations</li>
+          <li>Wechsler: "the global capacity of the individual to act purposefully, think rationally, and deal effectively with the environment"</li>
+          <li>Binet: the ability to judge, comprehend, and reason well</li>
+        </ul>
+        <h4>Theories of Intelligence</h4>
+        <ul>
+          <li><strong>Spearman's Two-Factor Theory:</strong> General intelligence (g) + Specific abilities (s)</li>
+          <li><strong>Thurstone's Primary Mental Abilities:</strong> 7 abilities: Verbal, Number, Spatial, Memory, Reasoning, Word Fluency, Perceptual Speed</li>
+          <li><strong>Gardner's Multiple Intelligences (1983):</strong> 8 types: Linguistic, Logical-mathematical, Spatial, Musical, Bodily-kinesthetic, Interpersonal, Intrapersonal, Naturalist</li>
+          <li><strong>Sternberg's Triarchic Theory:</strong> Analytical (academic), Creative, Practical (real-world)</li>
+          <li><strong>Emotional Intelligence (EQ - Goleman):</strong> Self-awareness, Self-regulation, Empathy, Motivation, Social skills — highly relevant to nursing!</li>
+        </ul>
+        <h4>Intelligence Quotient (IQ)</h4>
+        <ul>
+          <li>IQ = (Mental Age / Chronological Age) × 100</li>
+          <li>Average IQ = 90-110; Average range = 85-115</li>
+          <li>Gifted = IQ > 130; Intellectual Disability = IQ &lt; 70</li>
+        </ul>
+        <div class="mnemonic"><strong>🔑 IQ formula:</strong> MA/CA × 100 — Mental Age divided by Chronological Age × 100</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">📊</span>
+        <div class="card-meta">
+          <div class="card-title">Measurement of Intelligence & Intelligence in Sickness</div>
+          <span class="card-tag">Unit VIII</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Intelligence Tests</h4>
+        <ul>
+          <li><strong>Stanford-Binet Intelligence Scale:</strong> oldest; verbal emphasis; gives mental age</li>
+          <li><strong>Wechsler Scales:</strong> WAIS (adults), WISC (children), WPPSI (preschool) — most widely used clinically; gives Verbal + Performance IQ</li>
+          <li><strong>Raven's Progressive Matrices:</strong> non-verbal, culture-fair; pattern completion</li>
+          <li><strong>Bhatia's Battery (India):</strong> culturally adapted, uses Kohs Blocks, Pass-along test</li>
+        </ul>
+        <h4>Types of Tests</h4>
+        <ul>
+          <li>Individual vs Group tests</li>
+          <li>Verbal vs Non-verbal vs Performance tests</li>
+          <li>Speed vs Power tests</li>
+        </ul>
+        <h4>Intelligence During Sickness</h4>
+        <ul>
+          <li>Acute illness: temporary cognitive decline (confusion, delirium)</li>
+          <li>Chronic illness: fatigue, medication effects reduce performance</li>
+          <li>Brain injury: specific cognitive deficits</li>
+          <li>Dementia: progressive deterioration of intelligence</li>
+          <li>Malnutrition/anemia: cognitive impairment especially in children</li>
+        </ul>
+        <h4>Nursing Implications</h4>
+        <ul>
+          <li>Assess cognitive function (use MMSE - Mini Mental State Examination)</li>
+          <li>Adjust teaching methods for intellectual level</li>
+          <li>Never assume fixed intelligence — illness temporarily depresses it</li>
+          <li>Special care for intellectually disabled patients</li>
+        </ul>
+        <div class="imp">⭐ Know the key intelligence tests by name. WAIS is most commonly used in clinical settings for adults.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- =================== UNIT IX =================== -->
+<div class="unit-section" data-unit="9">
+  <div class="unit-header" onclick="toggleUnit(this)">
+    <span class="unit-badge">Unit IX</span>
+    <h2>Learning</h2>
+    <span class="unit-toggle">▾</span>
+  </div>
+  <div class="unit-body">
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">📚</span>
+        <div class="card-meta">
+          <div class="card-title">Definition & Conditions of Learning</div>
+          <span class="card-tag">Unit IX</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Definition</h4>
+        <ul>
+          <li><strong>Learning</strong> = a relatively permanent change in behaviour (or potential for behaviour) that results from practice or experience</li>
+          <li>Key word: "relatively permanent" (distinguishes from fatigue, drugs, maturation)</li>
+          <li>Must result from experience (not biological maturation alone)</li>
+        </ul>
+        <h4>Types of Learning</h4>
+        <ul>
+          <li><strong>Classical Conditioning (Pavlov):</strong> learning through association (NS + UCS → CS → CR)</li>
+          <li><strong>Operant Conditioning (Skinner):</strong> learning through consequences (reinforcement, punishment)</li>
+          <li><strong>Observational/Social Learning (Bandura):</strong> learning by watching others (modelling)</li>
+          <li><strong>Insight Learning (Köhler):</strong> sudden understanding — "aha!" moment</li>
+          <li><strong>Cognitive Learning:</strong> learning through thought, mental maps</li>
+        </ul>
+        <h4>Conditions of Learning</h4>
+        <ul>
+          <li><strong>Readiness:</strong> physical and mental preparedness to learn</li>
+          <li><strong>Motivation:</strong> desire to learn; intrinsic > extrinsic</li>
+          <li><strong>Practice:</strong> repetition strengthens learning</li>
+          <li><strong>Feedback/Knowledge of results:</strong> knowing if one is correct</li>
+          <li><strong>Active participation:</strong> doing > passive listening</li>
+          <li><strong>Meaningful material:</strong> learning is better when it has purpose</li>
+          <li><strong>Appropriate environment:</strong> free from distractions, comfortable</li>
+        </ul>
+        <div class="mnemonic"><strong>🔑 RM-PFAM:</strong> Readiness, Motivation, Practice, Feedback, Active participation, Meaning</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">⚖️</span>
+        <div class="card-meta">
+          <div class="card-title">Laws of Learning (Thorndike)</div>
+          <span class="card-tag">Unit IX</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Thorndike's Primary Laws</h4>
+        <ul>
+          <li><strong>Law of Readiness:</strong> learning is more effective when learner is ready and willing; forcing learning on unprepared person causes frustration</li>
+          <li><strong>Law of Exercise/Use:</strong> connections are strengthened by use (practice) and weakened by disuse; "use it or lose it"</li>
+          <li><strong>Law of Effect:</strong> behaviours followed by pleasant consequences (satisfiers) are strengthened; behaviours followed by unpleasant consequences (annoyers) are weakened; basis of reinforcement theory</li>
+        </ul>
+        <h4>Thorndike's Secondary Laws</h4>
+        <ul>
+          <li><strong>Law of Multiple Response:</strong> organism tries different responses until one works</li>
+          <li><strong>Law of Set/Attitude:</strong> learner's mental set influences learning</li>
+          <li><strong>Law of Partial Activity:</strong> selective response to relevant elements</li>
+          <li><strong>Law of Analogy:</strong> responds to new situations based on past similar situations</li>
+          <li><strong>Law of Associative Shift:</strong> any stimulus that occurs with a response can eventually elicit it</li>
+        </ul>
+        <h4>Application in Nursing Education</h4>
+        <ul>
+          <li>Assess patient's readiness before health teaching</li>
+          <li>Repeat key instructions (law of exercise)</li>
+          <li>Provide positive reinforcement for compliance (law of effect)</li>
+          <li>Use return demonstration — active practice</li>
+        </ul>
+        <div class="imp">⭐ Thorndike's 3 primary laws are frequently asked: Readiness, Exercise, Effect — REE</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">🏥</span>
+        <div class="card-meta">
+          <div class="card-title">Learning During Health & Sickness</div>
+          <span class="card-tag">Unit IX</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Learning in Health</h4>
+        <ul>
+          <li>Optimal when all conditions met (readiness, motivation, environment)</li>
+          <li>Health education possible at any time</li>
+          <li>Best time: patient is interested, not distracted</li>
+        </ul>
+        <h4>Learning During Sickness — Challenges</h4>
+        <ul>
+          <li>Pain and discomfort reduce concentration</li>
+          <li>Fever, medications (sedatives, analgesics) impair cognition</li>
+          <li>Anxiety interferes with encoding new information</li>
+          <li>Depression reduces motivation to learn</li>
+          <li>Fatigue limits attention span</li>
+          <li>Hospital environment — unfamiliar, noisy, distressing</li>
+        </ul>
+        <h4>Nursing Strategies for Learning in Sick Patients</h4>
+        <ul>
+          <li>Teach when patient is most alert (usually morning, after rest)</li>
+          <li>Keep sessions SHORT — 10-15 minutes maximum</li>
+          <li>Repeat important points multiple times</li>
+          <li>Use visual aids, pamphlets, models</li>
+          <li>Involve family as learning partners</li>
+          <li>Assess readiness; don't teach when in acute distress</li>
+          <li>Return demonstration — confirms learning</li>
+          <li>Follow up: re-teach if needed</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- =================== UNIT X =================== -->
+<div class="unit-section" data-unit="10">
+  <div class="unit-header" onclick="toggleUnit(this)">
+    <span class="unit-badge">Unit X</span>
+    <h2>Memory & Forgetting</h2>
+    <span class="unit-toggle">▾</span>
+  </div>
+  <div class="unit-body">
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">🧠</span>
+        <div class="card-meta">
+          <div class="card-title">Memory — Definition & Types</div>
+          <span class="card-tag">Unit X</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Definition</h4>
+        <ul>
+          <li><strong>Memory</strong> = the mental capacity to encode, store, and retrieve information</li>
+          <li>Memory is the foundation of learning — without memory, nothing can be learned</li>
+        </ul>
+        <h4>Three Stages of Memory (Atkinson-Shiffrin Modal Model)</h4>
+        <ul>
+          <li><strong>Encoding:</strong> converting information into a form the brain can process (acoustic, visual, semantic)</li>
+          <li><strong>Storage:</strong> retaining encoded information over time</li>
+          <li><strong>Retrieval:</strong> accessing stored information when needed</li>
+        </ul>
+        <h4>Types of Memory (Duration)</h4>
+        <ul>
+          <li><strong>Sensory Memory:</strong> very brief (0.5-3 sec); holds exact copy of sensory input (iconic-visual, echoic-auditory)</li>
+          <li><strong>Short-term Memory (STM) / Working Memory:</strong> 15-30 seconds; capacity = 7±2 chunks (Miller's Magic Number)</li>
+          <li><strong>Long-term Memory (LTM):</strong> potentially unlimited capacity and duration</li>
+        </ul>
+        <h4>Types of Long-term Memory</h4>
+        <ul>
+          <li><strong>Explicit (Declarative):</strong> conscious recall
+            <ul style="margin-left:16px">
+              <li>Episodic: personal events ("my first day in hospital")</li>
+              <li>Semantic: general knowledge and facts</li>
+            </ul>
+          </li>
+          <li><strong>Implicit (Non-declarative):</strong> unconscious
+            <ul style="margin-left:16px">
+              <li>Procedural: skills and habits (riding a bike, giving injection)</li>
+              <li>Priming: prior exposure influences later response</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="mnemonic"><strong>🔑 ESR</strong> = Encode, Store, Retrieve (memory stages)<br><strong>SEL</strong> = Sensory, Explicit, Learning (LTM types)</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">❌</span>
+        <div class="card-meta">
+          <div class="card-title">Forgetting — Definition, Theories & Sickness</div>
+          <span class="card-tag">Unit X</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Definition</h4>
+        <ul>
+          <li><strong>Forgetting</strong> = the inability to recall or recognize information that was previously learned</li>
+          <li>Ebbinghaus Forgetting Curve: most forgetting (60-70%) occurs within the FIRST 24 hours</li>
+          <li>Spaced practice (distributed learning) reduces forgetting</li>
+        </ul>
+        <h4>Theories of Forgetting</h4>
+        <ul>
+          <li><strong>Decay Theory:</strong> memory trace fades over time with disuse (like an unused path)</li>
+          <li><strong>Interference Theory:</strong> other memories interfere
+            <ul style="margin-left:16px">
+              <li>Proactive interference: old learning interferes with new</li>
+              <li>Retroactive interference: new learning interferes with old</li>
+            </ul>
+          </li>
+          <li><strong>Motivated Forgetting/Repression:</strong> unconscious suppression of painful memories (Freud)</li>
+          <li><strong>Retrieval Failure:</strong> memory exists but cannot be accessed (tip-of-tongue phenomenon)</li>
+          <li><strong>Encoding Failure:</strong> information never properly stored in first place</li>
+        </ul>
+        <h4>Memory & Forgetting in Sickness</h4>
+        <ul>
+          <li><strong>Amnesia:</strong> memory loss
+            <ul style="margin-left:16px">
+              <li>Anterograde: cannot form NEW memories (after injury)</li>
+              <li>Retrograde: cannot recall events BEFORE injury</li>
+            </ul>
+          </li>
+          <li><strong>Dementia:</strong> progressive memory loss (Alzheimer's)</li>
+          <li><strong>Delirium:</strong> acute confusional state — impaired memory and attention</li>
+          <li>Medications (benzodiazepines, antihistamines): impair encoding</li>
+          <li>Depression: pseudodementia — impairs recall but not storage</li>
+          <li>High fever: impairs memory consolidation</li>
+        </ul>
+        <h4>Nursing Implications</h4>
+        <ul>
+          <li>Use written instructions (don't rely only on verbal)</li>
+          <li>Repeat key information at each visit</li>
+          <li>Use memory aids: pill organisers, reminder cards</li>
+          <li>Involve caregiver for patients with memory impairment</li>
+          <li>Assess memory with tools: MMSE, clock drawing test</li>
+        </ul>
+        <div class="imp">⭐ Anterograde vs Retrograde amnesia — know the difference. Anterograde = AFTER injury (can't make new memories). Retrograde = BEFORE injury (lost old memories).</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- =================== UNIT XI =================== -->
+<div class="unit-section" data-unit="11">
+  <div class="unit-header" onclick="toggleUnit(this)">
+    <span class="unit-badge">Unit XI</span>
+    <h2>Attitudes</h2>
+    <span class="unit-toggle">▾</span>
+  </div>
+  <div class="unit-body">
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">💬</span>
+        <div class="card-meta">
+          <div class="card-title">Definition, Development & Modification of Attitudes</div>
+          <span class="card-tag">Unit XI</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Definition</h4>
+        <ul>
+          <li><strong>Attitude</strong> = a learned, relatively enduring predisposition to respond in a consistently favourable or unfavourable manner to a person, object, or situation</li>
+          <li>Gordon Allport: "A mental and neural state of readiness to respond"</li>
+        </ul>
+        <h4>Three Components (ABC Model)</h4>
+        <ul>
+          <li><strong>A — Affective (Emotional):</strong> feelings associated with the object ("I fear injections")</li>
+          <li><strong>B — Behavioural (Conative):</strong> predisposition to act in certain way ("I avoid injections")</li>
+          <li><strong>C — Cognitive:</strong> beliefs and knowledge about the object ("Injections cause pain")</li>
+        </ul>
+        <h4>Development of Attitudes</h4>
+        <ul>
+          <li><strong>Classical Conditioning:</strong> associations formed in childhood</li>
+          <li><strong>Operant Conditioning:</strong> attitudes reinforced by rewards/punishments</li>
+          <li><strong>Modelling/Observational Learning:</strong> learning attitudes by watching parents, peers, media</li>
+          <li><strong>Direct experience:</strong> personal encounters shape attitudes</li>
+          <li><strong>Cultural transmission:</strong> family, religion, education, media</li>
+        </ul>
+        <h4>Modification of Attitudes</h4>
+        <ul>
+          <li><strong>Persuasive communication:</strong> credible source + strong message + right audience</li>
+          <li><strong>Cognitive Dissonance (Festinger):</strong> holding contradictory beliefs causes discomfort → attitude change</li>
+          <li><strong>Exposure effect:</strong> repeated exposure often increases liking</li>
+          <li><strong>Group influence:</strong> conformity to group norms</li>
+          <li><strong>Education and information:</strong> correcting misconceptions</li>
+        </ul>
+        <div class="mnemonic"><strong>🔑 ABC</strong> = Affective, Behavioural, Cognitive — components of attitude</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">🏥</span>
+        <div class="card-meta">
+          <div class="card-title">Attitudes in Health & Sickness</div>
+          <span class="card-tag">Unit XI</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Attitudes Affecting Health Behaviour</h4>
+        <ul>
+          <li>Positive health attitudes → preventive behaviour (vaccination, screening, exercise)</li>
+          <li>Negative attitudes toward hospitals → delayed treatment-seeking</li>
+          <li>Stigma attitudes → reluctance to seek mental health treatment</li>
+          <li>Cultural attitudes (e.g., "illness is God's will") → fatalism, non-compliance</li>
+        </ul>
+        <h4>Health Belief Model (Rosenstock)</h4>
+        <ul>
+          <li>Perceived susceptibility: "Am I at risk?"</li>
+          <li>Perceived severity: "How serious is it?"</li>
+          <li>Perceived benefits: "Will treatment help?"</li>
+          <li>Perceived barriers: "What will it cost me?"</li>
+          <li>Cues to action: triggers that prompt health behaviour</li>
+        </ul>
+        <h4>Nurse's Attitudes in Care</h4>
+        <ul>
+          <li>Nurse attitudes toward patients directly affect quality of care</li>
+          <li>Negative attitudes (ageism, sexism, stigma toward addiction/HIV) = barrier to care</li>
+          <li>Empathic, non-judgmental attitude = therapeutic</li>
+          <li>Self-reflection and awareness needed to identify own biases</li>
+        </ul>
+        <h4>Attitude Change in Patients</h4>
+        <ul>
+          <li>Building trust before attempting attitude change</li>
+          <li>Motivational Interviewing (MI) — effective for resistant patients</li>
+          <li>Use patient's own values to motivate change</li>
+          <li>Peer educators/patient groups — very effective</li>
+        </ul>
+        <div class="imp">⭐ Attitude ≠ behaviour. Knowing something is healthy doesn't mean a person will do it. Address barriers to translate attitude → behaviour.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- =================== UNIT XII =================== -->
+<div class="unit-section" data-unit="12">
+  <div class="unit-header" onclick="toggleUnit(this)">
+    <span class="unit-badge">Unit XII</span>
+    <h2>Mental Hygiene, Mental Health & Defense Mechanisms</h2>
+    <span class="unit-toggle">▾</span>
+  </div>
+  <div class="unit-body">
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">🧘</span>
+        <div class="card-meta">
+          <div class="card-title">Mental Hygiene & Mental Health</div>
+          <span class="card-tag">Unit XII</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Mental Hygiene — Definition</h4>
+        <ul>
+          <li><strong>Mental hygiene</strong> = the science of maintaining and promoting mental health and preventing mental disorders</li>
+          <li>Term coined by Clifford Beers (1908) in "A Mind That Found Itself"</li>
+          <li>Focuses on prevention at three levels: Primary (prevent), Secondary (early detect), Tertiary (rehabilitation)</li>
+        </ul>
+        <h4>Mental Health — Definition</h4>
+        <ul>
+          <li><strong>WHO:</strong> "a state of wellbeing in which the individual realizes their own abilities, can cope with normal stresses of life, can work productively, and is able to make a contribution to their community"</li>
+          <li>Mental health is NOT merely the absence of mental illness</li>
+          <li>Positive mental health = flourishing, not just surviving</li>
+        </ul>
+        <h4>Characteristics of a Mentally Healthy Person</h4>
+        <ul>
+          <li>Positive self-concept and self-esteem</li>
+          <li>Reality-oriented — perceives self and world accurately</li>
+          <li>Effective coping with stress and frustration</li>
+          <li>Satisfying interpersonal relationships</li>
+          <li>Emotional balance — feels full range of emotions appropriately</li>
+          <li>Autonomous — can make independent decisions</li>
+          <li>Productive — contributes to self and society</li>
+          <li>Flexible and adaptable to change</li>
+          <li>Free from excessive anxiety, conflict, guilt</li>
+          <li>Spiritual wellbeing — sense of meaning and purpose</li>
+        </ul>
+        <div class="mnemonic"><strong>🔑 PREFACE:</strong> Positive self, Reality, Effective coping, Friends/relationships, Autonomy, Contributes, Emotional balance</div>
+        <div class="imp">⭐ WHO definition of mental health is exam-essential. Memorize it word for word.</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">🛡️</span>
+        <div class="card-meta">
+          <div class="card-title">Defense Mechanisms — Complete Guide</div>
+          <span class="card-tag">Unit XII</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Definition</h4>
+        <ul>
+          <li><strong>Defense mechanisms</strong> = unconscious psychological strategies used by the ego to protect itself from anxiety and distress caused by unacceptable thoughts, feelings, or conflicts (Freud)</li>
+          <li>They are automatic, unconscious, not deliberate lying</li>
+          <li>Healthy in moderation; pathological when excessive or rigid</li>
+        </ul>
+        <h4>Mature Defense Mechanisms (Healthy)</h4>
+        <ul>
+          <li><strong>Sublimation:</strong> redirecting unacceptable impulses into socially acceptable activities (e.g., aggressive person becomes surgeon)</li>
+          <li><strong>Humour:</strong> using comedy to deal with anxiety</li>
+          <li><strong>Altruism:</strong> helping others to reduce own distress</li>
+          <li><strong>Suppression:</strong> consciously postponing awareness of stressor</li>
+        </ul>
+        <h4>Neurotic Defense Mechanisms (Common)</h4>
+        <ul>
+          <li><strong>Repression:</strong> pushing painful memories/desires into unconscious (basis of all defenses) — e.g., forgetting traumatic event</li>
+          <li><strong>Rationalization:</strong> giving logical but untrue reasons for behaviour ("sour grapes") — e.g., "I failed because the questions were unfair"</li>
+          <li><strong>Projection:</strong> attributing own unacceptable feelings to others — e.g., "I'm not angry, HE is angry at ME"</li>
+          <li><strong>Reaction Formation:</strong> expressing opposite of true feeling — e.g., hating someone but acting overly friendly</li>
+          <li><strong>Displacement:</strong> redirecting feelings to a safer target — e.g., angry at boss → yells at family</li>
+          <li><strong>Intellectualization:</strong> dealing with emotions through abstract thinking — e.g., cancer patient reads research instead of processing fear</li>
+          <li><strong>Denial:</strong> refusing to acknowledge painful reality — e.g., alcoholic says "I don't have a drinking problem"</li>
+        </ul>
+        <h4>Immature Defense Mechanisms</h4>
+        <ul>
+          <li><strong>Regression:</strong> reverting to earlier developmental behaviour under stress — e.g., adult throws tantrum; sick child resumes bedwetting</li>
+          <li><strong>Somatization:</strong> converting emotional distress into physical symptoms</li>
+          <li><strong>Splitting:</strong> seeing things as all good or all bad (black/white thinking)</li>
+          <li><strong>Acting out:</strong> expressing feelings through actions rather than words</li>
+        </ul>
+        <h4>Nursing Relevance</h4>
+        <ul>
+          <li>Recognize patient's defense mechanisms without judgment</li>
+          <li>Denial in newly diagnosed patient — don't force acceptance; work with it</li>
+          <li>Projection — patient accusing nurse of not caring — understand it's displaced anger</li>
+          <li>Regression in sick adults and children — reassure and support</li>
+          <li>Document behaviour, not interpretation (e.g., "patient refused to discuss diagnosis" not "patient is in denial")</li>
+        </ul>
+        <div class="imp">⭐ MOST IMPORTANT EXAM TOPIC! Know at least 8 defense mechanisms with definitions and clinical examples. Repression, Rationalization, Projection, Denial, Sublimation, Displacement, Regression, Reaction Formation.</div>
+        <div class="mnemonic"><strong>🔑 "Real Rats Rarely Deny Doing Something Rotten In Public"</strong><br>Repression, Rationalization, Reaction Formation, Denial, Displacement, Sublimation, Regression, Intellectualization, Projection</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="card-emoji">🌿</span>
+        <div class="card-meta">
+          <div class="card-title">Principles of Mental Hygiene & Nurse's Role</div>
+          <span class="card-tag">Unit XII</span>
+        </div>
+        <span class="card-chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <h4>Principles of Mental Hygiene</h4>
+        <ul>
+          <li>Know yourself (self-understanding reduces inner conflicts)</li>
+          <li>Accept yourself (realistic self-appraisal)</li>
+          <li>Build and maintain satisfying relationships</li>
+          <li>Maintain balance between work and recreation</li>
+          <li>Develop healthy coping strategies for stress</li>
+          <li>Cultivate a sense of purpose and meaning</li>
+          <li>Seek help early — destigmatize mental health issues</li>
+          <li>Maintain physical health — mind-body connection</li>
+        </ul>
+        <h4>Nurse's Role in Mental Hygiene</h4>
+        <ul>
+          <li><strong>Prevention:</strong> health education, stress management programs, suicide prevention</li>
+          <li><strong>Early identification:</strong> screening patients for psychological distress</li>
+          <li><strong>Therapeutic environment:</strong> create safe, supportive ward atmosphere</li>
+          <li><strong>Emotional support:</strong> therapeutic communication, empathy, active listening</li>
+          <li><strong>Referral:</strong> to psychiatrist, counsellor, social worker as appropriate</li>
+          <li><strong>Self-care:</strong> nurse must model mental hygiene — avoid burnout</li>
+          <li><strong>Stigma reduction:</strong> educate public and colleagues about mental health</li>
+        </ul>
+        <h4>Nurse's Own Mental Health</h4>
+        <ul>
+          <li>High-stress profession — increased risk of burnout, compassion fatigue, PTSD</li>
+          <li>Signs of burnout: emotional exhaustion, depersonalization, reduced personal accomplishment</li>
+          <li>Self-care strategies: exercise, social support, supervision, mindfulness, work-life balance</li>
+          <li>Seek help without stigma — nurses deserve mental health care too</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</main>
+
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+// ===== THEME MANAGEMENT =====
+const themeBtn = document.getElementById('themeToggle');
+function applyTheme(dark) {
+  document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+  themeBtn.textContent = dark ? '☀️ Light Mode' : '🌙 Dark Mode';
+  localStorage.setItem('psych-theme', dark ? 'dark' : 'light');
+}
+// Init theme
+const savedTheme = localStorage.getItem('psych-theme');
+if (savedTheme) {
+  applyTheme(savedTheme === 'dark');
+} else {
+  applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
+}
+themeBtn.addEventListener('click', () => {
+  applyTheme(document.documentElement.getAttribute('data-theme') !== 'dark');
+});
+
+// ===== CARD TOGGLE =====
+let openedCards = new Set();
+let totalCards = document.querySelectorAll('.card').length;
+function updateProgress() {
+  const pct = totalCards ? (openedCards.size / totalCards * 100).toFixed(0) : 0;
+  document.getElementById('progressBar').style.width = pct + '%';
+  document.getElementById('progressCount').textContent = openedCards.size + ' / ' + totalCards + ' cards opened';
+}
+function toggleCard(card) {
+  const isOpen = card.classList.toggle('open');
+  if (isOpen) openedCards.add(card);
+  else openedCards.delete(card);
+  updateProgress();
+}
+updateProgress();
+
+// ===== UNIT TOGGLE =====
+function toggleUnit(header) {
+  header.parentElement.classList.toggle('collapsed');
+}
+
+// ===== EXPAND / COLLAPSE ALL =====
+function expandAll() {
+  document.querySelectorAll('.card').forEach(c => {
+    c.classList.add('open');
+    openedCards.add(c);
+  });
+  document.querySelectorAll('.unit-section').forEach(u => u.classList.remove('collapsed'));
+  updateProgress();
+}
+function collapseAll() {
+  document.querySelectorAll('.card').forEach(c => c.classList.remove('open'));
+  openedCards.clear();
+  updateProgress();
+}
+
+// ===== FILTER BUTTONS =====
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const unit = btn.dataset.unit;
+    document.querySelectorAll('.unit-section').forEach(sec => {
+      if (unit === 'all' || sec.dataset.unit === unit) {
+        sec.style.display = '';
+      } else {
+        sec.style.display = 'none';
+      }
+    });
+  });
+});
+
+// ===== SEARCH =====
+const searchInput = document.getElementById('searchInput');
+const noResults = document.getElementById('noResults');
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.toLowerCase().trim();
+  let anyVisible = false;
+  document.querySelectorAll('.unit-section').forEach(sec => {
+    let secVisible = false;
+    sec.querySelectorAll('.card').forEach(card => {
+      const text = card.textContent.toLowerCase();
+      const match = !query || text.includes(query);
+      card.style.display = match ? '' : 'none';
+      if (match) { secVisible = true; anyVisible = true; }
+    });
+    sec.style.display = secVisible ? '' : 'none';
+    if (secVisible && query) sec.classList.remove('collapsed');
+  });
+  noResults.style.display = anyVisible || !query ? 'none' : 'block';
+  // reset filter buttons
+  if (query) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    document.querySelector('.filter-btn[data-unit="all"]').classList.add('active');
+  }
+});
+
+// ===== SCROLL TO TOP =====
+const scrollTopBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) scrollTopBtn.classList.add('visible');
+  else scrollTopBtn.classList.remove('visible');
+});
+</script>
+</body>
+</html>
