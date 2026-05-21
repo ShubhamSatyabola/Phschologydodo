@@ -804,6 +804,243 @@ main { padding: 24px; max-width: 1400px; margin: 0 auto; }
 }
 #pyqSearch:focus { border-color: #6366f1; }
 
+/* ===== TAB NAVIGATION ===== */
+.tab-nav {
+  background: var(--surface);
+  border-bottom: 2px solid var(--border);
+  display: flex;
+  gap: 0;
+  padding: 0 24px;
+  overflow-x: auto;
+}
+.tab-btn {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 14px 22px;
+  border: none;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  margin-bottom: -2px;
+}
+.tab-btn:hover { color: var(--text); }
+.tab-btn.active { color: #4338ca; border-bottom-color: #4338ca; }
+[data-theme="dark"] .tab-btn.active { color: #818cf8; border-bottom-color: #818cf8; }
+
+/* ===== PYQ SECTION ===== */
+#pyq-view { display: none; }
+#syllabus-view { display: block; }
+
+.pyq-main { padding: 24px; max-width: 1400px; margin: 0 auto; }
+
+.pyq-unit {
+  margin-bottom: 32px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+.pyq-unit-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 22px;
+  cursor: pointer;
+  user-select: none;
+}
+.pyq-unit-header:hover { opacity: 0.9; }
+.pyq-unit-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 700;
+  flex: 1;
+}
+.pyq-toggle { font-size: 1.1rem; color: rgba(255,255,255,0.8); transition: transform 0.3s; }
+.pyq-unit.collapsed .pyq-toggle { transform: rotate(-90deg); }
+.pyq-unit.collapsed .pyq-body { display: none; }
+
+.pyq-body {
+  background: var(--bg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* PYQ unit gradient headers (same palette) */
+.pyq-unit[data-unit="1"] .pyq-unit-header { background: linear-gradient(135deg,#1d4ed8,#3b82f6); }
+.pyq-unit[data-unit="2"] .pyq-unit-header { background: linear-gradient(135deg,#15803d,#22c55e); }
+.pyq-unit[data-unit="3"] .pyq-unit-header { background: linear-gradient(135deg,#b91c1c,#ef4444); }
+.pyq-unit[data-unit="4"] .pyq-unit-header { background: linear-gradient(135deg,#7e22ce,#a855f7); }
+.pyq-unit[data-unit="5"] .pyq-unit-header { background: linear-gradient(135deg,#c2410c,#f97316); }
+.pyq-unit[data-unit="6"] .pyq-unit-header { background: linear-gradient(135deg,#0e7490,#06b6d4); }
+.pyq-unit[data-unit="7"] .pyq-unit-header { background: linear-gradient(135deg,#4d7c0f,#84cc16); }
+.pyq-unit[data-unit="8"] .pyq-unit-header { background: linear-gradient(135deg,#b45309,#f59e0b); }
+.pyq-unit[data-unit="9"] .pyq-unit-header { background: linear-gradient(135deg,#be185d,#ec4899); }
+.pyq-unit[data-unit="10"] .pyq-unit-header { background: linear-gradient(135deg,#6d28d9,#8b5cf6); }
+.pyq-unit[data-unit="11"] .pyq-unit-header { background: linear-gradient(135deg,#047857,#10b981); }
+.pyq-unit[data-unit="12"] .pyq-unit-header { background: linear-gradient(135deg,#9f1239,#e11d48); }
+
+/* PYQ Question card */
+.pyq-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1.5px solid var(--border);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.pyq-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-1px); }
+
+.pyq-q-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  cursor: pointer;
+}
+.pyq-q-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: var(--surface2);
+  color: var(--muted);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.pyq-q-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text);
+  flex: 1;
+  line-height: 1.35;
+}
+.pyq-marks {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: #fef3c7;
+  color: #92400e;
+  flex-shrink: 0;
+}
+[data-theme="dark"] .pyq-marks { background: #2a1f00; color: #fbbf24; }
+.pyq-chev { font-size: 0.85rem; color: var(--muted); transition: transform 0.3s; flex-shrink: 0; margin-top: 3px; }
+.pyq-card.open .pyq-chev { transform: rotate(180deg); }
+
+.pyq-answer {
+  display: none;
+  padding: 0 16px 18px;
+  border-top: 1px solid var(--border);
+  animation: fadeIn 0.25s ease;
+}
+.pyq-card.open .pyq-answer { display: block; }
+
+.pyq-answer h4 {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 14px 0 6px;
+  padding-bottom: 3px;
+  border-bottom: 1.5px solid var(--border);
+  color: var(--muted);
+}
+.pyq-answer ul { list-style: none; padding: 0; margin: 0; }
+.pyq-answer ul li {
+  font-size: 0.87rem;
+  color: var(--text);
+  padding: 4px 0 4px 18px;
+  position: relative;
+  line-height: 1.6;
+}
+.pyq-answer ul li::before { content: '▸'; position: absolute; left: 0; font-size: 0.72rem; top: 6px; color: var(--muted); }
+.pyq-answer .answer-box {
+  background: var(--surface2);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+.pyq-answer .mn {
+  background: var(--surface2);
+  border-left: 3px solid #f59e0b;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-top: 10px;
+  font-size: 0.82rem;
+}
+.pyq-answer .mn strong { color: #d97706; }
+.pyq-answer .tip {
+  border: 1.5px solid #fde68a;
+  background: #fefce8;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: #854d0e;
+}
+[data-theme="dark"] .pyq-answer .tip { background: #2a1f00; border-color: #5c4000; color: #fbbf24; }
+.pyq-answer table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.83rem;
+}
+.pyq-answer table th {
+  background: var(--surface2);
+  padding: 7px 10px;
+  text-align: left;
+  font-weight: 700;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+.pyq-answer table td {
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  vertical-align: top;
+}
+.pyq-answer table tr:nth-child(even) td { background: var(--surface2); }
+
+/* Unit-specific answer heading colors */
+.pyq-unit[data-unit="1"] .pyq-answer h4 { color: var(--u1); border-color: var(--u1-bg); }
+.pyq-unit[data-unit="2"] .pyq-answer h4 { color: var(--u2); border-color: var(--u2-bg); }
+.pyq-unit[data-unit="3"] .pyq-answer h4 { color: var(--u3); border-color: var(--u3-bg); }
+.pyq-unit[data-unit="4"] .pyq-answer h4 { color: var(--u4); border-color: var(--u4-bg); }
+.pyq-unit[data-unit="5"] .pyq-answer h4 { color: var(--u5); border-color: var(--u5-bg); }
+.pyq-unit[data-unit="6"] .pyq-answer h4 { color: var(--u6); border-color: var(--u6-bg); }
+.pyq-unit[data-unit="7"] .pyq-answer h4 { color: var(--u7); border-color: var(--u7-bg); }
+.pyq-unit[data-unit="8"] .pyq-answer h4 { color: var(--u8); border-color: var(--u8-bg); }
+.pyq-unit[data-unit="9"] .pyq-answer h4 { color: var(--u9); border-color: var(--u9-bg); }
+.pyq-unit[data-unit="10"] .pyq-answer h4 { color: var(--u10); border-color: var(--u10-bg); }
+.pyq-unit[data-unit="11"] .pyq-answer h4 { color: var(--u11); border-color: var(--u11-bg); }
+.pyq-unit[data-unit="12"] .pyq-answer h4 { color: var(--u12); border-color: var(--u12-bg); }
+
+.pyq-unit[data-unit="1"] .pyq-card { border-top: 3px solid var(--u1); }
+.pyq-unit[data-unit="2"] .pyq-card { border-top: 3px solid var(--u2); }
+.pyq-unit[data-unit="3"] .pyq-card { border-top: 3px solid var(--u3); }
+.pyq-unit[data-unit="4"] .pyq-card { border-top: 3px solid var(--u4); }
+.pyq-unit[data-unit="5"] .pyq-card { border-top: 3px solid var(--u5); }
+.pyq-unit[data-unit="6"] .pyq-card { border-top: 3px solid var(--u6); }
+.pyq-unit[data-unit="7"] .pyq-card { border-top: 3px solid var(--u7); }
+.pyq-unit[data-unit="8"] .pyq-card { border-top: 3px solid var(--u8); }
+.pyq-unit[data-unit="9"] .pyq-card { border-top: 3px solid var(--u9); }
+.pyq-unit[data-unit="10"] .pyq-card { border-top: 3px solid var(--u10); }
+.pyq-unit[data-unit="11"] .pyq-card { border-top: 3px solid var(--u11); }
+.pyq-unit[data-unit="12"] .pyq-card { border-top: 3px solid var(--u12); }
+
 /* ===== SCROLL TOP ===== */
 #scrollTop {
   position: fixed;
@@ -886,6 +1123,7 @@ main { padding: 24px; max-width: 1400px; margin: 0 auto; }
   <div class="toolbar">
     <button class="btn btn-ghost" id="themeToggle">🌙 Dark Mode</button>
     <button class="btn btn-print" onclick="window.print()">🖨️ Print / PDF</button>
+    <button class="btn btn-ghost" onclick="window.open('psychology-pyq-answers.html','_blank')" style="background:#7c3aed;color:#fff;border-color:#7c3aed;">📝 PYQ Answers</button>
   </div>
 </header>
 
@@ -939,20 +1177,19 @@ main { padding: 24px; max-width: 1400px; margin: 0 auto; }
   <span class="progress-count" id="progressCount">0 / 0 cards opened</span>
 </div>
 
-<!-- EXPAND CONTROLS -->
-<div class="expand-row">
-  <button class="btn-sm" onclick="expandAll()">▼ Expand All Cards</button>
-  <button class="btn-sm" onclick="collapseAll()">▲ Collapse All Cards</button>
-</div>
-
-<!-- TAB NAV -->
+<!-- TAB NAVIGATION -->
 <div class="tab-nav">
-  <button class="tab-btn active" data-tab="syllabus">📖 Syllabus Notes</button>
-  <button class="tab-btn" data-tab="pyq">📝 PYQ Answers</button>
+  <button class="tab-btn active" onclick="switchTab('syllabus',this)">&#128214; Study Notes</button>
+  <button class="tab-btn" onclick="switchTab('pyq',this)">&#128221; PYQ Answers</button>
 </div>
 
-<!-- ===== SYLLABUS TAB ===== -->
-<div id="tab-syllabus" class="tab-panel active">
+<!-- EXPAND CONTROLS (syllabus) -->
+<div class="expand-row" id="expandRow">
+  <button class="btn-sm" onclick="expandAll()">&#9660; Expand All Cards</button>
+  <button class="btn-sm" onclick="collapseAll()">&#9650; Collapse All Cards</button>
+</div>
+
+<div id="syllabus-view">
 <main>
 
 <!-- IMPORTANT QUESTIONS BANNER -->
@@ -2517,6 +2754,7 @@ main { padding: 24px; max-width: 1400px; margin: 0 auto; }
 </div>
 
 </main>
+</div><!-- /syllabus-view -->
 
 <button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 

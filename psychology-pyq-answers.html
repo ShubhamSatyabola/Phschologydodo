@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Psychology PYQ Answers — Post BSc Nursing Yr 1</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f4f8;--surface:#fff;--surface2:#f0f0f6;--text:#1a1a2e;--muted:#5a5a7a;
+  --border:#dde0f0;--shadow:0 2px 16px rgba(30,27,75,.08);--shadow-h:0 8px 32px rgba(30,27,75,.18);
+  --u1:#2563eb;--u1-bg:#eff6ff;--u2:#16a34a;--u2-bg:#f0fdf4;
+  --u3:#dc2626;--u3-bg:#fef2f2;--u4:#9333ea;--u4-bg:#faf5ff;
+  --u5:#ea580c;--u5-bg:#fff7ed;--u6:#0891b2;--u6-bg:#ecfeff;
+  --u7:#65a30d;--u7-bg:#f7fee7;--u8:#d97706;--u8-bg:#fffbeb;
+  --u9:#db2777;--u9-bg:#fdf2f8;--u10:#7c3aed;--u10-bg:#f5f3ff;
+  --u11:#059669;--u11-bg:#ecfdf5;--u12:#be123c;--u12-bg:#fff1f2;
+}
+[data-theme="dark"]{
+  --bg:#0f1117;--surface:#1a1d27;--surface2:#1f2235;--text:#e8e8f0;--muted:#9ca3af;--border:#2d3148;
+  --shadow:0 2px 16px rgba(0,0,0,.4);--shadow-h:0 8px 32px rgba(0,0,0,.6);
+  --u1:#60a5fa;--u1-bg:#0d1a3d;--u2:#4ade80;--u2-bg:#0a2318;
+  --u3:#f87171;--u3-bg:#2d0a0a;--u4:#c084fc;--u4-bg:#1e0a3d;
+  --u5:#fb923c;--u5-bg:#2d1205;--u6:#22d3ee;--u6-bg:#051e2d;
+  --u7:#a3e635;--u7-bg:#0f1f02;--u8:#fbbf24;--u8-bg:#2d1f00;
+  --u9:#f472b6;--u9-bg:#2d0a1e;--u10:#a78bfa;--u10-bg:#180a3d;
+  --u11:#34d399;--u11-bg:#022616;--u12:#fb7185;--u12-bg:#2d0714;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;transition:background .3s,color .3s}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:100;background:linear-gradient(135deg,#1e1b4b,#312e81,#4338ca);padding:0 24px;height:68px;display:flex;align-items:center;gap:14px;box-shadow:0 4px 24px rgba(0,0,0,.3)}
+.h-title{flex:1}
+.h-title h1{font-family:'Playfair Display',serif;font-size:1.3rem;color:#fff;font-weight:700}
+.h-title p{font-size:.76rem;color:#c7d2fe}
+.toolbar{display:flex;gap:8px}
+.btn{font-family:'Source Sans 3',sans-serif;font-size:.82rem;font-weight:600;padding:7px 14px;border-radius:8px;border:none;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:5px;white-space:nowrap}
+.btn-back{background:rgba(255,255,255,.12);color:#e0e7ff;border:1px solid rgba(255,255,255,.2)}
+.btn-back:hover{background:rgba(255,255,255,.22)}
+.btn-theme{background:rgba(255,255,255,.12);color:#e0e7ff;border:1px solid rgba(255,255,255,.2)}
+.btn-theme:hover{background:rgba(255,255,255,.22)}
+.btn-print{background:#f59e0b;color:#1a1a2e}
+.btn-print:hover{background:#d97706}
+
+/* SEARCH */
+.search-bar{background:linear-gradient(135deg,#312e81,#4338ca);padding:12px 24px;border-bottom:1px solid rgba(255,255,255,.1);display:flex;gap:10px;align-items:center}
+.search-bar input{flex:1;padding:9px 12px 9px 36px;border-radius:8px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.1);color:#fff;font-family:'Source Sans 3',sans-serif;font-size:.88rem;outline:none}
+.search-bar input::placeholder{color:#a5b4fc}
+.search-bar input:focus{background:rgba(255,255,255,.18)}
+.search-bar span{position:absolute;left:36px;font-size:1rem;color:#a5b4fc}
+.si-wrap{position:relative;flex:1}
+
+/* UNIT FILTER */
+.filter-row{background:var(--surface);border-bottom:1px solid var(--border);padding:12px 24px;display:flex;flex-wrap:wrap;gap:7px;align-items:center}
+.fl{font-size:.76rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-right:4px}
+.fb{font-family:'Source Sans 3',sans-serif;font-size:.76rem;font-weight:600;padding:4px 11px;border-radius:20px;border:2px solid transparent;cursor:pointer;transition:all .2s;background:var(--surface2);color:var(--muted)}
+.fb[data-u="all"]{border-color:#6366f1;color:#6366f1;background:transparent}
+.fb[data-u="all"].on{background:#6366f1;color:#fff}
+.fb[data-u="1"]{border-color:var(--u1)}.fb[data-u="1"].on{background:var(--u1);color:#fff}
+.fb[data-u="2"]{border-color:var(--u2)}.fb[data-u="2"].on{background:var(--u2);color:#fff}
+.fb[data-u="3"]{border-color:var(--u3)}.fb[data-u="3"].on{background:var(--u3);color:#fff}
+.fb[data-u="4"]{border-color:var(--u4)}.fb[data-u="4"].on{background:var(--u4);color:#fff}
+.fb[data-u="5"]{border-color:var(--u5)}.fb[data-u="5"].on{background:var(--u5);color:#fff}
+.fb[data-u="6"]{border-color:var(--u6)}.fb[data-u="6"].on{background:var(--u6);color:#fff}
+.fb[data-u="7"]{border-color:var(--u7)}.fb[data-u="7"].on{background:var(--u7);color:#fff}
+.fb[data-u="8"]{border-color:var(--u8)}.fb[data-u="8"].on{background:var(--u8);color:#fff}
+.fb[data-u="9"]{border-color:var(--u9)}.fb[data-u="9"].on{background:var(--u9);color:#fff}
+.fb[data-u="10"]{border-color:var(--u10)}.fb[data-u="10"].on{background:var(--u10);color:#fff}
+.fb[data-u="11"]{border-color:var(--u11)}.fb[data-u="11"].on{background:var(--u11);color:#fff}
+.fb[data-u="12"]{border-color:var(--u12)}.fb[data-u="12"].on{background:var(--u12);color:#fff}
+
+/* MAIN */
+main{padding:24px;max-width:1200px;margin:0 auto}
+
+/* UNIT BLOCK */
+.unit{margin-bottom:28px;border-radius:14px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border)}
+.unit-hdr{display:flex;align-items:center;gap:12px;padding:14px 20px;cursor:pointer;user-select:none}
+.unit-hdr:hover{opacity:.92}
+.unit-hdr h2{font-family:'Playfair Display',serif;font-size:1.05rem;color:#fff;font-weight:700;flex:1}
+.ubadge{font-size:.7rem;font-weight:700;padding:3px 9px;border-radius:20px;background:rgba(255,255,255,.25);color:#fff;letter-spacing:.08em;text-transform:uppercase;flex-shrink:0}
+.utoggle{color:rgba(255,255,255,.8);font-size:1.1rem;transition:transform .3s}
+.unit.collapsed .utoggle{transform:rotate(-90deg)}
+.unit.collapsed .unit-body{display:none}
+.unit-body{background:var(--bg);padding:16px;display:flex;flex-direction:column;gap:12px}
+
+/* Gradients */
+.unit[data-u="1"] .unit-hdr{background:linear-gradient(135deg,#1d4ed8,#3b82f6)}
+.unit[data-u="2"] .unit-hdr{background:linear-gradient(135deg,#15803d,#22c55e)}
+.unit[data-u="3"] .unit-hdr{background:linear-gradient(135deg,#b91c1c,#ef4444)}
+.unit[data-u="4"] .unit-hdr{background:linear-gradient(135deg,#7e22ce,#a855f7)}
+.unit[data-u="5"] .unit-hdr{background:linear-gradient(135deg,#c2410c,#f97316)}
+.unit[data-u="6"] .unit-hdr{background:linear-gradient(135deg,#0e7490,#06b6d4)}
+.unit[data-u="7"] .unit-hdr{background:linear-gradient(135deg,#4d7c0f,#84cc16)}
+.unit[data-u="8"] .unit-hdr{background:linear-gradient(135deg,#b45309,#f59e0b)}
+.unit[data-u="9"] .unit-hdr{background:linear-gradient(135deg,#be185d,#ec4899)}
+.unit[data-u="10"] .unit-hdr{background:linear-gradient(135deg,#6d28d9,#8b5cf6)}
+.unit[data-u="11"] .unit-hdr{background:linear-gradient(135deg,#047857,#10b981)}
+.unit[data-u="12"] .unit-hdr{background:linear-gradient(135deg,#9f1239,#e11d48)}
+
+/* QUESTION CARD */
+.qcard{background:var(--surface);border-radius:12px;border:1px solid var(--border);overflow:hidden;cursor:pointer;transition:box-shadow .2s,transform .15s;box-shadow:var(--shadow)}
+.qcard:hover{box-shadow:var(--shadow-h);transform:translateY(-1px)}
+.unit[data-u="1"] .qcard{border-top:3px solid var(--u1)}
+.unit[data-u="2"] .qcard{border-top:3px solid var(--u2)}
+.unit[data-u="3"] .qcard{border-top:3px solid var(--u3)}
+.unit[data-u="4"] .qcard{border-top:3px solid var(--u4)}
+.unit[data-u="5"] .qcard{border-top:3px solid var(--u5)}
+.unit[data-u="6"] .qcard{border-top:3px solid var(--u6)}
+.unit[data-u="7"] .qcard{border-top:3px solid var(--u7)}
+.unit[data-u="8"] .qcard{border-top:3px solid var(--u8)}
+.unit[data-u="9"] .qcard{border-top:3px solid var(--u9)}
+.unit[data-u="10"] .qcard{border-top:3px solid var(--u10)}
+.unit[data-u="11"] .qcard{border-top:3px solid var(--u11)}
+.unit[data-u="12"] .qcard{border-top:3px solid var(--u12)}
+
+.qhdr{display:flex;align-items:flex-start;gap:10px;padding:13px 15px}
+.qnum{font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:20px;background:var(--surface2);color:var(--muted);flex-shrink:0;white-space:nowrap;margin-top:2px}
+.unit[data-u="1"] .qnum{background:var(--u1-bg);color:var(--u1)}
+.unit[data-u="2"] .qnum{background:var(--u2-bg);color:var(--u2)}
+.unit[data-u="3"] .qnum{background:var(--u3-bg);color:var(--u3)}
+.unit[data-u="4"] .qnum{background:var(--u4-bg);color:var(--u4)}
+.unit[data-u="5"] .qnum{background:var(--u5-bg);color:var(--u5)}
+.unit[data-u="6"] .qnum{background:var(--u6-bg);color:var(--u6)}
+.unit[data-u="7"] .qnum{background:var(--u7-bg);color:var(--u7)}
+.unit[data-u="8"] .qnum{background:var(--u8-bg);color:var(--u8)}
+.unit[data-u="9"] .qnum{background:var(--u9-bg);color:var(--u9)}
+.unit[data-u="10"] .qnum{background:var(--u10-bg);color:var(--u10)}
+.unit[data-u="11"] .qnum{background:var(--u11-bg);color:var(--u11)}
+.unit[data-u="12"] .qnum{background:var(--u12-bg);color:var(--u12)}
+.qtitle{font-family:'Playfair Display',serif;font-size:.96rem;font-weight:700;color:var(--text);flex:1;line-height:1.35}
+.qmarks{font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:6px;background:#fef3c7;color:#92400e;flex-shrink:0;white-space:nowrap;margin-top:2px}
+[data-theme="dark"] .qmarks{background:#2a1f00;color:#fbbf24}
+.qchev{color:var(--muted);font-size:.85rem;transition:transform .3s;flex-shrink:0;margin-top:3px}
+.qcard.open .qchev{transform:rotate(180deg)}
+
+/* ANSWER BODY */
+.ans{display:none;padding:0 15px 16px;border-top:1px solid var(--border);animation:fadeIn .2s ease}
+.qcard.open .ans{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
+
+.ans h4{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin:13px 0 5px;padding-bottom:3px;border-bottom:1.5px solid var(--border)}
+.unit[data-u="1"] .ans h4{color:var(--u1)}.unit[data-u="2"] .ans h4{color:var(--u2)}
+.unit[data-u="3"] .ans h4{color:var(--u3)}.unit[data-u="4"] .ans h4{color:var(--u4)}
+.unit[data-u="5"] .ans h4{color:var(--u5)}.unit[data-u="6"] .ans h4{color:var(--u6)}
+.unit[data-u="7"] .ans h4{color:var(--u7)}.unit[data-u="8"] .ans h4{color:var(--u8)}
+.unit[data-u="9"] .ans h4{color:var(--u9)}.unit[data-u="10"] .ans h4{color:var(--u10)}
+.unit[data-u="11"] .ans h4{color:var(--u11)}.unit[data-u="12"] .ans h4{color:var(--u12)}
+
+.ans ul{list-style:none;padding:0;margin:0}
+.ans ul li{font-size:.87rem;color:var(--text);padding:4px 0 4px 17px;position:relative;line-height:1.6}
+.ans ul li::before{content:'▸';position:absolute;left:0;font-size:.72rem;top:6px;color:var(--muted)}
+.mn{background:var(--surface2);border-left:3px solid #f59e0b;border-radius:6px;padding:8px 12px;margin-top:10px;font-size:.82rem;color:var(--text)}
+.mn strong{color:#d97706}
+.tip{border:1.5px solid #fde68a;background:#fefce8;border-radius:6px;padding:8px 12px;margin-top:10px;font-size:.82rem;color:#854d0e}
+[data-theme="dark"] .tip{background:#2a1f00;border-color:#5c4000;color:#fbbf24}
+.ans table{width:100%;border-collapse:collapse;margin-top:10px;font-size:.82rem}
+.ans table th{background:var(--surface2);padding:7px 10px;text-align:left;font-weight:700;border:1px solid var(--border);color:var(--text)}
+.ans table td{padding:6px 10px;border:1px solid var(--border);color:var(--text);vertical-align:top}
+.ans table tr:nth-child(even) td{background:var(--surface2)}
+
+/* NO RESULTS */
+.no-res{text-align:center;padding:60px 20px;color:var(--muted);font-size:1.1rem;display:none}
+
+/* SCROLL TOP */
+#st{position:fixed;bottom:22px;right:22px;width:40px;height:40px;border-radius:50%;background:#4338ca;color:#fff;border:none;font-size:1.1rem;cursor:pointer;box-shadow:0 4px 16px rgba(67,56,202,.4);display:none;align-items:center;justify-content:center;z-index:999}
+#st:hover{transform:scale(1.1)}
+#st.vis{display:flex}
+
+/* PRINT */
+@media print{
+  header,.search-bar,.filter-row,.btn,.qchev{display:none!important}
+  .unit.collapsed .unit-body{display:flex!important}
+  .ans{display:block!important}
+  .qcard{break-inside:avoid;box-shadow:none;border:1px solid #ddd;margin-bottom:8px}
+  .unit-hdr{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="h-title">
+    <h1>📝 Psychology PYQ — Model Answers</h1>
+    <p>Post BSc Nursing Yr 1 · All 12 Units · Click any question to expand</p>
+  </div>
+  <div class="toolbar">
+    <button class="btn btn-back" onclick="history.back()">← Back to Notes</button>
+    <button class="btn btn-theme" id="themeBtn">🌙 Dark</button>
+    <button class="btn btn-print" onclick="window.print()">🖨️ Print</button>
+  </div>
+</header>
+
+<div class="search-bar">
+  <div class="si-wrap">
+    <span>🔍</span>
+    <input type="text" id="si" placeholder="Search questions, keywords, topics…">
+  </div>
+</div>
+
+<div class="filter-row">
+  <span class="fl">Filter:</span>
+  <button class="fb on" data-u="all">All</button>
+  <button class="fb" data-u="1">I</button><button class="fb" data-u="2">II</button>
+  <button class="fb" data-u="3">III</button><button class="fb" data-u="4">IV</button>
+  <button class="fb" data-u="5">V</button><button class="fb" data-u="6">VI</button>
+  <button class="fb" data-u="7">VII</button><button class="fb" data-u="8">VIII</button>
+  <button class="fb" data-u="9">IX</button><button class="fb" data-u="10">X</button>
+  <button class="fb" data-u="11">XI</button><button class="fb" data-u="12">XII</button>
+</div>
+
+<main>
+<div class="no-res" id="nr">🔎 No questions found for that search.</div>
+
+<!-- ═══════════════════ UNIT I ═══════════════════ -->
+<div class="unit" data-u="1">
+  <div class="unit-hdr" onclick="this.parentElement.classList.toggle('collapsed')">
+    <span class="ubadge">Unit I</span>
+    <h2>Introduction to Psychology</h2>
+    <span class="utoggle">▾</span>
+  </div>
+  <div class="unit-body">
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q1</span><span class="qtitle">Define Psychology</span><span class="qmarks">2–5 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Definition</h4>
+        <ul>
+          <li><strong>Psychology</strong> = the <em>scientific study of behaviour and mental processes</em> of individuals</li>
+          <li>From Greek: <em>Psyche</em> (mind/soul) + <em>Logos</em> (study/science)</li>
+          <li><strong>William James:</strong> "The science of mental life"</li>
+          <li><strong>J.B. Watson:</strong> "The science of behaviour" (Behaviourist view)</li>
+          <li><strong>Hilgard & Atkinson:</strong> "Scientific study of behaviour and mental processes of man and other animals"</li>
+        </ul>
+        <h4>Key Terms</h4>
+        <ul>
+          <li><strong>Behaviour:</strong> any observable, measurable action (speaking, walking, crying)</li>
+          <li><strong>Mental processes:</strong> internal events — thinking, feeling, perceiving, remembering</li>
+          <li><strong>Scientific:</strong> uses systematic, objective, empirical methods — not guesswork or tradition</li>
+        </ul>
+        <h4>Evolution of the Definition</h4>
+        <ul>
+          <li>Ancient: study of the soul (philosophy)</li>
+          <li>1879 — Wundt: study of consciousness (introspection)</li>
+          <li>1913 — Watson: study of behaviour only (Behaviourism)</li>
+          <li>Modern: behaviour AND mental processes (cognitive revolution)</li>
+        </ul>
+        <div class="tip">✍️ Always include "scientific study," both <em>behaviour</em> AND <em>mental processes</em>, and cite at least one scholar.</div>
+      </div>
+    </div>
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q2</span><span class="qtitle">Explain Scope and Importance of Psychology in Nursing</span><span class="qmarks">10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Scope of Psychology (Branches)</h4>
+        <ul>
+          <li><strong>Clinical Psychology:</strong> assessment & treatment of mental disorders</li>
+          <li><strong>Health Psychology:</strong> role of behaviour and lifestyle in health & illness</li>
+          <li><strong>Educational Psychology:</strong> learning, teaching methods, student behaviour</li>
+          <li><strong>Developmental Psychology:</strong> psychological changes across the lifespan</li>
+          <li><strong>Social Psychology:</strong> influence of groups and society on behaviour</li>
+          <li><strong>Industrial/Organisational Psychology:</strong> workplace motivation, leadership</li>
+          <li><strong>Nursing Psychology:</strong> applying all the above in patient care settings</li>
+        </ul>
+        <h4>Importance of Psychology in Nursing</h4>
+        <ul>
+          <li><strong>1. Understanding Patient Behaviour:</strong> recognise and respond therapeutically to anxiety, denial, aggression — instead of reacting punitively</li>
+          <li><strong>2. Therapeutic Communication:</strong> psychological knowledge improves verbal and non-verbal communication with patients and families</li>
+          <li><strong>3. Holistic Care:</strong> illness has psychological dimensions — nurse treats the whole person, not just the disease</li>
+          <li><strong>4. Pain Management:</strong> fear and anxiety amplify pain perception; psychological interventions reduce pain experience</li>
+          <li><strong>5. Patient Education:</strong> learning theories (readiness, motivation, reinforcement) make health teaching more effective</li>
+          <li><strong>6. Special Groups:</strong> children, elderly, chronically ill, dying patients each have unique psychological needs</li>
+          <li><strong>7. Nurse's Own Mental Health:</strong> self-awareness, stress management, and burnout prevention</li>
+          <li><strong>8. Motivation & Compliance:</strong> understanding what motivates patients improves treatment adherence</li>
+          <li><strong>9. Crisis Intervention:</strong> identifying suicidal ideation, acute anxiety, grief reactions</li>
+          <li><strong>10. Interpersonal Relationships:</strong> better nurse–patient, nurse–doctor, nurse–team dynamics</li>
+        </ul>
+        <div class="mn"><strong>🔑 THPPEMNCKI:</strong> Therapeutic, Holistic, Pain, Patient education, Elderly/special groups, Motivation, Communication, Knowledge, Interpersonal, Inner health of nurse</div>
+      </div>
+    </div>
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q3</span><span class="qtitle">Describe the Methods of Psychology</span><span class="qmarks">10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>1. Observational Method</h4>
+        <ul>
+          <li><strong>Naturalistic:</strong> watching behaviour in natural settings without interference (e.g., watching nurse–patient interactions in a ward)</li>
+          <li><strong>Advantage:</strong> realistic; high ecological validity</li>
+          <li><strong>Disadvantage:</strong> no cause-and-effect; observer bias</li>
+        </ul>
+        <h4>2. Experimental Method</h4>
+        <ul>
+          <li>Manipulates <em>Independent Variable (IV)</em> → measures effect on <em>Dependent Variable (DV)</em></li>
+          <li>Has control group vs experimental group</li>
+          <li><strong>Advantage:</strong> ONLY method that establishes cause and effect</li>
+          <li><strong>Disadvantage:</strong> artificial lab setting; ethical constraints in medical research</li>
+        </ul>
+        <h4>3. Case Study Method</h4>
+        <ul>
+          <li>In-depth study of a single individual using interviews, records, observation, tests</li>
+          <li>Very useful in nursing for unusual patient presentations</li>
+          <li><strong>Disadvantage:</strong> cannot generalise to all people</li>
+        </ul>
+        <h4>4. Survey / Interview Method</h4>
+        <ul>
+          <li>Questionnaires or structured/unstructured interviews to gather large data sets</li>
+          <li>Used to assess attitudes, mental health prevalence, patient satisfaction</li>
+          <li><strong>Disadvantage:</strong> social desirability bias — responses may not reflect true behaviour</li>
+        </ul>
+        <h4>5. Introspection</h4>
+        <ul>
+          <li>Self-examination of one's own thoughts and sensations</li>
+          <li>Introduced by Wilhelm Wundt (1879 — first psychology lab)</li>
+          <li><strong>Limitation:</strong> highly subjective; not verifiable by others</li>
+        </ul>
+        <h4>6. Clinical / Psychoanalytic Method</h4>
+        <ul>
+          <li>Free association, dream analysis, projective tests — uncovers unconscious material</li>
+          <li>Relevant in psychiatric nursing assessment</li>
+        </ul>
+        <h4>7. Psychological Tests</h4>
+        <ul>
+          <li>Standardised instruments — IQ tests (WAIS), personality (MMPI), projective (Rorschach)</li>
+          <li>Administer, score, and interpret to give objective data</li>
+        </ul>
+        <div class="mn"><strong>🔑 OECSI PT:</strong> Observation, Experiment, Case study, Survey, Introspection, Psychological Tests</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════ UNIT II ═══════════════════ -->
+<div class="unit" data-u="2">
+  <div class="unit-hdr" onclick="this.parentElement.classList.toggle('collapsed')">
+    <span class="ubadge">Unit II</span>
+    <h2>Sensation, Attention &amp; Perception</h2>
+    <span class="utoggle">▾</span>
+  </div>
+  <div class="unit-body">
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q1</span><span class="qtitle">Difference between Illusion and Hallucination</span><span class="qmarks">5 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Comparison Table</h4>
+        <table>
+          <tr><th>Feature</th><th>Illusion</th><th>Hallucination</th></tr>
+          <tr><td>Definition</td><td>Misinterpretation of a REAL external stimulus</td><td>Perception WITHOUT any external stimulus</td></tr>
+          <tr><td>Stimulus present?</td><td>✅ Yes — real stimulus exists</td><td>❌ No stimulus at all</td></tr>
+          <tr><td>Example</td><td>Rope mistaken for a snake in dim light</td><td>Hearing voices when nobody is speaking</td></tr>
+          <tr><td>Occurs in</td><td>Normal people, delirium, fatigue</td><td>Schizophrenia, severe depression, delirium, drug intoxication</td></tr>
+          <tr><td>Correctable?</td><td>Yes — corrected when proper context/light provided</td><td>No — patient cannot be corrected by showing reality</td></tr>
+          <tr><td>Most common type</td><td>Visual illusions</td><td>Auditory hallucinations (most common)</td></tr>
+        </table>
+        <div class="tip">✍️ Key exam point: Presence vs absence of a REAL external stimulus is the only distinguishing factor. Learn this one line cold.</div>
+      </div>
+    </div>
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q2</span><span class="qtitle">Difference between Sensation and Perception</span><span class="qmarks">5 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <table>
+          <tr><th>Feature</th><th>Sensation</th><th>Perception</th></tr>
+          <tr><td>Definition</td><td>Detection of stimuli by sense organs</td><td>Interpretation and organisation of sensory info</td></tr>
+          <tr><td>Level</td><td>Peripheral — sense organs → nerve</td><td>Central — brain interprets</td></tr>
+          <tr><td>Past experience</td><td>Not influenced</td><td>Strongly influenced by memory, culture, expectations</td></tr>
+          <tr><td>Complexity</td><td>Simple, automatic</td><td>Complex, involves higher cognition</td></tr>
+          <tr><td>Example</td><td>Light hitting the retina (raw data)</td><td>Recognising it as a candle flame (meaning)</td></tr>
+        </table>
+        <div class="mn">📌 Analogy: Sensation = raw data (pixels). Perception = the picture the brain creates. No sensation → no perception.</div>
+      </div>
+    </div>
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q3</span><span class="qtitle">Define Sensation and Explain Sensory Processes — Normal and Abnormal</span><span class="qmarks">10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Definition of Sensation</h4>
+        <ul>
+          <li>Sensation = the process by which sense organs detect and transmit physical stimuli from the environment to the brain</li>
+          <li>Pathway: Stimulus → Receptor → Transduction (nerve impulse) → Brain</li>
+        </ul>
+        <h4>Types of Sensory Processes</h4>
+        <ul>
+          <li><strong>Exteroceptive:</strong> receives external stimuli — Vision, Hearing, Smell, Taste, Touch (pressure, pain, temperature)</li>
+          <li><strong>Interoceptive:</strong> internal organs — hunger, thirst, nausea, visceral pain</li>
+          <li><strong>Proprioceptive:</strong> body position and movement — muscles, joints, balance (vestibular)</li>
+        </ul>
+        <h4>Normal Sensory Processes</h4>
+        <ul>
+          <li>Accurate transmission of real stimuli via intact sense organs</li>
+          <li>Appropriate thresholds: Absolute threshold (minimum to detect) and Difference threshold / JND (minimum change detectable)</li>
+          <li>Sensory adaptation: reduced sensitivity to constant stimuli (e.g., not noticing your own perfume after a while)</li>
+        </ul>
+        <h4>Abnormal Sensory Processes</h4>
+        <ul>
+          <li><strong>Hyperesthesia:</strong> abnormally increased sensitivity (e.g., extreme light sensitivity in migraine)</li>
+          <li><strong>Hypoesthesia:</strong> reduced sensitivity (e.g., diabetic peripheral neuropathy)</li>
+          <li><strong>Anesthesia:</strong> complete absence of sensation</li>
+          <li><strong>Paresthesia:</strong> abnormal sensations without adequate stimulus — tingling, burning, "pins and needles"</li>
+          <li><strong>Hallucination:</strong> perception with NO external stimulus — auditory in schizophrenia, visual in delirium</li>
+          <li><strong>Illusion:</strong> misinterpretation of a real stimulus</li>
+        </ul>
+        <h4>Nursing Implications</h4>
+        <ul>
+          <li>Assess for sensory deficits in elderly, diabetic, neurological patients</li>
+          <li>Modify environment to compensate for sensory loss (adequate lighting, clear speech)</li>
+          <li>Never dismiss abnormal sensory reports — investigate underlying cause</li>
+          <li>Hallucinating patients need safety monitoring and psychiatric referral</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q4</span><span class="qtitle">Factors Affecting Attention / Determinants of Attention</span><span class="qmarks">5–10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Definition of Attention</h4>
+        <ul>
+          <li>Selective focusing of consciousness on a particular stimulus while excluding others</li>
+          <li>William James: "Everyone knows what attention is… taking possession of the mind in clear and vivid form"</li>
+        </ul>
+        <h4>A. Objective Factors (Properties of the Stimulus)</h4>
+        <ul>
+          <li><strong>Intensity:</strong> loud sounds, bright lights attract more attention (e.g., loud ward alarm)</li>
+          <li><strong>Size:</strong> larger stimuli get more attention</li>
+          <li><strong>Novelty:</strong> new/unusual stimuli attract attention over familiar ones</li>
+          <li><strong>Movement:</strong> moving objects attract attention over stationary ones</li>
+          <li><strong>Repetition:</strong> repeated stimuli draw attention (initially)</li>
+          <li><strong>Contrast:</strong> stimuli standing out from background (e.g., coloured warning text)</li>
+        </ul>
+        <h4>B. Subjective Factors (Properties of the Person)</h4>
+        <ul>
+          <li><strong>Interest:</strong> we attend best to what interests us</li>
+          <li><strong>Motivation / Need:</strong> hungry person notices food-related stimuli more</li>
+          <li><strong>Mental Set:</strong> preparedness to attend to specific stimuli</li>
+          <li><strong>Emotion:</strong> emotionally charged stimuli get priority; anxiety narrows attention</li>
+          <li><strong>Fatigue:</strong> reduces capacity for sustained attention — important in nursing shift work</li>
+          <li><strong>Practice:</strong> experienced nurses notice abnormal signs that novices miss</li>
+          <li><strong>Health status:</strong> pain, fever, anxiety reduce attentional capacity</li>
+        </ul>
+        <h4>Nursing Applications</h4>
+        <ul>
+          <li>Use novel, interesting teaching materials to capture patient attention</li>
+          <li>Minimise distractions during patient education and consent</li>
+          <li>Assess patient's attentional capacity before starting any teaching</li>
+        </ul>
+        <div class="mn"><strong>🔑 Objective: INSMC</strong> — Intensity, Novelty, Size, Movement, Contrast<br><strong>Subjective: IMSEF</strong> — Interest, Motivation, Set, Emotion, Fatigue</div>
+      </div>
+    </div>
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q5</span><span class="qtitle">Principles / Characteristics of Perception</span><span class="qmarks">5–10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Definition</h4>
+        <ul>
+          <li>Perception = the active brain process of organising, interpreting, and giving meaning to sensory information using prior experience and current context</li>
+        </ul>
+        <h4>Principles / Characteristics of Perception</h4>
+        <ul>
+          <li><strong>1. Selectivity:</strong> we cannot process all stimuli; brain selects the most relevant (Figure-Ground principle)</li>
+          <li><strong>2. Organisation:</strong> brain automatically groups stimuli into patterns — Gestalt laws (Proximity, Similarity, Closure, Continuity)</li>
+          <li><strong>3. Constancy:</strong> objects appear stable despite changing sensory input — Size constancy, Shape constancy, Colour constancy</li>
+          <li><strong>4. Meaningfulness:</strong> every perception carries meaning shaped by past experience</li>
+          <li><strong>5. Subjectivity:</strong> two people perceive the same event differently based on experience and emotion</li>
+          <li><strong>6. Context-dependence:</strong> same stimulus perceived differently in different contexts</li>
+          <li><strong>7. Set (Expectation):</strong> what we expect to perceive, we often do — perceptual set guides interpretation</li>
+          <li><strong>8. Active process:</strong> perception is not passive recording — brain actively constructs it</li>
+        </ul>
+        <div class="mn"><strong>🔑 SOCMSCA:</strong> Selectivity, Organisation, Constancy, Meaningfulness, Subjectivity, Context, Active</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════ UNIT III ═══════════════════ -->
+<div class="unit" data-u="3">
+  <div class="unit-hdr" onclick="this.parentElement.classList.toggle('collapsed')">
+    <span class="ubadge">Unit III</span>
+    <h2>Motivation &amp; Conflict</h2>
+    <span class="utoggle">▾</span>
+  </div>
+  <div class="unit-body">
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q1</span><span class="qtitle">Explain Self-Actualization and Maslow's Hierarchy of Needs</span><span class="qmarks">10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Maslow's Theory — Introduction</h4>
+        <ul>
+          <li>Abraham Maslow (1943) — "A Theory of Human Motivation" — Humanistic theory</li>
+          <li>Human needs are arranged in a hierarchy; lower needs must be met before higher needs become motivating</li>
+        </ul>
+        <h4>The Five Levels (Bottom → Top)</h4>
+        <ul>
+          <li><strong>Level 1 — Physiological:</strong> food, water, oxygen, sleep, warmth — most basic; if unmet, nothing else matters</li>
+          <li><strong>Level 2 — Safety:</strong> physical safety, stability, freedom from fear — patients fear pain, procedures, death</li>
+          <li><strong>Level 3 — Love/Belonging:</strong> affection, friendship, sense of belonging — hospitalization causes intense isolation; these needs spike</li>
+          <li><strong>Level 4 — Esteem:</strong> self-respect, achievement, recognition — illness threatens these; patient feels helpless, ashamed of dependency</li>
+          <li><strong>Level 5 — Self-Actualization:</strong> realizing one's full potential, creativity, peak experiences — highest level; only ~1% reach it</li>
+        </ul>
+        <h4>Self-Actualization — Detailed</h4>
+        <ul>
+          <li>Characteristics (Maslow): realistic perception, autonomous, creative, spontaneous, deep relationships, peak experiences, problem-centred, acceptance of self and others, sense of humour</li>
+          <li>Examples: Gandhi, Einstein, Mother Teresa, Abraham Lincoln</li>
+        </ul>
+        <h4>Nursing Application</h4>
+        <ul>
+          <li>Prioritise physiological needs FIRST (airway, breathing, circulation) in acute illness</li>
+          <li>Address safety needs — explain procedures to reduce fear</li>
+          <li>Support belonging — allow family, maintain therapeutic relationship</li>
+          <li>Preserve esteem — involve in decisions, maintain dignity</li>
+          <li>Support self-actualization in rehabilitation — encourage meaningful activities</li>
+          <li>Sickness = regression to lower levels; recovery = ascending the pyramid</li>
+        </ul>
+        <div class="mn"><strong>🔑 "Please Stop Loving Everyone Selflessly"</strong> — Physiological, Safety, Love, Esteem, Self-Actualization</div>
+        <div class="tip">✍️ Draw and label the pyramid. Apply each level to a nursing scenario for full marks.</div>
+      </div>
+    </div>
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q2</span><span class="qtitle">Write Any Theory of Motivation</span><span class="qmarks">5 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Drive Reduction Theory (Hull, 1943)</h4>
+        <ul>
+          <li>When a biological need arises, it creates a drive (tension state) that motivates behaviour to reduce that drive</li>
+          <li>Need → Drive → Behaviour → Drive Reduction (Goal achieved) → Homeostasis restored</li>
+          <li>Example: Thirst (need) → drink water (behaviour) → quench thirst (drive reduction)</li>
+          <li>Limitation: does not explain behaviours that increase arousal (bungee jumping, spicy food)</li>
+        </ul>
+        <h4>McClelland's Achievement Motivation Theory</h4>
+        <ul>
+          <li>Three social motives: Need for Achievement (n-Ach), Need for Affiliation (n-Aff), Need for Power (n-Pow)</li>
+          <li>n-Ach people: prefer moderate challenges, immediate feedback, personal responsibility</li>
+          <li>Nursing: nurses with high n-Ach strive for excellence; high n-Aff nurses are more empathic</li>
+        </ul>
+        <div class="tip">✍️ If asked "write any theory" — use Maslow's (most complete) or Drive Reduction (simplest to explain quickly).</div>
+      </div>
+    </div>
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q3</span><span class="qtitle">Define Motivation — Biological and Social Motives</span><span class="qmarks">10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Definition</h4>
+        <ul>
+          <li>Motivation = the internal driving force that <em>initiates, directs, and sustains</em> goal-directed behaviour</li>
+          <li>From Latin <em>movere</em> = to move</li>
+          <li>Chain: Need (deficiency) → Drive (tension) → Behaviour (goal-directed) → Goal (need satisfied)</li>
+        </ul>
+        <h4>Biological (Primary / Physiological) Motives</h4>
+        <ul>
+          <li>Innate, unlearned, have a clear physiological/homeostatic basis</li>
+          <li><strong>Hunger:</strong> blood glucose drop → hypothalamus → eating</li>
+          <li><strong>Thirst:</strong> osmoreceptors → dehydration signal → drinking</li>
+          <li><strong>Sleep:</strong> adenosine accumulation → sleep drive; circadian rhythm</li>
+          <li><strong>Sex:</strong> hormonal (testosterone, oestrogen)</li>
+          <li><strong>Pain avoidance:</strong> reflex-based protective drive</li>
+          <li><strong>Temperature regulation:</strong> shivering / sweating homeostatic drives</li>
+          <li><strong>Maternal drive:</strong> instinct to protect offspring</li>
+        </ul>
+        <h4>Social (Secondary / Psychological) Motives</h4>
+        <ul>
+          <li>Learned, culturally shaped, vary between individuals and societies</li>
+          <li><strong>Achievement (n-Ach — McClelland):</strong> desire to excel and succeed</li>
+          <li><strong>Affiliation:</strong> need to belong; intensifies during illness</li>
+          <li><strong>Power:</strong> desire to influence and control others</li>
+          <li><strong>Security:</strong> need for stability and safety</li>
+          <li><strong>Approval:</strong> need for recognition and praise</li>
+          <li><strong>Curiosity:</strong> drive to explore and know — basis of learning</li>
+        </ul>
+        <h4>Nursing Relevance</h4>
+        <ul>
+          <li>Illness disrupts biological motives: anorexia (lost hunger drive), insomnia</li>
+          <li>Social motives intensify during hospitalisation: affiliation (need family), security (need reassurance)</li>
+          <li>Non-compliance often reflects a motivational deficit — address the underlying need</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q4</span><span class="qtitle">Explain Frustration and Conflict: Causes and Effects + Conflict Resolution</span><span class="qmarks">10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Frustration — Definition and Causes</h4>
+        <ul>
+          <li>Frustration = the emotional state arising when motivated behaviour is blocked or thwarted, preventing the person from reaching their goal</li>
+          <li><strong>External causes:</strong> physical obstacles, other people, hospital rules, circumstances</li>
+          <li><strong>Internal causes:</strong> personal limitations (disease, disability, lack of skill)</li>
+          <li>In patients: pain, immobility, inability to perform usual roles = major frustration sources</li>
+        </ul>
+        <h4>Effects / Responses to Frustration</h4>
+        <ul>
+          <li><strong>Aggression:</strong> outward hostility — Dollard's Frustration-Aggression Hypothesis; patient shouts at nurse</li>
+          <li><strong>Regression:</strong> returning to childlike behaviour (adult cries, becomes dependent)</li>
+          <li><strong>Withdrawal:</strong> social withdrawal, apathy, depression</li>
+          <li><strong>Fixation:</strong> repeating the same ineffective behaviour rigidly</li>
+          <li><strong>Constructive coping:</strong> problem-solving, finding alternative routes — healthy response</li>
+          <li><strong>Displacement:</strong> redirecting frustration onto another person or object</li>
+        </ul>
+        <h4>Conflict — Definition and Types (Lewin)</h4>
+        <ul>
+          <li>Conflict = simultaneous presence of two or more incompatible goals creating psychological tension</li>
+          <li><strong>Approach–Approach:</strong> two equally attractive goals; pleasant dilemma. Ex: two good treatment options</li>
+          <li><strong>Avoidance–Avoidance:</strong> two equally unpleasant choices; double bind. Ex: surgery vs untreated pain</li>
+          <li><strong>Approach–Avoidance:</strong> one goal has both attractive AND repulsive aspects. Ex: patient wants recovery but fears chemotherapy</li>
+          <li><strong>Double Approach–Avoidance:</strong> multiple goals each with pros and cons; most common in real life. Ex: dialysis vs transplant — both have advantages and risks</li>
+        </ul>
+        <h4>Techniques of Conflict Resolution</h4>
+        <ul>
+          <li><strong>Negotiation:</strong> both parties discuss and reach a mutually acceptable solution</li>
+          <li><strong>Compromise:</strong> each side concedes something</li>
+          <li><strong>Mediation:</strong> neutral third party helps resolve dispute</li>
+          <li><strong>Counselling:</strong> therapist helps individual resolve internal conflict</li>
+          <li><strong>Prioritisation:</strong> rank goals by importance to clarify choices</li>
+          <li><strong>Reframing:</strong> changing perspective to see the situation differently</li>
+          <li><strong>Problem-solving:</strong> systematic, creative search for solutions</li>
+        </ul>
+        <div class="mn"><strong>🔑 Four conflict types:</strong> App-App | Avoid-Avoid | App-Avoid | Double App-Avoid</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════ UNIT IV ═══════════════════ -->
+<div class="unit" data-u="4">
+  <div class="unit-hdr" onclick="this.parentElement.classList.toggle('collapsed')">
+    <span class="ubadge">Unit IV</span>
+    <h2>Emotions</h2>
+    <span class="utoggle">▾</span>
+  </div>
+  <div class="unit-body">
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q1</span><span class="qtitle">Define Emotions and Explain Expression and Control of Emotions</span><span class="qmarks">10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Definition</h4>
+        <ul>
+          <li>Emotion = a complex psychological state involving <strong>subjective feeling + physiological arousal + cognitive appraisal + expressive behaviour</strong></li>
+          <li>From Latin <em>emovere</em> = to stir up, to move</li>
+          <li>Paul Ekman's 6 universal basic emotions: Fear, Anger, Disgust, Happiness, Sadness, Surprise</li>
+        </ul>
+        <h4>Four Components of Emotion</h4>
+        <ul>
+          <li><strong>Subjective feeling:</strong> conscious awareness — "I feel afraid"</li>
+          <li><strong>Physiological arousal:</strong> ↑HR, ↑BP, pupil dilation, sweating, adrenaline — controlled by amygdala and ANS</li>
+          <li><strong>Cognitive appraisal:</strong> interpretation of the situation (Lazarus — appraisal determines emotion)</li>
+          <li><strong>Behavioural expression:</strong> facial expression, posture, speech, actions</li>
+        </ul>
+        <h4>Theories of Emotion</h4>
+        <ul>
+          <li><strong>James–Lange:</strong> physiological change PRECEDES emotion ("we feel afraid because our heart races")</li>
+          <li><strong>Cannon–Bard:</strong> emotion and physiology occur SIMULTANEOUSLY via the thalamus</li>
+          <li><strong>Schachter–Singer (Two-Factor):</strong> arousal + cognitive label = emotion (context determines which emotion)</li>
+          <li><strong>Lazarus Cognitive Appraisal:</strong> how you interpret the situation determines the emotion</li>
+        </ul>
+        <h4>Expression of Emotions</h4>
+        <ul>
+          <li><strong>Facial expressions:</strong> universal across cultures (Ekman) — smile, frown, raised brows</li>
+          <li><strong>Body language:</strong> posture, gestures, personal space, touch</li>
+          <li><strong>Vocal:</strong> tone, pitch, speed of speech, silence</li>
+          <li><strong>Physiological:</strong> blushing, trembling, sweating (involuntary)</li>
+          <li><strong>Verbal:</strong> direct expression, poetry, art, journaling</li>
+        </ul>
+        <h4>Control / Regulation of Emotions</h4>
+        <ul>
+          <li><strong>Cognitive reappraisal:</strong> reinterpreting the situation to change emotional response</li>
+          <li><strong>Relaxation techniques:</strong> deep breathing, PMR (progressive muscle relaxation), meditation</li>
+          <li><strong>Physical activity:</strong> releases endorphins, reduces cortisol</li>
+          <li><strong>Social support:</strong> sharing emotions with trusted others</li>
+          <li><strong>Problem-solving:</strong> addressing the source of negative emotion directly</li>
+          <li><strong>Healthy expression:</strong> art, music, journaling, therapy — not suppression</li>
+          <li><strong>Mindfulness:</strong> observing emotions without judgment</li>
+        </ul>
+        <h4>Emotions in Sickness — Nursing Relevance</h4>
+        <ul>
+          <li>Most common emotions in sick patients: anxiety, fear, anger, depression, denial, guilt, hope</li>
+          <li>Kübler-Ross DABDA: Denial → Anger → Bargaining → Depression → Acceptance</li>
+          <li>Nurse's role: active listening, empathy, allow expression, explain procedures, refer to counsellor when needed</li>
+        </ul>
+        <div class="tip">✍️ For "Expression and Control" — use TWO clear headings and give at least 5 points each with brief explanations.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════ UNIT V ═══════════════════ -->
+<div class="unit" data-u="5">
+  <div class="unit-hdr" onclick="this.parentElement.classList.toggle('collapsed')">
+    <span class="ubadge">Unit V</span>
+    <h2>Personality</h2>
+    <span class="utoggle">▾</span>
+  </div>
+  <div class="unit-body">
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q1</span><span class="qtitle">Define Personality and Determinants of Personality</span><span class="qmarks">10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Definition</h4>
+        <ul>
+          <li>Personality = the unique, relatively stable pattern of thoughts, feelings, and behaviours that characterises an individual and distinguishes them from all others</li>
+          <li>Gordon Allport: "the dynamic organisation within the individual of those psychophysical systems that determine their unique adjustments to the environment"</li>
+          <li>From Latin <em>persona</em> = theatrical mask; psychology uses it to mean the true self</li>
+        </ul>
+        <h4>Freud's Structural Theory</h4>
+        <ul>
+          <li><strong>Id:</strong> primitive, unconscious, Pleasure Principle — seeks immediate gratification; present from birth</li>
+          <li><strong>Ego:</strong> conscious mediator, Reality Principle — delays gratification, finds realistic solutions</li>
+          <li><strong>Superego:</strong> internalized morality, Morality Principle — conscience and ideal self</li>
+        </ul>
+        <h4>Determinants of Personality</h4>
+        <ul>
+          <li><strong>1. Biological/Genetic:</strong> temperament, physical constitution, brain chemistry (serotonin, dopamine), genetic disorders</li>
+          <li><strong>2. Family Environment:</strong> parenting style (authoritative → best outcomes), sibling position, family values — shapes earliest personality</li>
+          <li><strong>3. Cultural Factors:</strong> cultural norms, religion, roles determine which traits are encouraged or suppressed</li>
+          <li><strong>4. Peer Group:</strong> especially powerful in adolescence — conformity, social comparison</li>
+          <li><strong>5. School and Education:</strong> teachers as role models; academic success/failure shapes self-concept</li>
+          <li><strong>6. Socioeconomic Status:</strong> poverty vs affluence shapes aspirations, coping styles, values</li>
+          <li><strong>7. Life Experiences:</strong> trauma, achievements, losses — significant events reshape personality</li>
+          <li><strong>8. Physical Health:</strong> chronic illness alters personality through pain, dependency, body image changes</li>
+        </ul>
+        <div class="mn"><strong>🔑 BFCPSEL-H:</strong> Biological, Family, Culture, Peers, School, Economy, Life experiences, Health</div>
+      </div>
+    </div>
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q2</span><span class="qtitle">Describe Projective Techniques of Personality Assessment</span><span class="qmarks">10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Definition</h4>
+        <ul>
+          <li>Projective tests present ambiguous stimuli onto which the person projects their unconscious thoughts, feelings, and personality</li>
+          <li>Based on Freud's concept of projection; yield rich qualitative data about personality and unconscious conflicts</li>
+        </ul>
+        <h4>Major Projective Tests</h4>
+        <ul>
+          <li><strong>1. Rorschach Inkblot Test (Hermann Rorschach, 1921):</strong> 10 symmetrical inkblot cards (5 black-white, 2 black-red, 3 coloured); patient describes what they see; scored for location, determinant (color/form), content (human/animal), popularity; reveals unconscious thoughts and emotional states</li>
+          <li><strong>2. Thematic Apperception Test (TAT — Murray, 1935):</strong> 20 ambiguous picture cards of people in situations; patient tells a story for each card; stories reveal dominant needs, motives, conflicts, interpersonal patterns; heroes in stories = patient's own wishes and fears</li>
+          <li><strong>3. Sentence Completion Test:</strong> incomplete sentences (e.g., "I feel most afraid when…"); patient completes in own words; fast, easy; reveals attitudes and hidden concerns</li>
+          <li><strong>4. Draw-a-Person Test (DAP):</strong> patient draws a person, then opposite sex; details analysed (size, omissions, placement, line pressure); especially useful with children</li>
+          <li><strong>5. Word Association Test (Jung):</strong> examiner says a word; patient responds with first word that comes to mind; long delays or unusual responses indicate complexes/conflicts</li>
+        </ul>
+        <h4>Advantages</h4>
+        <ul>
+          <li>Reveals unconscious material that questionnaires cannot access</li>
+          <li>Resistant to faking (unlike self-report scales)</li>
+          <li>Rich, holistic picture of personality</li>
+        </ul>
+        <h4>Limitations</h4>
+        <ul>
+          <li>Scoring is subjective — lower inter-rater reliability</li>
+          <li>Time consuming; requires trained psychologist</li>
+          <li>Cultural bias in test stimuli</li>
+        </ul>
+        <div class="tip">✍️ Rorschach and TAT are the most frequently tested. Know: inventor, year, materials, what it measures.</div>
+      </div>
+    </div>
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q3</span><span class="qtitle">Explain Personality Attributes of a Nurse / Personality in Nursing</span><span class="qmarks">5–10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Ideal Personality Attributes of a Nurse</h4>
+        <ul>
+          <li><strong>Empathy:</strong> understand and share patient feelings without being overwhelmed; foundation of therapeutic relationship</li>
+          <li><strong>Emotional Stability:</strong> calm in emergencies; manages own emotions professionally; doesn't become overwhelmed by patient distress</li>
+          <li><strong>Patience:</strong> especially with elderly, intellectually disabled, terminally ill, or difficult patients</li>
+          <li><strong>Non-judgmental Attitude:</strong> accepts patients regardless of diagnosis (addiction, HIV, mental illness, lifestyle)</li>
+          <li><strong>Honesty and Integrity:</strong> truthful with patients and colleagues; professional ethics upheld at all times</li>
+          <li><strong>Self-Awareness:</strong> recognises own biases, values, emotional reactions — prevents these from harming patient care</li>
+          <li><strong>Adaptability:</strong> flexible in rapidly changing clinical situations</li>
+          <li><strong>Conscientiousness:</strong> meticulous and detail-oriented — critical for medication administration and documentation</li>
+          <li><strong>Strong Communication Skills:</strong> clear, compassionate, culturally sensitive verbal and non-verbal communication</li>
+          <li><strong>Resilience:</strong> recovers from stressful situations, patient loss, difficult shifts</li>
+          <li><strong>High EQ (Emotional Intelligence — Goleman):</strong> self-awareness, self-regulation, empathy, motivation, social skills</li>
+        </ul>
+        <h4>Personality in Sickness — How Illness Affects Personality</h4>
+        <ul>
+          <li>Illness stresses existing personality patterns and exaggerates pre-morbid traits</li>
+          <li>Regression: adult becomes dependent, childlike</li>
+          <li>Type A patient: resists sick role, hostile, non-compliant — hard to nurse</li>
+          <li>Type B patient: relaxed, compliant — easier nursing relationship</li>
+          <li>Paranoid personality: suspicious of medications and nurses — needs extra trust-building</li>
+        </ul>
+        <div class="mn"><strong>🔑 EPNHSA-CCRL:</strong> Empathy, Patience, Non-judgmental, Honesty, Self-awareness, Adaptable, Conscientious, Communication, Resilience, Leadership</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════ UNIT VI ═══════════════════ -->
+<div class="unit" data-u="6">
+  <div class="unit-hdr" onclick="this.parentElement.classList.toggle('collapsed')">
+    <span class="ubadge">Unit VI</span>
+    <h2>Psychological Needs — Developmental</h2>
+    <span class="utoggle">▾</span>
+  </div>
+  <div class="unit-body">
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q1</span><span class="qtitle">Discuss Psychological Needs of Children During Illness</span><span class="qmarks">10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Three Major Stressors for Hospitalised Children</h4>
+        <ul>
+          <li><strong>1. Separation from parents</strong> — greatest fear; Bowlby's attachment theory</li>
+          <li><strong>2. Loss of control</strong> — unfamiliar environment, forced procedures</li>
+          <li><strong>3. Bodily injury and pain</strong> — fear of pain, mutilation, death</li>
+        </ul>
+        <h4>Needs by Age Group</h4>
+        <ul>
+          <li><strong>Infants (0–1 yr):</strong> need consistent primary caregiver (bonding); stranger anxiety peaks at ~8 months; need touch, warmth, feeding routine; separation from mother = extreme distress — Erikson: Trust vs Mistrust</li>
+          <li><strong>Toddlers (1–3 yr):</strong> ritualistic routines essential; resist procedures; regression to earlier behaviour is normal (bedwetting, thumb-sucking); brief simple explanations only — Erikson: Autonomy vs Shame</li>
+          <li><strong>Preschool (3–6 yr):</strong> magical thinking — may believe illness is punishment for wrongdoing; fear of body mutilation; use therapeutic play — Erikson: Initiative vs Guilt</li>
+          <li><strong>School age (6–12 yr):</strong> fear of being "different"; wants to understand procedures; capable of reasoning; concerned about missing school; needs sense of mastery — Erikson: Industry vs Inferiority</li>
+        </ul>
+        <h4>Core Psychological Needs</h4>
+        <ul>
+          <li><strong>Security:</strong> consistent caregivers, familiar objects (favourite toy), predictable routines</li>
+          <li><strong>Parental presence:</strong> rooming-in for parents; minimise separation — distress is proportional to separation</li>
+          <li><strong>Age-appropriate information:</strong> honest, simple — "Your blood is being tested to help you feel better"</li>
+          <li><strong>Play therapy:</strong> allows processing of fears; medical play — examining doll with stethoscope</li>
+          <li><strong>Control:</strong> offer choices wherever possible — "Left arm or right arm?" — preserves autonomy</li>
+          <li><strong>Adequate pain management:</strong> children's pain is chronically undertreated</li>
+        </ul>
+        <h4>Nursing Interventions</h4>
+        <ul>
+          <li>Assign primary nurse — minimise number of different caregivers</li>
+          <li>Use distraction during painful procedures (blowing bubbles, music, storytelling)</li>
+          <li>Never perform painful procedures while parent is present — parent = safe person</li>
+          <li>Teach parents caregiving skills to reduce their anxiety and maintain competence</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q2</span><span class="qtitle">Discuss Psychological Needs of Adolescents</span><span class="qmarks">10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Erikson's Stage: Identity vs Role Confusion (12–18 yrs)</h4>
+        <ul>
+          <li>Core task: forming a stable identity — "Who am I?"</li>
+          <li>Illness disrupts this process and threatens identity formation</li>
+        </ul>
+        <h4>Key Psychological Needs</h4>
+        <ul>
+          <li><strong>Body image and self-esteem:</strong> extremely sensitive to physical changes; hair loss, scars, weight changes, colostomy = devastating. Nurse must proactively address body image concerns</li>
+          <li><strong>Independence and autonomy:</strong> resist being treated as children; must be involved in care decisions; always provide rationale for every procedure</li>
+          <li><strong>Privacy and confidentiality:</strong> absolute; discuss care privately; do not discuss in front of parents without patient's consent</li>
+          <li><strong>Peer relationships:</strong> fear of being "different" or "left behind"; maintain social connection (phone, social media within limits)</li>
+          <li><strong>Education continuity:</strong> worried about missing school and exams; coordinate with school; hospital teachers where available</li>
+          <li><strong>Full honest information:</strong> want complete explanations, not watered-down versions; can understand medical facts if explained clearly</li>
+          <li><strong>Trust:</strong> must trust the nurse personally before accepting care</li>
+          <li><strong>Sexual identity:</strong> illness raises sexuality concerns; nurse must be comfortable addressing these sensitively</li>
+        </ul>
+        <h4>Nursing Approach</h4>
+        <ul>
+          <li>Negotiate care — do not dictate; use shared decision-making</li>
+          <li>Maintain confidentiality — this builds trust faster than anything else</li>
+          <li>Peer support groups for chronic conditions (e.g., diabetes camps, cancer peer support)</li>
+          <li>Use relatable language — avoid both childish and overly technical terms</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q3</span><span class="qtitle">Discuss Psychological Needs of the Elderly During Illness</span><span class="qmarks">10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Erikson's Stage: Ego Integrity vs Despair (65+ yrs)</h4>
+        <ul>
+          <li>Successful aging = looking back with satisfaction (Ego Integrity)</li>
+          <li>Failure = despair, regret, bitterness</li>
+          <li>Illness and hospitalisation can tip the balance toward despair</li>
+        </ul>
+        <h4>Psychological Challenges</h4>
+        <ul>
+          <li><strong>Fear of death and dying:</strong> illness makes death feel imminent; need to discuss fears openly and respectfully</li>
+          <li><strong>Loss of independence:</strong> most feared — inability to perform ADLs is deeply distressing; loss of control</li>
+          <li><strong>Cognitive changes:</strong> memory loss, delirium ("sundowning"), early dementia — nurse must differentiate delirium (acute, reversible) from dementia (chronic, progressive)</li>
+          <li><strong>Social isolation:</strong> loss of spouse and friends; reduced mobility limits social contact</li>
+          <li><strong>Multiple losses:</strong> bereavement, financial losses, role losses (retirement) — accumulated grief</li>
+          <li><strong>Sensory deficits:</strong> hearing loss → misunderstanding → frustration; vision loss → falls, anxiety</li>
+          <li><strong>Depression:</strong> most common and most undertreated mental health issue in elderly — screen with GDS (Geriatric Depression Scale)</li>
+          <li><strong>Ageism:</strong> feeling dismissed, ignored, or talked down to — profound negative effect on self-esteem</li>
+        </ul>
+        <h4>Nursing Interventions</h4>
+        <ul>
+          <li>Speak clearly, face-to-face, at normal pace (shouting is disrespectful and distorts speech)</li>
+          <li>Maintain orientation — clock, calendar, daily orientation conversations</li>
+          <li>Maximise independence — allow self-care wherever safe</li>
+          <li>Reminiscence therapy — structured life review improves psychological wellbeing</li>
+          <li>Involve family; assess and support caregiver burden</li>
+          <li>Spiritual support — respect religious practices and end-of-life wishes</li>
+          <li>Fall prevention — adequate lighting, call bell, non-slip footwear</li>
+          <li>Respect experience and wisdom — never patronise</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════ UNIT VII ═══════════════════ -->
+<div class="unit" data-u="7">
+  <div class="unit-hdr" onclick="this.parentElement.classList.toggle('collapsed')">
+    <span class="ubadge">Unit VII</span>
+    <h2>Individual Differences</h2>
+    <span class="utoggle">▾</span>
+  </div>
+  <div class="unit-body">
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q1</span><span class="qtitle">Define Individual Differences and Their Significance in Nursing</span><span class="qmarks">10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Definition</h4>
+        <ul>
+          <li>Individual differences = the variations in physical, psychological, intellectual, social, and emotional characteristics that make each person unique</li>
+          <li>No two individuals — even identical twins — are psychologically identical</li>
+          <li>Pioneer: Francis Galton</li>
+        </ul>
+        <h4>Areas of Individual Differences</h4>
+        <ul>
+          <li>Intelligence and cognitive abilities; personality traits; physical characteristics</li>
+          <li>Emotional reactivity and temperament; attitudes and values; coping styles</li>
+          <li>Health behaviour; language and communication style; learning pace and style</li>
+        </ul>
+        <h4>Significance in Nursing</h4>
+        <ul>
+          <li><strong>1. Individualised Care Plans:</strong> not one-size-fits-all; tailor every plan to the specific patient</li>
+          <li><strong>2. Communication Adaptation:</strong> adjust language, pace, and style based on education level, age, culture</li>
+          <li><strong>3. Pain Assessment:</strong> pain threshold varies enormously; use validated tools; do not stereotype</li>
+          <li><strong>4. Patient Education:</strong> adapt content, literacy level, language, and method to individual learner</li>
+          <li><strong>5. Drug Response:</strong> pharmacogenomics — genetic differences affect drug metabolism and side effects</li>
+          <li><strong>6. Cultural Competence:</strong> beliefs about illness, acceptable treatment, family roles in care vary by culture</li>
+          <li><strong>7. Compliance Assessment:</strong> different patients have different reasons for non-compliance — no single solution fits all</li>
+          <li><strong>8. Nursing Education:</strong> nursing students learn differently — teaching must accommodate individual learning styles</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q2</span><span class="qtitle">Explain Role of Heredity in Individual Differences</span><span class="qmarks">5–10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Definition of Heredity</h4>
+        <ul>
+          <li>Heredity = the transmission of biological traits and characteristics from parents to offspring through genes on chromosomes</li>
+          <li>Humans have 46 chromosomes (23 pairs); 50% from each parent</li>
+        </ul>
+        <h4>Role in Individual Differences</h4>
+        <ul>
+          <li><strong>Physical traits:</strong> height, weight, eye colour, skin colour, facial features — largely genetic</li>
+          <li><strong>Temperament:</strong> basic emotional reactivity (easy, difficult, slow-to-warm — Thomas & Chess) is largely inborn and persists across life</li>
+          <li><strong>Intelligence:</strong> ~50% of IQ variance is genetic; identical twins more similar than fraternal twins even raised apart</li>
+          <li><strong>Personality:</strong> Big Five traits (especially neuroticism, extraversion) ~40–60% heritable</li>
+          <li><strong>Mental disorders:</strong> schizophrenia (80% heritability), bipolar disorder, depression, autism — strong genetic component</li>
+          <li><strong>Disease susceptibility:</strong> diabetes, hypertension, cancer — genetic predisposition</li>
+        </ul>
+        <h4>Evidence</h4>
+        <ul>
+          <li>Twin studies: MZ twins more similar than DZ twins even when raised apart</li>
+          <li>Adoption studies: adopted children more similar to biological parents than adoptive parents in many traits</li>
+        </ul>
+        <h4>Nature + Nurture Interaction (Modern View)</h4>
+        <ul>
+          <li>NOT either/or — both interact continuously</li>
+          <li>Genes set a range of potential; environment determines where within that range</li>
+          <li>Epigenetics: environment can switch genes on or off</li>
+          <li>Example: genetic predisposition to depression + stressful environment triggers it; supportive environment may prevent it</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q3</span><span class="qtitle">Explain Implications of Individual Differences in Nursing</span><span class="qmarks">5 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Key Nursing Implications</h4>
+        <ul>
+          <li><strong>Assessment:</strong> comprehensive, individualised assessment of every patient — physical, psychological, social, cultural dimensions</li>
+          <li><strong>Care Planning:</strong> tailor interventions to the individual; avoid standardised, routine approaches</li>
+          <li><strong>Communication:</strong> match communication style to patient's education, language, culture, and cognitive level</li>
+          <li><strong>Health Education:</strong> identify learning style, readiness, and literacy level before teaching</li>
+          <li><strong>Pain Management:</strong> use validated scales; don't compare patients' pain responses or apply stereotypes</li>
+          <li><strong>Cultural Sensitivity:</strong> understand cultural beliefs about illness, diet, gender roles in care, spiritual needs</li>
+          <li><strong>Non-Judgmental Care:</strong> different doesn't mean wrong; individual differences are normal human variation</li>
+          <li><strong>Staff Training:</strong> nurses must be trained to recognise and respond to individual differences — cultural competence training, communication skills</li>
+        </ul>
+        <div class="tip">✍️ The CORE message: individual differences demand individualised care. "One size fits all" nursing is poor nursing.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════ UNIT VIII ═══════════════════ -->
+<div class="unit" data-u="8">
+  <div class="unit-hdr" onclick="this.parentElement.classList.toggle('collapsed')">
+    <span class="ubadge">Unit VIII</span>
+    <h2>Intelligence &amp; Abilities</h2>
+    <span class="utoggle">▾</span>
+  </div>
+  <div class="unit-body">
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q1</span><span class="qtitle">Define Intelligence and Write Theories of Intelligence</span><span class="qmarks">10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Definition</h4>
+        <ul>
+          <li>Intelligence = the ability to learn from experience, solve problems, and adapt effectively to new situations</li>
+          <li>Wechsler: "the global capacity of the individual to act purposefully, think rationally, and deal effectively with the environment"</li>
+        </ul>
+        <h4>1. Spearman's Two-Factor Theory (1904)</h4>
+        <ul>
+          <li><strong>'g' factor:</strong> general intelligence — overall mental energy underlying all intellectual activities</li>
+          <li><strong>'s' factor:</strong> specific abilities for particular tasks (musical, verbal, mathematical)</li>
+          <li>Smart in one area → tend to be smart in others (g factor)</li>
+        </ul>
+        <h4>2. Thurstone's Primary Mental Abilities (1938)</h4>
+        <ul>
+          <li>7 independent abilities: Verbal comprehension, Word fluency, Number facility, Spatial ability, Associative memory, Perceptual speed, Reasoning</li>
+          <li>Rejected single 'g' — intelligence is multifaceted</li>
+        </ul>
+        <h4>3. Gardner's Multiple Intelligences (1983)</h4>
+        <ul>
+          <li>8 intelligences: Linguistic, Logical-mathematical, Spatial, Musical, Bodily-kinesthetic, Interpersonal, Intrapersonal, Naturalist</li>
+          <li>Nursing relevance: high Interpersonal (understanding others) and Intrapersonal (self-awareness) intelligences are essential</li>
+          <li>Each person has a unique profile — traditional IQ captures only a slice</li>
+        </ul>
+        <h4>4. Sternberg's Triarchic Theory (1985)</h4>
+        <ul>
+          <li><strong>Analytical:</strong> academic problem-solving — traditional IQ</li>
+          <li><strong>Creative:</strong> dealing with novel situations; innovation</li>
+          <li><strong>Practical:</strong> "street smarts" — adapting to real-world environments</li>
+          <li>Practical intelligence is highly relevant to nursing; traditional tests miss it</li>
+        </ul>
+        <h4>5. Emotional Intelligence / EQ (Goleman, 1995)</h4>
+        <ul>
+          <li>Self-awareness, Self-regulation, Motivation, Empathy, Social skills</li>
+          <li>Goleman: EQ is more important than IQ for success in caring professions</li>
+          <li>High-EQ nurses → better patient outcomes, less burnout, better team dynamics</li>
+        </ul>
+        <div class="tip">✍️ Cover at least 4 theories. For each: name + year + core idea + nursing relevance. Always mention EQ in nursing exams.</div>
+      </div>
+    </div>
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q2</span><span class="qtitle">Describe Measurement and Assessment of Intelligence</span><span class="qmarks">10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Intelligence Quotient (IQ)</h4>
+        <ul>
+          <li><strong>Formula: IQ = (Mental Age ÷ Chronological Age) × 100</strong></li>
+          <li>Average IQ = 100; Normal range = 85–115; Average category = 90–110</li>
+        </ul>
+        <h4>IQ Classification</h4>
+        <table>
+          <tr><th>IQ Range</th><th>Classification</th></tr>
+          <tr><td>&gt;130</td><td>Very Superior / Gifted</td></tr>
+          <tr><td>120–129</td><td>Superior</td></tr>
+          <tr><td>110–119</td><td>High Average</td></tr>
+          <tr><td>90–109</td><td>Average</td></tr>
+          <tr><td>70–79</td><td>Borderline</td></tr>
+          <tr><td>&lt;70</td><td>Intellectual Disability</td></tr>
+        </table>
+        <h4>Major Intelligence Tests</h4>
+        <ul>
+          <li><strong>Stanford-Binet Scale:</strong> oldest test; verbal emphasis; gives Mental Age; widely used for children; revised multiple times (latest: SB-5, 2003)</li>
+          <li><strong>Wechsler Scales:</strong> most widely used clinically; gives Verbal IQ + Performance IQ; WAIS-IV (adults 16+), WISC-V (children 6–16), WPPSI-IV (2.5–7 yr)</li>
+          <li><strong>Raven's Progressive Matrices:</strong> non-verbal; pattern completion; culture-fair; suitable regardless of language; measures fluid intelligence</li>
+          <li><strong>Bhatia Battery (India):</strong> culturally adapted; Kohs Block Design, Pass-Along Test, Pattern Drawing, Memory, Picture Construction</li>
+        </ul>
+        <h4>Types of Tests</h4>
+        <ul>
+          <li>Individual vs Group; Verbal vs Non-verbal vs Performance; Speed vs Power; Culture-fair vs Culture-bound</li>
+        </ul>
+        <h4>Intelligence During Sickness</h4>
+        <ul>
+          <li>Acute illness → temporary cognitive decline (delirium, fever, medication effects)</li>
+          <li>Dementia → progressive irreversible decline; MMSE (Mini Mental State Examination) used to track</li>
+          <li>Nurse: adjust communication and teaching to current functional level; don't assume intelligence is fixed</li>
+        </ul>
+        <div class="mn"><strong>🔑 IQ Formula:</strong> MA ÷ CA × 100 — never forget this formula in exams</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════ UNIT IX ═══════════════════ -->
+<div class="unit" data-u="9">
+  <div class="unit-hdr" onclick="this.parentElement.classList.toggle('collapsed')">
+    <span class="ubadge">Unit IX</span>
+    <h2>Learning</h2>
+    <span class="utoggle">▾</span>
+  </div>
+  <div class="unit-body">
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q1</span><span class="qtitle">Describe Trial and Error Theory of Learning (Thorndike)</span><span class="qmarks">10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Introduction</h4>
+        <ul>
+          <li>Proposed by <strong>Edward L. Thorndike (1898)</strong> — also called <strong>Connectionism</strong></li>
+          <li>Experiment: hungry cats placed in puzzle boxes; food outside; had to pull a lever to escape</li>
+          <li>Cats tried random responses until they accidentally pulled the lever; with each trial, time to escape decreased → learning by trial and error</li>
+        </ul>
+        <h4>Key Features</h4>
+        <ul>
+          <li>Learning occurs through random attempts at solving a problem</li>
+          <li>Incorrect responses gradually eliminated; correct response (leading to reward) is strengthened ("stamped in")</li>
+          <li>Learning curve: slow initially, speeds up with practice</li>
+          <li>Motivation required: animal/person must want the goal</li>
+        </ul>
+        <h4>Thorndike's THREE Primary Laws</h4>
+        <ul>
+          <li><strong>Law of Readiness:</strong> a learner who is ready to act finds satisfaction in doing so; forcing learning on an unready learner causes frustration. Nursing: always assess patient readiness before teaching</li>
+          <li><strong>Law of Exercise (Use/Disuse):</strong> connections strengthened by use (practice); weakened by disuse — "use it or lose it." Nursing: repeat instructions; use return demonstrations; practice clinical skills in lab</li>
+          <li><strong>Law of Effect:</strong> responses followed by a satisfying outcome (reward) are stamped in; responses followed by annoying outcomes are stamped out. This is the basis of all reinforcement. Nursing: praise correct technique; give positive feedback after compliant behaviour</li>
+        </ul>
+        <h4>Secondary Laws</h4>
+        <ul>
+          <li><strong>Multiple Response:</strong> organism tries many responses until one works</li>
+          <li><strong>Set/Attitude:</strong> mental attitude influences which connections form</li>
+          <li><strong>Partial Activity:</strong> organism responds selectively to relevant parts of situation</li>
+          <li><strong>Assimilation:</strong> new situations responded to like old similar ones</li>
+          <li><strong>Associative Shifting:</strong> any stimulus occurring with a response can eventually produce that response alone</li>
+        </ul>
+        <h4>Nursing Applications</h4>
+        <ul>
+          <li>Patient learning insulin injection or dressing change follows trial-and-error — expect initial errors; reinforce correct technique</li>
+          <li>Use positive reinforcement consistently (praise, information feedback)</li>
+          <li>Assess readiness — patient in acute pain is NOT ready to learn</li>
+        </ul>
+        <div class="mn"><strong>🔑 REE:</strong> Readiness, Exercise, Effect — Thorndike's 3 primary laws. Memorise these three.</div>
+      </div>
+    </div>
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q2</span><span class="qtitle">Define Learning and Principles of Learning</span><span class="qmarks">10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Definition</h4>
+        <ul>
+          <li>Learning = a <strong>relatively permanent change</strong> in behaviour or its potential that results from <strong>practice or experience</strong>, excluding changes due to maturation, fatigue, drugs, or injury</li>
+          <li>Key qualifiers: "relatively permanent" + "practice or experience"</li>
+        </ul>
+        <h4>Principles / Conditions of Learning</h4>
+        <ul>
+          <li><strong>1. Motivation:</strong> learner must WANT to learn; intrinsic motivation &gt; extrinsic; without motivation, no learning occurs</li>
+          <li><strong>2. Readiness:</strong> physical, mental, and emotional preparedness; forcing learning on an unready person is futile and distressing</li>
+          <li><strong>3. Active Participation:</strong> doing &gt; watching &gt; listening; return demonstration confirms learning</li>
+          <li><strong>4. Practice and Repetition:</strong> strengthens learning connections; spaced repetition &gt; massed practice for retention</li>
+          <li><strong>5. Feedback / Knowledge of Results:</strong> learner must know immediately whether their response is correct; immediate feedback is most effective</li>
+          <li><strong>6. Meaningful Content:</strong> learning is faster and more durable when content is relevant and useful to the learner</li>
+          <li><strong>7. Appropriate Pace:</strong> not too fast (overwhelm) or too slow (boredom); adjusted to individual rate</li>
+          <li><strong>8. Pleasant Environment:</strong> free from distractions, anxiety-provoking elements; comfortable setting</li>
+          <li><strong>9. Transfer of Learning:</strong> applying previously learned material to new situations; nurse uses anatomy knowledge to explain a procedure</li>
+          <li><strong>10. Whole vs Part Learning:</strong> simple material — teach as whole; complex — break into parts then integrate</li>
+        </ul>
+        <div class="mn"><strong>🔑 MR-APFM-PETP:</strong> Motivation, Readiness, Active, Practice, Feedback, Meaningful, Pace, Environment, Transfer, Parts/whole</div>
+        <div class="tip">✍️ In patient teaching: always assess READINESS and MOTIVATION first. These are the two most tested principles in nursing exams.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════ UNIT X ═══════════════════ -->
+<div class="unit" data-u="10">
+  <div class="unit-hdr" onclick="this.parentElement.classList.toggle('collapsed')">
+    <span class="ubadge">Unit X</span>
+    <h2>Memory &amp; Forgetting</h2>
+    <span class="utoggle">▾</span>
+  </div>
+  <div class="unit-body">
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q1</span><span class="qtitle">Define Memory and Describe the Process of Memory</span><span class="qmarks">5–10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Definition</h4>
+        <ul>
+          <li>Memory = the mental capacity to <strong>encode, store, and retrieve</strong> information and experiences</li>
+          <li>Memory is the foundation of all learning — without memory, nothing can be retained or applied</li>
+        </ul>
+        <h4>Three Stages / Process of Memory</h4>
+        <ul>
+          <li><strong>1. Encoding:</strong> converting information into a form the brain can process and store; types: acoustic (sound), visual (image), semantic (meaning — deepest and most durable)</li>
+          <li><strong>2. Storage:</strong> retaining encoded information over time in memory systems; quality depends on depth of encoding and emotional significance</li>
+          <li><strong>3. Retrieval:</strong> accessing stored information when needed; types: recall (free recall, cued recall) and recognition; retrieval depends on appropriate cues</li>
+        </ul>
+        <h4>Atkinson–Shiffrin Modal Model</h4>
+        <ul>
+          <li><strong>Sensory Memory:</strong> 0.25–3 sec; holds exact sensory impression briefly; Iconic (visual) / Echoic (auditory); fades unless attended to</li>
+          <li><strong>Short-Term Memory (STM) / Working Memory:</strong> 15–30 sec; capacity = 7±2 chunks (Miller's Magic Number, 1956); lost without rehearsal</li>
+          <li><strong>Long-Term Memory (LTM):</strong> potentially unlimited capacity and duration; organised semantically</li>
+        </ul>
+        <h4>Types of Long-Term Memory</h4>
+        <ul>
+          <li><strong>Explicit/Declarative:</strong> consciously recalled
+            <ul><li>Episodic: personal autobiographical events with time and context</li>
+            <li>Semantic: general knowledge and facts (no personal context)</li></ul>
+          </li>
+          <li><strong>Implicit/Non-declarative:</strong> unconscious, automatic
+            <ul><li>Procedural: skills and habits — survives even in severe amnesia</li>
+            <li>Priming: prior exposure influences later response</li></ul>
+          </li>
+        </ul>
+        <div class="mn"><strong>🔑 ESR:</strong> Encode, Store, Retrieve — the three stages of memory</div>
+      </div>
+    </div>
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q2</span><span class="qtitle">Discuss Short-Term and Long-Term Memory</span><span class="qmarks">5 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <table>
+          <tr><th>Feature</th><th>Short-Term Memory (STM)</th><th>Long-Term Memory (LTM)</th></tr>
+          <tr><td>Duration</td><td>15–30 seconds without rehearsal</td><td>Days to a lifetime</td></tr>
+          <tr><td>Capacity</td><td>7±2 chunks (Miller)</td><td>Essentially unlimited</td></tr>
+          <tr><td>Encoding type</td><td>Primarily acoustic</td><td>Primarily semantic (meaning)</td></tr>
+          <tr><td>Forgetting</td><td>Rapid decay + displacement</td><td>Interference, retrieval failure</td></tr>
+          <tr><td>Brain area</td><td>Prefrontal cortex</td><td>Hippocampus (episodic), temporal lobe</td></tr>
+          <tr><td>Sickness</td><td>Severely impaired in delirium</td><td>Progressively destroyed in dementia</td></tr>
+          <tr><td>Example</td><td>Holding a phone number while dialling</td><td>Remembering your nursing school name</td></tr>
+        </table>
+        <h4>Transfer from STM to LTM</h4>
+        <ul>
+          <li>Rehearsal moves information STM → LTM</li>
+          <li>Elaborative rehearsal (connecting to existing knowledge) far more effective than simple repetition</li>
+          <li>Emotional significance also promotes transfer</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q3</span><span class="qtitle">Explain Types of Memory and Ways to Improve Memorization</span><span class="qmarks">10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Ways to Improve Memorization</h4>
+        <ul>
+          <li><strong>Elaborative rehearsal:</strong> connect new material to existing knowledge (deep processing) — far better than rote repetition</li>
+          <li><strong>Spaced repetition:</strong> review at increasing intervals (Day 1 → 3 → 7 → 30) — combats Ebbinghaus forgetting curve (60–70% forgotten in 24 hrs)</li>
+          <li><strong>Mnemonics:</strong> acronyms, rhymes, peg systems, method of loci — create memorable retrieval cues</li>
+          <li><strong>Chunking:</strong> group individual items into meaningful larger units (e.g., phone number blocks)</li>
+          <li><strong>Visual imagery:</strong> create vivid mental pictures for abstract concepts</li>
+          <li><strong>Active recall (testing):</strong> testing yourself is more effective than re-reading (retrieval practice effect)</li>
+          <li><strong>Adequate sleep:</strong> memory consolidation occurs during sleep — study before sleeping aids retention</li>
+          <li><strong>Minimise interference:</strong> study similar subjects at different times to reduce retroactive/proactive interference</li>
+          <li><strong>Emotional association:</strong> emotionally significant material remembered better (amygdala–hippocampal connection)</li>
+          <li><strong>Reduce anxiety:</strong> high cortisol impairs hippocampal function → reduces encoding and retrieval</li>
+        </ul>
+        <div class="mn"><strong>🔑 SMILE:</strong> Spaced repetition, Mnemonics, Imagery, Links (elaboration), Examine yourself (active recall)</div>
+      </div>
+    </div>
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q4</span><span class="qtitle">Write Types of Forgetting</span><span class="qmarks">5–10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Definition</h4>
+        <ul>
+          <li>Forgetting = the inability to recall or recognise previously stored information</li>
+          <li>Ebbinghaus Forgetting Curve: ~60–70% of new material forgotten within 24 hours; rate slows over time</li>
+        </ul>
+        <h4>Theories / Types of Forgetting</h4>
+        <ul>
+          <li><strong>1. Decay Theory:</strong> memory trace fades due to disuse over time — "use it or lose it"; explains STM forgetting well; doesn't explain why old vivid memories remain</li>
+          <li><strong>2. Interference Theory:</strong>
+            <ul><li><strong>Proactive interference:</strong> OLD learning interferes with NEW (French → harder to learn Spanish)</li>
+            <li><strong>Retroactive interference:</strong> NEW learning interferes with OLD (learning Spanish → harder to recall French)</li></ul>
+          </li>
+          <li><strong>3. Retrieval Failure:</strong> information IS stored but cannot be accessed without appropriate retrieval cue; tip-of-tongue phenomenon; context-dependent memory (recall better in same environment as encoding)</li>
+          <li><strong>4. Motivated Forgetting / Repression (Freud):</strong> unconscious suppression of painful, threatening memories into the unconscious; basis of psychoanalytic therapy</li>
+          <li><strong>5. Encoding Failure:</strong> information never properly encoded into LTM in the first place — not true forgetting; e.g., not remembering a face you barely glanced at</li>
+        </ul>
+        <h4>Pathological Forgetting</h4>
+        <ul>
+          <li><strong>Anterograde Amnesia:</strong> cannot form NEW memories after brain injury (hippocampal damage) — forward-facing</li>
+          <li><strong>Retrograde Amnesia:</strong> cannot recall events BEFORE the injury — backward-facing</li>
+          <li><strong>Alzheimer's Disease:</strong> progressive destruction, beginning with episodic memory</li>
+        </ul>
+        <div class="tip">✍️ Anterograde = AFTER injury (can't make new memories). Retrograde = BEFORE injury (lost old memories). This distinction is frequently confused in exams.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════ UNIT XI ═══════════════════ -->
+<div class="unit" data-u="11">
+  <div class="unit-hdr" onclick="this.parentElement.classList.toggle('collapsed')">
+    <span class="ubadge">Unit XI</span>
+    <h2>Attitudes</h2>
+    <span class="utoggle">▾</span>
+  </div>
+  <div class="unit-body">
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q1</span><span class="qtitle">Define Attitude and Factors Affecting Attitude Formation</span><span class="qmarks">10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Definition</h4>
+        <ul>
+          <li>Attitude = a learned, relatively stable predisposition to respond consistently (favourably or unfavourably) toward a specific person, object, group, or situation</li>
+          <li>Gordon Allport (1935): "A mental and neural state of readiness, organised through experience, exerting a directive or dynamic influence upon the individual's response"</li>
+          <li>Key features: LEARNED, EVALUATIVE (positive/negative), RELATIVELY STABLE</li>
+        </ul>
+        <h4>Three Components (ABC Model)</h4>
+        <ul>
+          <li><strong>A — Affective (Feeling):</strong> emotional response — "I feel anxious about injections"</li>
+          <li><strong>B — Behavioural (Conative):</strong> predisposition to act — "I avoid giving injections"</li>
+          <li><strong>C — Cognitive:</strong> beliefs and knowledge — "Injections cause pain and can cause complications"</li>
+        </ul>
+        <h4>Factors Affecting Attitude Formation</h4>
+        <ul>
+          <li><strong>1. Classical Conditioning:</strong> pairing a neutral object with a positive/negative stimulus creates attitude; negative hospital experience as child → negative attitude toward hospitals as adult</li>
+          <li><strong>2. Operant Conditioning:</strong> reinforced attitudes are strengthened; punished attitudes weakened</li>
+          <li><strong>3. Observational Learning:</strong> watching parents, peers, media — parent's attitude toward mental illness becomes child's attitude</li>
+          <li><strong>4. Direct Personal Experience:</strong> firsthand encounters powerfully shape attitudes; patient treated kindly → positive attitude toward nursing</li>
+          <li><strong>5. Culture and Social Norms:</strong> family values, religion, community standards shape core attitudes</li>
+          <li><strong>6. Peer Group Influence:</strong> especially powerful in adolescence — conformity, social comparison</li>
+          <li><strong>7. Mass Media:</strong> TV, social media — shaping health attitudes (vaccination hesitancy, body image)</li>
+          <li><strong>8. Education:</strong> formal education can counter prejudicial attitudes and broaden perspectives</li>
+          <li><strong>9. Personality:</strong> authoritarian personalities hold more rigid attitudes; open personalities are more flexible</li>
+        </ul>
+        <div class="mn"><strong>🔑 ABC:</strong> Affective, Behavioural, Cognitive — always structure attitude answers using these three components</div>
+      </div>
+    </div>
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q2</span><span class="qtitle">Describe the Process of Attitudinal Change</span><span class="qmarks">5–10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Why Attitudes Change</h4>
+        <ul>
+          <li>Attitudes are relatively stable but CAN change through experience, persuasion, group pressure, and personal insight</li>
+        </ul>
+        <h4>Processes of Attitude Change</h4>
+        <ul>
+          <li><strong>1. Persuasive Communication (Hovland):</strong> effectiveness depends on source (credibility, attractiveness), message (strength, emotional vs rational), and audience (existing attitudes, intelligence)</li>
+          <li><strong>2. Cognitive Dissonance (Festinger, 1957):</strong> holding contradictory beliefs creates discomfort → person changes attitude to reduce it. Smoker knows smoking kills → "I'll cut down" or "It won't happen to me" → attitude shifts</li>
+          <li><strong>3. Learning (CC + OC + Modelling):</strong> new associations, reinforcement, and role models change attitudes</li>
+          <li><strong>4. Social Pressure / Group Influence:</strong> majority opinion and conformity pressure (Asch studies) change individual attitudes</li>
+          <li><strong>5. Direct Experience:</strong> positive contact with a previously feared group/situation reduces negative attitude (Contact Theory)</li>
+          <li><strong>6. Motivational Interviewing (MI):</strong> collaborative conversation evoking the person's own reasons for change; highly effective for changing unhealthy behaviours in nursing</li>
+        </ul>
+        <h4>Role of Attitudes in Health and Sickness</h4>
+        <ul>
+          <li>Positive health attitudes → preventive behaviours (exercise, vaccination, screening)</li>
+          <li>Negative attitudes toward hospitals → delayed care-seeking → worse outcomes</li>
+          <li>Stigmatising attitudes toward mental illness → prevents help-seeking</li>
+          <li>Nurse's non-judgmental attitude → patient feels safe → better disclosure → better care</li>
+          <li>Health Belief Model: perceived susceptibility + severity + benefits − barriers = likelihood of health action</li>
+        </ul>
+        <div class="tip">✍️ For Role of Attitudes in Health and Sickness — give examples from BOTH sides: patient's attitudes affecting health behaviour AND nurse's attitudes affecting care quality.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════ UNIT XII ═══════════════════ -->
+<div class="unit" data-u="12">
+  <div class="unit-hdr" onclick="this.parentElement.classList.toggle('collapsed')">
+    <span class="ubadge">Unit XII</span>
+    <h2>Defense Mechanisms &amp; Mental Health</h2>
+    <span class="utoggle">▾</span>
+  </div>
+  <div class="unit-body">
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q1</span><span class="qtitle">Define Defense Mechanisms — Types with Clinical Examples</span><span class="qmarks">10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>Definition</h4>
+        <ul>
+          <li>Defense mechanisms = <strong>unconscious psychological strategies</strong> used by the ego to protect itself from anxiety arising from unacceptable id impulses, moral demands of the superego, or external threats</li>
+          <li>Developed by <strong>Sigmund Freud</strong>; elaborated by his daughter <strong>Anna Freud</strong></li>
+          <li>They are: automatic, unconscious (person is unaware), and reduce anxiety in the short term</li>
+          <li>Healthy in moderation; pathological when rigid, excessive, or significantly distort reality</li>
+        </ul>
+        <h4>Mature / Healthy Defense Mechanisms</h4>
+        <ul>
+          <li><strong>Sublimation:</strong> redirecting unacceptable impulses toward socially acceptable activities. <em>Example: highly aggressive person becomes a competitive athlete or surgeon</em></li>
+          <li><strong>Altruism:</strong> helping others to satisfy own unconscious needs. <em>Example: nurse who was once critically ill becomes a dedicated patient advocate</em></li>
+          <li><strong>Humour:</strong> expressing unacceptable feelings through comedy. <em>Example: doctor jokes about a difficult case to release tension</em></li>
+          <li><strong>Suppression:</strong> CONSCIOUSLY postponing awareness of a problem. <em>Example: nurse decides "I'll deal with this worry after my shift ends"</em></li>
+        </ul>
+        <h4>Neurotic Defense Mechanisms (Most Common — Must Know All)</h4>
+        <ul>
+          <li><strong>Repression:</strong> MOST FUNDAMENTAL — forcibly blocking unacceptable thoughts/memories from conscious awareness into the unconscious. <em>Example: adult has no memory of childhood abuse</em></li>
+          <li><strong>Rationalization:</strong> creating logical-sounding but false justifications ("sour grapes"). <em>Example: patient who missed medications says "Those tablets weren't helping anyway"</em></li>
+          <li><strong>Projection:</strong> attributing own unacceptable feelings to others. <em>Example: person feeling hostile says "Everyone here hates me!" — projecting their own anger outward</em></li>
+          <li><strong>Reaction Formation:</strong> expressing the OPPOSITE of true feeling. <em>Example: nurse who feels hostility toward a difficult patient becomes excessively kind and attentive</em></li>
+          <li><strong>Displacement:</strong> redirecting emotion from threatening target to safer target. <em>Example: nurse scolded by doctor → goes home and argues with spouse</em></li>
+          <li><strong>Intellectualization:</strong> using abstract reasoning to avoid emotional impact. <em>Example: terminal cancer patient reads only medical research papers instead of processing their own grief</em></li>
+          <li><strong>Denial:</strong> refusing to accept a painful external reality. <em>Example: alcoholic insists "I don't have a drinking problem"; newly diagnosed patient says "The tests must be wrong"</em></li>
+        </ul>
+        <h4>Immature Defense Mechanisms</h4>
+        <ul>
+          <li><strong>Regression:</strong> reverting to earlier developmental behaviour under stress. <em>Example: hospitalised adult becomes tearful and helpless; sick child resumes bedwetting</em></li>
+          <li><strong>Somatization:</strong> converting emotional conflicts into physical symptoms. <em>Example: student gets headache before exam; grief expressed as chronic pain</em></li>
+          <li><strong>Splitting:</strong> seeing people/things as all good or all bad — no middle ground. <em>Common in Borderline Personality Disorder</em></li>
+        </ul>
+        <h4>Nursing Relevance</h4>
+        <ul>
+          <li>Recognise defense mechanisms as adaptive coping — not deliberate dishonesty</li>
+          <li>Patient in denial — do not forcibly break down denial; build trust first; early denial may be protective</li>
+          <li>Angry patient displacing onto nurse — do not take it personally; respond with therapeutic communication</li>
+          <li>Document behaviours factually, not interpretations ("patient refused to discuss diagnosis" not "patient is in denial")</li>
+        </ul>
+        <div class="mn"><strong>🔑 "Really Rude People Reject Drinking During Intellectual Situations"</strong><br>Repression, Rationalization, Projection, Reaction formation, Displacement, Denial, Intellectualization, Sublimation</div>
+        <div class="tip">✍️ THE most important question in Unit XII. Learn at least 8 mechanisms: definition + one clinical nursing example each. Examiners love clinical application.</div>
+      </div>
+    </div>
+
+    <div class="qcard" onclick="toggleQ(this)">
+      <div class="qhdr"><span class="qnum">Q2</span><span class="qtitle">Write Characteristics of a Mentally Healthy Person</span><span class="qmarks">10 M</span><span class="qchev">▾</span></div>
+      <div class="ans">
+        <h4>WHO Definition of Mental Health</h4>
+        <ul>
+          <li>"A state of wellbeing in which the individual realises their own abilities, can cope with the normal stresses of life, can work productively and fruitfully, and is able to make a contribution to their community" — WHO (2001)</li>
+          <li>Mental health ≠ merely absence of mental illness — it is a POSITIVE state of wellbeing</li>
+        </ul>
+        <h4>Characteristics of a Mentally Healthy Person</h4>
+        <ul>
+          <li><strong>1. Positive and Realistic Self-Concept:</strong> accurate, balanced self-perception — neither grandiose nor self-deprecating; accepts both strengths and limitations honestly</li>
+          <li><strong>2. Reality Orientation:</strong> perceives self and world accurately; decisions based on reality, not wishful thinking; distinguishes imagination from reality</li>
+          <li><strong>3. Effective Coping with Stress:</strong> faces difficulties constructively; uses healthy coping (problem-solving, social support); does not rely excessively on defense mechanisms</li>
+          <li><strong>4. Satisfying Interpersonal Relationships:</strong> capable of forming and maintaining mutually satisfying relationships; gives and receives love and affection; genuinely empathic</li>
+          <li><strong>5. Emotional Balance:</strong> experiences the full range of emotions appropriately; neither suppresses all feelings nor loses control; regulates emotions constructively</li>
+          <li><strong>6. Autonomy and Self-Direction:</strong> makes independent decisions; takes responsibility for own behaviour; not overly dependent on others for approval or decisions</li>
+          <li><strong>7. Productive and Purposeful:</strong> engaged in meaningful work, study, or creative activities; contributes to family and society; has a clear sense of purpose</li>
+          <li><strong>8. Adaptability and Flexibility:</strong> adjusts to change; tolerates uncertainty; resilient in the face of adversity</li>
+          <li><strong>9. Freedom from Excessive Anxiety and Guilt:</strong> not paralysed by guilt or anxiety; manages internal conflicts without being overwhelmed</li>
+          <li><strong>10. Spiritual Wellbeing:</strong> sense of meaning, purpose, and connection to something greater; inner peace; not necessarily religious but spiritually grounded</li>
+          <li><strong>11. Healthy Physical Habits:</strong> adequate sleep, nutrition, exercise — recognises and respects the mind–body connection</li>
+          <li><strong>12. Positive Outlook:</strong> optimism; hope for the future; capacity for gratitude and enjoyment</li>
+        </ul>
+        <h4>Nurse's Role in Promoting Mental Health</h4>
+        <ul>
+          <li>Create therapeutic, non-stigmatising ward environment</li>
+          <li>Teach stress management to patients and community</li>
+          <li>Early identification of mental health deterioration — screen routinely</li>
+          <li>Model mentally healthy behaviour — nurse as role model</li>
+          <li>Practise self-care to maintain own mental health and prevent burnout</li>
+        </ul>
+        <div class="mn"><strong>🔑 PREFACE-AS:</strong> Positive self, Reality, Effective coping, Friends, Autonomy, Contributions, Emotions balanced, Adaptability, Spiritual</div>
+        <div class="tip">✍️ Always start with the WHO definition (memorise it word for word). Then give 10–12 characteristics in numbered points. Examiners check for the WHO definition specifically.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</main>
+
+<button id="st" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+// THEME
+const tb = document.getElementById('themeBtn');
+function applyTheme(dark){
+  document.documentElement.setAttribute('data-theme', dark?'dark':'light');
+  tb.textContent = dark ? '☀️ Light' : '🌙 Dark';
+  localStorage.setItem('pyq-theme', dark?'dark':'light');
+}
+const st = localStorage.getItem('pyq-theme');
+applyTheme(st ? st==='dark' : window.matchMedia('(prefers-color-scheme: dark)').matches);
+tb.addEventListener('click', ()=> applyTheme(document.documentElement.getAttribute('data-theme')!=='dark'));
+
+// CARD TOGGLE
+function toggleQ(card){ card.classList.toggle('open'); }
+
+// FILTER
+document.querySelectorAll('.fb').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));
+    btn.classList.add('on');
+    const u = btn.dataset.u;
+    document.querySelectorAll('.unit').forEach(sec=>{
+      sec.style.display = (u==='all'||sec.dataset.u===u) ? '' : 'none';
+    });
+  });
+});
+
+// SEARCH
+const si = document.getElementById('si');
+const nr = document.getElementById('nr');
+si.addEventListener('input',()=>{
+  const q = si.value.toLowerCase().trim();
+  let any = false;
+  document.querySelectorAll('.unit').forEach(sec=>{
+    let vis = false;
+    sec.querySelectorAll('.qcard').forEach(card=>{
+      const match = !q || card.textContent.toLowerCase().includes(q);
+      card.style.display = match ? '' : 'none';
+      if(match){vis=true;any=true;}
+    });
+    sec.style.display = vis ? '' : 'none';
+    if(vis && q) sec.classList.remove('collapsed');
+  });
+  nr.style.display = any||!q ? 'none' : 'block';
+  if(q){
+    document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));
+    document.querySelector('.fb[data-u="all"]').classList.add('on');
+  }
+});
+
+// SCROLL TOP
+const stBtn = document.getElementById('st');
+window.addEventListener('scroll',()=>{ stBtn.classList.toggle('vis', window.scrollY>300); });
+</script>
+</body>
+</html>
